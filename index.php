@@ -17,8 +17,8 @@
             <!-- fct php de création de card en ftc des meilleurs users -->
         </div>
         <div>
-            <button></button>
-            <button></button>
+        <?php bouton_hubbert("Demander un service","index.php","vert"); ?>
+        <?php bouton_hubbert("Proposer un service","index.php","orange"); ?>
         </div>
     </section>
 
@@ -31,8 +31,8 @@
             <!-- fct php de création de card en ftc des meilleurs annonces d'outils -->
         </div>
         <div>
-            <button></button>
-            <button></button>
+        <?php bouton_hubbert("Demander un outil","index.php","vert"); ?>
+        <?php bouton_hubbert("Proposer un outil","index.php","orange"); ?>
         </div>
     </section>
 
