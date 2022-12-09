@@ -10,7 +10,7 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg couleurnav">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img class="logo-navbar" src="<?php echo get_template_directory_uri(); ?>/assets/img/hubbert_noir.png"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
