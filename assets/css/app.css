@@ -81,6 +81,8 @@ h1 {
 
 .texte-central p {
 
+/* texte de l'acceil */
+
     width: 356.85px;
     font-family: 'Josefin Sans';
     font-style: normal;
@@ -92,7 +94,7 @@ h1 {
 
 .bouton-hubbert {
 
-/* Auto layout */
+/* Auto layout --> template pour tout les boutons CTA */
 
 display: flex;
 flex-direction: row;
@@ -132,6 +134,8 @@ transition: 0.4s;
 }
 
 .orange {
+
+ /* orange cta */
 
     border: 2px solid #F17444;
     border-radius: 8px;
