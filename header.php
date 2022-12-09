@@ -16,7 +16,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <div class="collapse navbar-collapse droite" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 droite">
         <li class="nav-item">
           <a class="nav-link" href="#"><button>Demander un service / outil</button></a>
