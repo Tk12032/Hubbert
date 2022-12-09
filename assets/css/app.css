@@ -10,15 +10,14 @@ background-color: #ECE4B7;
 
 }
 
-.droite {
-
-    float: right;
-    justify-content: flex-end;
-
-}
-
 .container-fluid {
 
  display:flex; 
+
+}
+
+.navbar {
+
+justify-content: space-between;
 
 }
