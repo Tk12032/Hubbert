@@ -5,10 +5,10 @@
 <section class="garden">
         <div>
             <span>
-                <h1></h1>
-                <p></p>
+                <h1>KEEP YOUR GARDEN CLEAN</h1>
+                <p>La plateforme qui vous permet d’échanger entre voisins des outils et des services de jardinage à bas prix.</p>
             </span>
-            <button></button>
+            <button>Je me connecte </button>
         </div>
     </section>
 
@@ -24,8 +24,8 @@
 
     <section class="outils">
         <span>
-            <h2></h2>
-            <p></p>
+            <h2>Les outils les plus chauds de ta région</h2>
+            <p>Trouves les outils qui te manque chez les personnes qui habitent près de chez toi. Ou alors toi aussi mets à disposition un ou plusieurs de tes outils pour aider et te faire un peu d’économie.</p>
         </span>
         <div class="carroussel tools">
             <!-- fct php de création de card en ftc des meilleurs annonces d'outils -->
