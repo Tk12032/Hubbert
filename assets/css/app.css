@@ -151,3 +151,17 @@ transition: 0.4s;
     transition: 0.4s;
     
 }
+
+.nav-item {
+
+margin: 10px;
+
+}
+
+header {
+
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+}
