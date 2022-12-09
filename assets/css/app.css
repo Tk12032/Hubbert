@@ -21,3 +21,15 @@ background-color: #ECE4B7;
 justify-content: space-between;
 
 }
+
+
+.garden { 
+
+    background-color: #000;
+    background-image: url(../images/Gardener.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
