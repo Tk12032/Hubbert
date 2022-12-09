@@ -7,7 +7,8 @@ body {
 
 .logo-navbar{
 
-    width: 150px;
+    height: 80px;
+    padding-left:100px;
 
 }
 
@@ -99,18 +100,15 @@ h1 {
 display: flex;
 flex-direction: row;
 justify-content: center;
-align-items: flex-start;
+align-items: center;
 padding: 10px 20px;
-gap: 10px;
 text-decoration:none;
-width: 247px;
-height: 41px;
-font-family: 'Josefin Sans';
+font-family: 'Poppins';
+font-weight: bold;
 font-style: normal;
-font-weight: 500;
 font-size: 16px;
-line-height: 24px;
 color: #504136;
+max-width: 400px;
 }
 
 
@@ -163,6 +161,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 2;
+    top:0px;
 
 }
 
