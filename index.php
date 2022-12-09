@@ -14,6 +14,7 @@
 
     <section class="services">
         <div class="carroussel users">
+            <?php carroussel_couleur("users",20); ?>
             <!-- fct php de création de card en ftc des meilleurs users -->
         </div>
         <div>
@@ -34,6 +35,7 @@
         <?php bouton_hubbert("Demander un outil","index.php","vert"); ?>
         <?php bouton_hubbert("Proposer un outil","index.php","orange"); ?>
         </div>
+       
     </section>
 
 <?php get_footer(); ?>
