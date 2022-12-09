@@ -3,7 +3,7 @@
 <button class="messagerie"><!-- boutton messagerie --></button>    
 
 <section class="garden">
-        <div>
+        <div class="texte-central">
             <span>
                 <h1>KEEP YOUR GARDEN CLEAN</h1>
                 <p>La plateforme qui vous permet d’échanger entre voisins des outils et des services de jardinage à bas prix.</p>

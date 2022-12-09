@@ -1,3 +1,10 @@
+body {
+
+    color: #504136;
+
+}
+
+
 .logo-navbar{
 
     width: 150px;
@@ -6,19 +13,19 @@
 
 .couleurnav {
 
-background-color: #ECE4B7;
+     background-color: #ECE4B7;
 
 }
 
 .container-fluid {
 
- display:flex; 
+     display:flex; 
 
 }
 
 .navbar {
 
-justify-content: space-between;
+     justify-content: space-between;
 
 }
 
@@ -31,5 +38,54 @@ justify-content: space-between;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    height: 1000px;
+
+}
+
+.messagerie {
+
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 50px;
+    position: fixed;
+    bottom: 50px;
+
+}
+
+.texte-central {
+
+     position: absolute;
+     left: 168px;
+     top: 297px;
+
+}
+
+.texte-central h1 {
+
+    width: 399px;
+    height: 96px;
+
+}
+
+h1 {
+
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    
+}
+
+.texte-central p {
+
+    width: 356.85px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
 
 }
