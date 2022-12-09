@@ -89,3 +89,61 @@ h1 {
     line-height: 24px;
 
 }
+
+.bouton-hubbert {
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 10px 20px;
+gap: 10px;
+text-decoration:none;
+width: 247px;
+height: 41px;
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #504136;
+}
+
+
+.vert {
+
+/* vert cta */
+
+border: 2px solid #AACF23;
+border-radius: 8px;
+
+}
+
+.vert:hover {
+
+background-color:#AACF23;
+border: 2px solid #AACF23;
+border-radius: 8px;
+color: #504136;
+transition: 0.4s;
+
+}
+
+.orange {
+
+    border: 2px solid #F17444;
+    border-radius: 8px;
+
+}
+
+.orange:hover {
+
+    background-color:#F17444;
+    border: 2px solid #F17444;
+    border-radius: 8px;
+    color: #504136;
+    transition: 0.4s;
+    
+}

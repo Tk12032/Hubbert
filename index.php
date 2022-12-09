@@ -8,7 +8,7 @@
                 <h1>KEEP YOUR GARDEN CLEAN</h1>
                 <p>La plateforme qui vous permet d’échanger entre voisins des outils et des services de jardinage à bas prix.</p>
             </span>
-            <button>Je me connecte </button>
+            <?php bouton_hubbert("Je me connecte","index.php","vert"); ?>
         </div>
     </section>
 

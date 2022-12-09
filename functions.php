@@ -23,3 +23,8 @@ function montheme_menu_link_class($attrs){
 add_filter('nav_menu_css_class', 'montheme_menu_class');
 add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');
 
+function bouton_hubbert($contenu,$adresse,$couleur) {
+
+  echo  '<a class = "bouton-hubbert '.$couleur.'" href= $adresse >'.$contenu.'</a>';
+
+}

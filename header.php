@@ -19,11 +19,11 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#"><button>Demander un service / outil</button></a>
+          <a class="nav-link" href="#"> <?php bouton_hubbert("Demander un service / outil","index.php","vert"); ?></a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#"><button>Demander un service / outil</button></a>
+          <a class="nav-link" href="#"><?php bouton_hubbert("Proposer un service / outil","index.php","orange"); ?></a>
         </li>
 
         <li class="nav-item">
