@@ -63,6 +63,7 @@
           return oldSrc.replace('actif', 'inact');
         });
       });
+      
     </script>
 </body>
 </html>
