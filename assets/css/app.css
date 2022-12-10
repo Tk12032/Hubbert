@@ -1,13 +1,15 @@
 body {
 
     color: #504136;
+    background-image: url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/fond_hubbert.png);
+    
 
 }
 
 
 .logo-navbar{
 
-    height: 80px;
+    height: 42px;
     padding-left:100px;
 
 }
@@ -28,6 +30,7 @@ body {
 
      justify-content: space-between;
      height: 86px;
+     box-shadow: 0px 0px 20px black;
 
 }
 
@@ -260,4 +263,58 @@ height: 252px;
     flex-direction: column;
     height: 120px;
     justify-content: space-between;
+}
+
+.logo-footer{
+    width: 300px;
+}
+footer{
+    display:flex;
+    justify-content: space-between;
+    padding:30px 50px 100px 50px;
+    background-color: #504136;
+    color:#ECE4B7;
+    height: 460px;
+}
+
+footer div{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 360px;
+}
+footer span{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+}
+
+footer p, a {
+    font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+}
+
+footer h5{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 48px;
+border-bottom:  1px solid black;
+}
+
+.text-justify{
+    text-align:justify;
+}
+footer a {
+    margin-bottom: 8px;
+}
+.text-center{
+    text-align: center;
+}.border-bot{
+    border-bottom: 1px solid #000;
 }
