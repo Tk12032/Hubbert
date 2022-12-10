@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
+    <title>Hubbert</title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/app.css">
 </head>
 <body>
@@ -25,7 +26,7 @@
           <?php bouton_hubbert("Proposer un service / outil","index.php","orange"); ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled"><button>Profil</button></a>
+          <?php boutonpicto("profil", "vert", "rond"); ?>
         </li>
       </ul>
     </div>

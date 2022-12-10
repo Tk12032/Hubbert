@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
-<button class="messagerie"><!-- boutton messagerie --></button>    
+<<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>  
 
+ 
 <section class="garden">
         <div class="texte-central">
             <span>
@@ -40,3 +41,4 @@
     </section>
 
 <?php get_footer(); ?>
+

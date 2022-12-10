@@ -12,18 +12,6 @@ function wp_bootstrap_styles_scripts() {
 }    
 add_action('wp_enqueue_scripts','wp_bootstrap_styles_scripts');
 
-function montheme_menu_class($classes) {
-    $classes[] = 'nav-item';
-    return $classes;
-}
-function montheme_menu_link_class($attrs){
-    $attrs['class'] = 'nav-link';
-    return $attrs;
-}
-
-add_filter('nav_menu_css_class', 'montheme_menu_class');
-add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');
-
 function bouton_hubbert($contenu,$adresse,$couleur) {
 
   echo  '<a class = "nav-link bouton-hubbert '.$couleur.'" href= $adresse >'.$contenu.'</a>';
@@ -34,4 +22,23 @@ function carroussel_couleur($type, $nbr){
     for($i=0; $i<$nbr;$i++){
         echo '<div class="'.$type.'"><p>'.$i.'</p></div>';
     }
+}
+
+
+/*function bouton_picto($type, $couleur,$shape){
+    $nomimg="picto_".$type."_inact.png";
+    $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
+    echo '
+    <button>
+    <img class="'.$couleur.' '.$shape.' '.$type.'" alt="picto '.$type.'" scr="'.$adresse.'">
+    </button>
+    ';
+}*/
+function boutonpicto($type,$couleur,$shape){
+    $nomimg="picto_".$type."_inact.png";
+    $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
+    echo '
+    <button class="'.$couleur.' '.$shape.' '.$type.'">
+    <img class="'.$type.'" src="'.$adresse.'">
+    </button>';
 }
