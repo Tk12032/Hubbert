@@ -21,11 +21,9 @@
         <li class="nav-item">
           <?php bouton_hubbert("Demander un service / outil","index.php","vert"); ?>
         </li>
-
         <li class="nav-item">
           <?php bouton_hubbert("Proposer un service / outil","index.php","orange"); ?>
         </li>
-
         <li class="nav-item">
           <a class="nav-link disabled"><button>Profil</button></a>
         </li>
