@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 <?php 
 /* Template Name: PageFAQ */
 get_header(); ?>
-=======
-<?php get_header(); ?>
->>>>>>> b26c4254efc7a8fbce42781d259d5b89ed61782f
 
 <section class="faq">
         <div>
