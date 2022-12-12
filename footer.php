@@ -28,23 +28,24 @@
         <span>
             <h5>BESOINS D'AIDES ?</h5>
             <!--ligne-->
-            <a href= "page--faq.php">FAQ</a>
+            <p>
+            <?php 
+            wp_nav_menu([
+            'theme_location' => 'footer',
+            'container' => false,
+            'menu_class' => 'navbar-nav me-auto'
+            ]); ?>
+
+            </p>
         </span>
         
-        <?php 
-        wp_nav_menu([
-          'theme_location' => 'footer',
-          'container' => false,
-          'menu_class' => 'navbar-nav me-auto'
-        ]);
-      
-      ?>
+        
 
 
     </div>
     <div>
         <span>
-            <h5>A PROPOS DE NOUS</h5>
+          <h5>A PROPOS DE NOUS</h5>
             <!--ligne-->
             <p class="text-justify">Hubbert est une initiative étudiante qui a la volonté de diminuer l’emprunte carbone de chacun. C’est pourquoi nous vous proposons une plateforme qui vous permet de louer des outils de jardinage et rendre des services aux personnes qui en ont besoin dans leur jardin. </p>
         </span>

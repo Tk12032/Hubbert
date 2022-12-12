@@ -288,7 +288,7 @@ footer{
     padding:30px 50px 100px 50px;
     background-color: #504136;
     color:#ECE4B7;
-    height: 460px;
+    height: auto;
 }
 
 footer div{
@@ -296,20 +296,22 @@ footer div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 360px;
+    height: 400px;
 }
 footer span{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-bottom: 45px;
 }
 
 footer p, a {
-    font-family: 'Josefin Sans';
+font-family: 'Josefin Sans';
 font-style: normal;
 font-weight: 500;
-font-size: 20px;
+font-size: 24px;
 line-height: 24px;
+width:360px;
 }
 
 footer h5{
