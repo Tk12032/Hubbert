@@ -3,6 +3,9 @@ add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 register_nav_menu('footer', 'navigation footer');
+register_nav_menu('navbar', 'en tete');
+
+
 
 //test onverra
 add_theme_support( 'post-templates', array(
