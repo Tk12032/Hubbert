@@ -13,7 +13,12 @@
 <header> 
 <nav class="navbar navbar-expand-lg couleurnav">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img class="logo-navbar" src="<?php echo get_template_directory_uri(); ?>/assets/img/hubbert_noir.png"></a>
+  <?php 
+            wp_nav_menu([
+            'theme_location' => 'navbar',
+            'container' => false,
+            'menu_class' => 'navbar-nav me-auto'
+            ]); ?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

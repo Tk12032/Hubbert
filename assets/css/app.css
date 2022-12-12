@@ -354,8 +354,7 @@ button{
 .faq {
 
     padding-top: 100px;
-width: 817px;
-height: 792px;
+width: 817px;       
 justify-content: center;
 }
 
@@ -368,8 +367,7 @@ justify-content: center;
 font-family: 'Josefin Sans';
 font-style: normal;
 font-weight: 300;
-font-size: 32px;
-line-height: 32px;
+font-size: 24px;
 
 color: #000000;
 
@@ -381,7 +379,6 @@ color: #000000;
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 24px;
 
 }
