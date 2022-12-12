@@ -4,6 +4,13 @@ add_theme_support('post-thumbnails');
 add_theme_support('menus');
 register_nav_menu('footer', 'navigation footer');
 
+//test onverra
+add_theme_support( 'post-templates', array(
+    'page-template-name' => 'Template Name',
+) );
+//fin du test lokum parano
+
+
 function wp_bootstrap_styles_scripts() {
     wp_enqueue_style('style',get_stylesheet_uri());
     wp_enqueue_style('boostrap','https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
