@@ -22,7 +22,7 @@ get_header(); ?>
     ?>
       <span class="question">
             <h5><?php the_title(); ?></h5> 
-            <p class="question"><?php the_content(); ?></p> 
+            <p><?php the_content(); ?></p> 
       </span>
     <?php endwhile; ?>
 <?php else: ?>
