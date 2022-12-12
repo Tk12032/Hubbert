@@ -358,3 +358,7 @@ width: 817px;
 height: 792px;
 justify-content: center;
 }
+
+.faq span {
+    margin:100px;
+}

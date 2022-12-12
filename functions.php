@@ -50,8 +50,19 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
 		],
 		'public' => true, // c'est un post_type publique
 		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
-  	'rewrite' => ['slug' => 'services'], // j'applique une réécriture d'url "services" au lieu de "slug"
+  	'rewrite' => ['slug' => 'outils'], // j'applique une réécriture d'url "services" au lieu de "slug"
 		'menu_icon' => 'dashicons-admin-tools' // je lui précise une icon dans la bar d'outil de l'admin wordpress
+	]);
+
+    register_post_type('question'/* le nom de mon type de contenu */, [ // tableau avec mes options 
+		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
+			'name' => __('question'), // __() permet a wordpress que c'est contenu de traduction
+			'singular_name' => __('question')
+		],
+    	'public' => true, // c'est un post_type publique
+		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
+  	    'rewrite' => ['slug' => 'question'], // j'applique une réécriture d'url "services" au lieu de "slug"
+		'menu_icon' => 'dashicons-clipboard' // je lui précise une icon dans la bar d'outil de l'admin wordpress
 	]);
 }
 add_action('init', 'create_post_type');
@@ -69,16 +80,6 @@ function carroussel_couleur($type, $nbr){
     }
 }
 
-
-/*function bouton_picto($type, $couleur,$shape){
-    $nomimg="picto_".$type."_inact.png";
-    $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
-    echo '
-    <button>
-    <img class="'.$couleur.' '.$shape.' '.$type.'" alt="picto '.$type.'" scr="'.$adresse.'">
-    </button>
-    ';
-}*/
 function boutonpicto($type,$couleur,$shape){
     $nomimg="picto_".$type."_inact.png";
     $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
@@ -97,6 +98,18 @@ function montheme_menu_class($classes) {
 	$attrs['class'] = 'nav-link';
 	return $attrs;
   }
+
+
+    
+        
+    
+
+
+
+
+
+
+
   
   add_filter('nav_menu_css_class', 'montheme_menu_class');
   add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');

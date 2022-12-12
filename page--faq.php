@@ -4,12 +4,31 @@ get_header(); ?>
 
 <div class="container">
 <section class="faq">
-        <div id="q1">
-            <span>
-                <h1>Peut on donner du chocolat à son chien ?</h1>
-                <p>Alors de ce que nous savons, il est très déconseillé de nourrir ses animaux de compagnie avec du chocolat. Pour la pluspart c’est un aliment qui peut agir comme du poison pour eux. Malgré tout, nous restons assez confu sur la pertinence de cette question sur un site parlant de jardinage.</p>
-            </span>
-        </div>
+        
+<?php
+  $question = new WP_Query([ // je crée une variable $services
+    'post_type' => 'question', // la je précise quel post_type je veux (dans mon cas "services")
+    'post_status' => 'publish', // la je précise que je veux des posts qui sont publié
+    'limit' => 3, // dans mon cas je n'en ai besoin que de trois
+    'orderby' => 'date', // je les trie par date 
+    'date' => true // je récupéère ma date
+  ]);
+
+  if ($question->have_posts()): // ici je vérifie que $services posède bien mes posts
+?>
+    <?php 
+      while ($question->have_posts()): // la je lance ma boucle sur mes posts contenu dans services
+      $question->the_post(); // la récupère mon post
+    ?>
+      <span>
+            <h5><?php the_title(); ?></h5> 
+            <p><?php the_content(); ?></p> 
+      </span>
+    <?php endwhile; ?>
+<?php else: ?>
+  <h5>On a pas encore de question a vous répondre mais ça arrive !</h5>
+<?php endif; ?>
+
  </section>
 </div>
 
