@@ -12,6 +12,44 @@ function wp_bootstrap_styles_scripts() {
 }    
 add_action('wp_enqueue_scripts','wp_bootstrap_styles_scripts');
 
+
+function create_post_type() {	 // function dans la quel j'ajouterais tous mes type de contenu
+	register_post_type('services'/* le nom de mon type de contenu */, [ // tableau avec mes options 
+		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
+			'name' => __('Services'), // __() permet a wordpress que c'est contenu de traduction
+			'singular_name' => __('Services')
+		],
+    	'public' => true, // c'est un post_type publique
+		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
+  	    'rewrite' => ['slug' => 'services'], // j'applique une réécriture d'url "services" au lieu de "slug"
+		'menu_icon' => 'dashicons-clipboard' // je lui précise une icon dans la bar d'outil de l'admin wordpress
+	]);
+    
+    register_post_type('profil'/* le nom de mon type de contenu */, [ // tableau avec mes options 
+		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
+			'name' => __('Profil'), // __() permet a wordpress que c'est contenu de traduction
+			'singular_name' => __('Profil')
+		],
+   		'public' => true, // c'est un post_type publique
+		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
+  	    'rewrite' => ['slug' => 'services'], // j'applique une réécriture d'url "services" au lieu de "slug"
+		'menu_icon' => 'dashicons-admin-users' // je lui précise une icon dans la bar d'outil de l'admin wordpress
+	]);
+
+    register_post_type('outil'/* le nom de mon type de contenu */, [ // tableau avec mes options 
+		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
+			'name' => __('outils'), // __() permet a wordpress que c'est contenu de traduction
+			'singular_name' => __('outils')
+		],
+		'public' => true, // c'est un post_type publique
+		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
+  	'rewrite' => ['slug' => 'services'], // j'applique une réécriture d'url "services" au lieu de "slug"
+		'menu_icon' => 'dashicons-admin-tools' // je lui précise une icon dans la bar d'outil de l'admin wordpress
+	]);
+}
+add_action('init', 'create_post_type');
+
+
 function bouton_hubbert($contenu,$adresse,$couleur) {
 
   echo  '<a class = "nav-link bouton-hubbert '.$couleur.'" href= $adresse >'.$contenu.'</a>';
