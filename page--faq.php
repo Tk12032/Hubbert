@@ -20,9 +20,9 @@ get_header(); ?>
       while ($question->have_posts()): // la je lance ma boucle sur mes posts contenu dans services
       $question->the_post(); // la récupère mon post
     ?>
-      <span>
+      <span class="question">
             <h5><?php the_title(); ?></h5> 
-            <p><?php the_content(); ?></p> 
+            <p class="question"><?php the_content(); ?></p> 
       </span>
     <?php endwhile; ?>
 <?php else: ?>
