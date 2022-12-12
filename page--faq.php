@@ -1,5 +1,6 @@
-
-<?php get_header(); ?>
+<?php 
+/* Template Name: PageFAQ */
+get_header(); ?>
 
 <section class="faq">
         <div>
