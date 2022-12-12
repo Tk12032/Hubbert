@@ -362,3 +362,26 @@ justify-content: center;
 .faq span {
     margin:100px;
 }
+
+.question p {
+
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 32px;
+line-height: 32px;
+
+color: #000000;
+
+
+}
+
+.question h5 {
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+
+}
