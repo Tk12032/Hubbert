@@ -50,7 +50,7 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
 		],
 		'public' => true, // c'est un post_type publique
 		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
-  	'rewrite' => ['slug' => 'services'], // j'applique une réécriture d'url "services" au lieu de "slug"
+  	'rewrite' => ['slug' => 'outils'], // j'applique une réécriture d'url "services" au lieu de "slug"
 		'menu_icon' => 'dashicons-admin-tools' // je lui précise une icon dans la bar d'outil de l'admin wordpress
 	]);
 
@@ -99,20 +99,6 @@ function montheme_menu_class($classes) {
 	return $attrs;
   }
 
-  function questionfaq(){
-
-    if(have_posts()){
-
-        while (have_posts()){
-
-            the_post();
-            echo '<h5>'.the_title().'</h5>
-            <p>'.the_excerpt().'</p>';
-
-        }
-
-    }
-}
 
     
         
