@@ -28,9 +28,19 @@
         <span>
             <h5>BESOINS D'AIDES ?</h5>
             <!--ligne-->
-            <a href= "faq.php">FAQ</a>
+            <a href= "page--faq.php">FAQ</a>
         </span>
         
+        <?php 
+        wp_nav_menu([
+          'theme_location' => 'footer',
+          'container' => false,
+          'menu_class' => 'navbar-nav me-auto'
+        ]);
+      
+      ?>
+
+
     </div>
     <div>
         <span>

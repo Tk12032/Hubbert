@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 
 <section class="faq">

@@ -2,7 +2,7 @@
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
-register_nav_menu('header', 'En tête du menu');
+register_nav_menu('footer', 'navigation footer');
 
 function wp_bootstrap_styles_scripts() {
     wp_enqueue_style('style',get_stylesheet_uri());
@@ -80,3 +80,16 @@ function boutonpicto($type,$couleur,$shape){
     <img class="pictobouton '.$type.'" src="'.$adresse.'">
     </button>';
 }
+
+
+function montheme_menu_class($classes) {
+	$classes[] = 'nav-item';
+	return $classes;
+  }
+  function montheme_menu_link_class($attrs) {
+	$attrs['class'] = 'nav-link';
+	return $attrs;
+  }
+  
+  add_filter('nav_menu_css_class', 'montheme_menu_class');
+  add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');
