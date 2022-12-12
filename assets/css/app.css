@@ -346,3 +346,23 @@ button{
     background-color: transparent;
 }
  
+<<<<<<< HEAD
+
+/* c'est pour le FAQ */
+
+.faq {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 36px;
+
+position: absolute;
+width: 817px;
+height: 792px;
+left: 169px;
+top: 205px;
+
+}
+=======
+>>>>>>> 2f41e30d12743e50ec7a903e689fd1cbc9c572f7
