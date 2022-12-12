@@ -36,11 +36,10 @@
         <div class="bouton-page">
         <?php bouton_hubbert("Demander un outil","index.php","vert"); ?>
         <?php bouton_hubbert("Proposer un outil","index.php","orange"); ?>
-        </div>
        
     </section>
 
-
+   
 
 
 
