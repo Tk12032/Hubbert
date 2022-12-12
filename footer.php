@@ -28,7 +28,7 @@
         <span>
             <h5>BESOINS D'AIDES ?</h5>
             <!--ligne-->
-            <a href="<?php get_template_directory_uri();?>">FAQ</a>
+            <a href= "faq.php">FAQ</a>
         </span>
         
     </div>
@@ -63,8 +63,7 @@
           return oldSrc.replace('actif', 'inact');
         });
       });
-
-
+      
     </script>
 </body>
 </html>

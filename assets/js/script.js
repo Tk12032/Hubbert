@@ -19,4 +19,3 @@ $('.pictobouton').hover(function() {
 
 
 });
-
