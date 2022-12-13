@@ -131,6 +131,7 @@ border-radius: 8px;
     border: 2px solid #AACF23;
     background-color: #AACF23;
     border-radius: 8px;
+    opacity: 100%;
     
     }
 
@@ -454,7 +455,8 @@ footer p{
 }
 
 #menu-navbar{
-    width: 100%;
+    display: flex;
+    justify-content: space-between; 
 }
 
 #menu-navbar li:nth-child(1) a{
