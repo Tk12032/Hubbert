@@ -24,8 +24,7 @@ body {
      justify-content: space-between;
      height: 86px;
      box-shadow: 0px 0px 20px black;
-     margin-right:-30px; /* Oui c'est un move un peu louche mais bootsrap ajoute 30px de margin qqpart et on arrive par à le retirer donc voila l'astuce */
-
+    
 }
 
 .garden { 
@@ -96,24 +95,19 @@ header .nav-item a, main .nav-item a{
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 10px 20px 5px 20x;
 font-family: 'Poppins';
 font-weight: bold;
 font-style: normal;
 height: 40px;
 font-size: 16px;
 color: #504136;
-width: 300px;   
+width: fit-content;
 }
 
-.nav-item{
-    margin-top: 0px;
-    padding:0px;
-}
 .vert {
 
 /* vert cta */
-
+width:auto;
 border: 2px solid #AACF23;
 border-radius: 8px;
 
@@ -300,7 +294,7 @@ footer span{
     margin-bottom: 45px;
 }
 
-footer p, a {
+footer p, footer a {
 font-family: 'Josefin Sans';
 font-style: normal;
 font-weight: 500;
@@ -335,17 +329,14 @@ footer a {
     width: 45px;
 }
 
-#menu-logohome{
-    width: 100%;
+
+.profil .menu-image{
+    margin-top:-20px;
+    height: 1000px !important;
+    padding:7px;
+    margin-left:-5px;
 }
 
-.profil img {
-    position: absolute;
-    margin-top:-20px;
-    margin-left:-16px;
-    height: 40px;
-    padding:7px;
-}
 button{
     width: fit-content;
     height: fit-content;
