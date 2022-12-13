@@ -89,7 +89,7 @@ h1 {
     margin-bottom: 30px;
 }
 
-header .nav-item a, main .nav-item a{
+header a, main a{
 
 /* Auto layout --> template pour tout les boutons CTA */
 
