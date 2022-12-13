@@ -17,19 +17,14 @@
             wp_nav_menu([
             'theme_location' => 'navbar',
             'container' => false,
-            'menu_class' => 'navbar-nav me-auto'
+            'menu_class' => 'navbar-nav'
             ]); ?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <?php bouton_hubbert("Demander un service / outil","index.php","vert"); ?>
-        </li>
-        <li class="nav-item">
-          <?php bouton_hubbert("Proposer un service / outil","index.php","orange"); ?>
-        </li>
+        
         <li class="nav-item">
           <?php boutonpicto("profil", "vert", "rond"); ?>
         </li>

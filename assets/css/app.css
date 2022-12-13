@@ -7,13 +7,6 @@ body {
 
 }
 
-
-.logo-navbar{
-
-    height: 42px;
-
-}
-
 .couleurnav {
 
      background-color: #ECE4B7;
@@ -96,25 +89,27 @@ h1 {
     margin-bottom: 30px;
 }
 
-.bouton-hubbert {
+header .nav-item a, main .nav-item a{
 
 /* Auto layout --> template pour tout les boutons CTA */
 
 display: flex;
-flex-direction: row;
 justify-content: center;
 align-items: center;
-padding: 10px 20px;
-text-decoration:none;
+padding: 10px 20px 5px 20x;
 font-family: 'Poppins';
 font-weight: bold;
 font-style: normal;
+height: 40px;
 font-size: 16px;
 color: #504136;
 width: 300px;   
 }
 
-
+.nav-item{
+    margin-top: 0px;
+    padding:0px;
+}
 .vert {
 
 /* vert cta */
