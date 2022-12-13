@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: PageFAQ */
+/* Template Name: PageConnexion */
 get_header(); ?>
 
 

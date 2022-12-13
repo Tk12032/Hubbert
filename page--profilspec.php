@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: PageFAQ */
+/* Template Name: PageProfilspec */
 get_header(); ?>
 
 
