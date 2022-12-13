@@ -15,7 +15,7 @@
   <div class="container-fluid">
   <?php 
             wp_nav_menu([
-            'theme_location' => 'navbar',
+            'theme_location' => 'logohome',
             'container' => false,
             'menu_class' => 'navbar-nav'
             ]); ?>

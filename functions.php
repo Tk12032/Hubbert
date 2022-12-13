@@ -2,8 +2,8 @@
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
-register_nav_menu('footer', 'navigation footer');
-register_nav_menu('navbar', 'en tete');
+register_nav_menu('footer', 'navigation_footer');
+register_nav_menu('logohome', 'en_tete');
 
 
 
