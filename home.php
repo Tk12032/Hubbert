@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php 
+/* Template Name: PageHome */
+get_header(); ?>
 
 <<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>  
 
