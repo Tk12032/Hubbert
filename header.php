@@ -13,12 +13,6 @@
 <header> 
 <nav class="navbar navbar-expand-lg couleurnav">
   <div class="container-fluid">
-  <?php 
-            wp_nav_menu([
-            'theme_location' => 'logohome',
-            'container' => false,
-            'menu_class' => 'navbar-nav me-auto'
-            ]); ?>
             <?php 
             wp_nav_menu([
             'theme_location' => 'navbar',
