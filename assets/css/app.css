@@ -267,9 +267,11 @@ margin-bottom:45px;
     font-size:16px;
 }
 .carroussel .card-text{
-    overflow-x: hidden;
-    white-space: nowrap; /* Don't forget this one */
-    text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
 }
 div.card-body{
     width: 160px;
@@ -366,7 +368,7 @@ footer a {
 
 .profil .menu-image{
     margin-top:-20px;
-    height: 1000px !important;
+    height: 1000px;
     padding:7px;
     margin-left:-5px;
 }
