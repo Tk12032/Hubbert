@@ -17,7 +17,7 @@
             wp_nav_menu([
             'theme_location' => 'logohome',
             'container' => false,
-            'menu_class' => 'navbar-nav'
+            'menu_class' => 'navbar-nav me-auto'
             ]); ?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
