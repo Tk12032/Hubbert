@@ -2,7 +2,7 @@
 /* Template Name: PageHome */
 get_header(); ?>
 
-<<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>  
+<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>  
 
  
 <section class="garden">
@@ -17,7 +17,7 @@ get_header(); ?>
 
     <section class="services">
         <div class="carroussel">
-            <?php carroussel_couleur("users",20); ?>
+            <?php carroussel_couleur("profil",20); ?>
             <!-- fct php de création de card en ftc des meilleurs users -->
         </div>
         <div class="bouton-page">
