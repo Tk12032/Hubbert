@@ -332,11 +332,17 @@ footer a {
 
 .rond {
     border-radius: 30px;
-    width: 60px;
+    width: 45px;
+}
+
+#menu-logohome{
+    width: 100%;
 }
 
 .profil img {
     position: absolute;
+    margin-top:-20px;
+    margin-left:-16px;
     height: 40px;
     padding:7px;
 }
