@@ -2,7 +2,7 @@
 /* Template Name: PageConfigP */
 get_header(); ?>
 
-<div class="container-fluid">
+
 
 
 
