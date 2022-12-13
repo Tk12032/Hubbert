@@ -111,13 +111,14 @@ function carroussel_couleur($type, $nbr){
 		$content->the_post(); // la récupère mon post
 		if($type==='profil'){
 			$image=get_field('photo_de_profil');
-			echo '<div class="card" style="width: 18rem;">
+			$nom_prenom=get_the_title();
+			$description=get_the_content();
+			echo '<div class="card profil" style="width: 18rem;">
 				<img class="card-img-top" src="'.$image['url'].'" alt="Card image cap">
 				<div class="card-body">
-					<h5 class="card-title">'.the_title().'</h5>
-					<p class="card-text">'.get_field('localite').'</p>
-					<p class="card-text">'.the_content().'</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+					<h5 class="card-title">'.$nom_prenom.'</h5>
+					<p class="localite">'.get_field('localite').'</p>
+					<p class="card-text">'.$description.'</p>
 				</div>
 			</div>
 				';

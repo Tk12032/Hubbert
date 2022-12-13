@@ -27,6 +27,16 @@ body {
     
 }
 
+.card.profil{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: transparent;
+}
+
+.card-title{
+    font-size:20px;
+}
+
 .garden { 
 
     background-color: #000;
@@ -63,6 +73,7 @@ body {
     height: 96px;
 
 }
+
 
 h1 {
 
@@ -235,7 +246,7 @@ flex-direction: row;
 margin-bottom:45px;
 }
 
-.carroussel > .users {
+.carroussel > .profil {
     flex-shrink: 0;
    text-align: center;
    margin-left: 25px;
@@ -244,6 +255,29 @@ margin-bottom:45px;
     border: 2px solid #504136;
     border-radius: 15px;
 
+}
+.carroussel p {
+    font-size:14px;
+    line-height: 14px;
+    margin-bottom:10px;
+    text-align:start;
+}
+.carroussel img{
+    width:130px;
+    height: 150px;
+    border-radius:12px 0px 0px 12px;
+    overflow: hidden;
+}
+.carroussel h5{
+    font-size:16px;
+}
+.carroussel .card-text{
+    overflow-x: hidden;
+    white-space: nowrap; /* Don't forget this one */
+    text-overflow: ellipsis;
+}
+div.card-body{
+    width: 160px;
 }
 
 .carroussel > .tools {
@@ -286,6 +320,11 @@ footer div{
     flex-direction: column;
     justify-content: space-between;
     height: 400px;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 footer span{
     display: flex;
