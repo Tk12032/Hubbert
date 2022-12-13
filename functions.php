@@ -3,7 +3,7 @@ add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 register_nav_menu('footer', 'navigation footer');
-register_nav_menu('lohohome', 'en tete');
+register_nav_menu('logohome', 'en tete');
 
 
 
