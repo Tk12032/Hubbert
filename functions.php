@@ -67,6 +67,23 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
   	    'rewrite' => ['slug' => 'question'], // j'applique une réécriture d'url "services" au lieu de "slug"
 		'menu_icon' => 'dashicons-clipboard' // je lui précise une icon dans la bar d'outil de l'admin wordpress
 	]);
+
+	
+	
+	/* Pour mention legale */
+
+
+	register_post_type('textelegal'/* le nom de mon type de contenu */, [ // tableau avec mes options 
+		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
+			'name' => __('textelegal'), // __() permet a wordpress que c'est contenu de traduction
+			'singular_name' => __('textelegal')
+		],
+    	'public' => true, // c'est un post_type publique
+		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
+  	    'rewrite' => ['slug' => 'textelegal'], // j'applique une réécriture d'url "textelegal" au lieu de "slug"
+		'menu_icon' => 'dashicons-clipboard' // je lui précise une icon dans la bar d'outil de l'admin wordpress
+	]);
+
 }
 add_action('init', 'create_post_type');
 

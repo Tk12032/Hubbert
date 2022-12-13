@@ -387,3 +387,37 @@ color: #000000;
     font-size: 24px;
 
 }
+
+/* c'est pour le mentionlegale */
+
+.legal {
+
+padding-top: 100px;
+width: 817px;       
+justify-content: center;
+min-height: 600px;
+
+}
+
+
+.legal span {
+    margin:100px;
+}
+
+.tzxtelegal p {
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+;}
+
+.textelegal h5 {
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+
+}
