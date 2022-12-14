@@ -74,6 +74,14 @@ body {
 }
 
 
+.texte-profil h1 {
+
+    width: 500px;
+    height: 96px;
+
+}
+
+
 h1 {
 
 
@@ -341,7 +349,7 @@ width:360px;
 }
 
 footer h5{
-    font-family: 'Poppins';
+font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
 font-size: 32px;
@@ -385,7 +393,7 @@ button{
 
 .faq {
 
-    padding-top: 100px;
+padding-top: 100px;
 width: 817px;       
 justify-content: center;
 min-height: 600px;
@@ -416,7 +424,7 @@ color: #000000;
 
 }
 
-/* c'est pour le mentionlegale */
+/* c'est pour la mentionlegale */
 
 .legal {
 
@@ -492,3 +500,19 @@ footer p{
 #menu-navbar a{
     width: fit-content;
 }
+
+
+.texte-profil {
+
+margin-top:-20px;
+height: 1000px;
+padding:7px;
+
+padding-top: 100px;
+width: 817px;       
+justify-content: center;
+min-height: 600px;
+margin-left: 50px;
+
+}
+

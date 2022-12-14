@@ -6,18 +6,18 @@ get_header(); ?>
 <section class="faq">
         
 <?php
-  $question = new WP_Query([ // je crée une variable $services
-    'post_type' => 'question', // la je précise quel post_type je veux (dans mon cas "services")
+  $question = new WP_Query([ // je crée une variable $q
+    'post_type' => 'question', // la je précise quel post_type je veux (dans mon cas "q")
     'post_status' => 'publish', // la je précise que je veux des posts qui sont publié
     'limit' => 3, // dans mon cas je n'en ai besoin que de trois
     'orderby' => 'date', // je les trie par date 
     'date' => true // je récupéère ma date
   ]);
 
-  if ($question->have_posts()): // ici je vérifie que $services posède bien mes posts
+  if ($question->have_posts()): // ici je vérifie que $q posède bien mes posts
 ?>
     <?php 
-      while ($question->have_posts()): // la je lance ma boucle sur mes posts contenu dans services
+      while ($question->have_posts()): // la je lance ma boucle sur mes posts contenu dans q
       $question->the_post(); // la récupère mon post
     ?>
       <span class="question">
