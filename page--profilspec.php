@@ -20,7 +20,7 @@ if ($content->have_posts()): // ici je vérifie que $services posède bien mes p
 ?>
 <div class="container">
     <div class="info-profil">
-
+ 
         <div class="top-part">
 
             <span class="infotext">
