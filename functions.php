@@ -27,8 +27,8 @@ add_action('wp_enqueue_scripts','wp_bootstrap_styles_scripts');
 function create_post_type() {	 // function dans la quel j'ajouterais tous mes type de contenu
 	register_post_type('services'/* le nom de mon type de contenu */, [ // tableau avec mes options 
 		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
-			'name' => __('Services'), // __() permet a wordpress que c'est contenu de traduction
-			'singular_name' => __('Services')
+		'name' => __('Services'), // __() permet a wordpress que c'est contenu de traduction
+		'singular_name' => __('Services')
 		],
     	'public' => true, // c'est un post_type publique
 		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
