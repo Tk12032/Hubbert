@@ -8,7 +8,13 @@ get_header(); ?>
 <section class="garden">
         <div class="texte-central">
             <span>
-                <h1>KEEP YOUR GARDEN CLEAN</h1>
+                <?php 
+                    $homepage=get_page_by_title('home-page');
+                    echo var_dump($homepage);
+
+
+                
+                 ?>
                 <p>La plateforme qui vous permet d’échanger entre voisins des outils et des services de jardinage à bas prix.</p>
             </span>
             <?php bouton_hubbert("Je me connecte","index.php","vert nav-item menu-item"); ?>

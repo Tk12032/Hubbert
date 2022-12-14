@@ -435,7 +435,9 @@ min-height: 600px;
 
 }
 
-
+.container{
+    margin-top:100px;
+}
 .legal span {
     margin:100px;
 }
@@ -502,17 +504,11 @@ footer p{
 }
 
 
-.texte-profil {
-
-margin-top:-20px;
-height: 1000px;
-padding:7px;
-
-padding-top: 100px;
-width: 817px;       
-justify-content: center;
-min-height: 600px;
-margin-left: 50px;
-
+.top-part{
+    display: flex;
+    flex-direction: row;
+}
+.info-profil img{
+    width:220px;
 }
 

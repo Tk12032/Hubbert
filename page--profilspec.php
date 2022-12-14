@@ -11,26 +11,36 @@ $content = new WP_Query([ // je crée une variable $services
   'date' => true // je récupéère ma date
 ]);
 
-if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts
+if ($content->have_posts()): // ici je vérifie que $services posède bien mes posts
 
       $content->the_post(); // la récupère mon post
           $image=get_field('photo_de_profil');
           $nom_prenom=get_the_title();
           $description=get_the_content();
-          echo '<div class="card profil" style="width: 18rem;">
-              <img class="card-img-top" src="'.$image['url'].'" alt="Card image cap">
-              <div class="card-body">
-                  <h5 class="card-title">'.$nom_prenom.'</h5>
-                  <p class="localite">'.get_field('localite').'</p>
-                  <p class="card-text">'.$description.'</p>
-              </div>
-          </div>
-              ';
-      
-  
-}
-else{
-  echo '<h5>On a pas encore de question a vous répondre mais ça arrive !</h5>';
-}
+?>
+<div class="container">
+    <div class="info-profil">
+
+        <div class="top-part">
+
+            <span class="infotext">
+                <h5><?php echo $nom_prenom; ?></h5>
+                <h4><?php echo get_field('localite'); ?></h4>
+
+            </span>
+            <img class="pdp" src="<?php echo $image['url']; ?>" alt="Photo d'un très bel homme">
+
+        </div>
+        <span class="descri">                
+            <p><?php echo $description; ?></p>
+        </span>
+
+    </div>
+</div>
+
+<?php
+else:
+  echo '</h5>'."Il n'y a personne ici !".'</h5>';
+endif;
 ?>
 <?php get_footer(); ?>
