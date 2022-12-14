@@ -510,5 +510,22 @@ footer p{
 }
 .info-profil img{
     width:220px;
+    height: 217px;
 }
 
+.infotext {
+
+    width: 220px;
+    height: 36px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+}
+
+
+.descri {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    width: 220px;
+    height: 36px;
+margin-bottom: 500px;
+}
