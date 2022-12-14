@@ -24,4 +24,7 @@
     </button>
   </div>
 </nav>
+
+
+<?php block_header_area(); ?>
 </header>

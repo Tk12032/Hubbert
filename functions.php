@@ -14,6 +14,17 @@ add_theme_support( 'post-templates', array(
 ) );
 //fin du test lokum parano
 
+register_meta( 'post', 'block_name', array(
+	'show_in_rest' => true,
+	'single'       => true,
+	'type'         => 'string',
+  ) );
+  
+
+function my_theme_setup() {
+    add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'widgets' ) );
+}
+add_action( 'after_setup_theme', 'my_theme_setup' );
 
 function wp_bootstrap_styles_scripts() {
     wp_enqueue_style('style',get_stylesheet_uri());
