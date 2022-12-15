@@ -4,8 +4,6 @@ get_header(); ?>
 
 
 
-<?php wpforms(124);?>
-
 <div class="container">
 <?php
 $homepage = new WP_Query([ // je crée une variable $q

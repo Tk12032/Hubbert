@@ -312,6 +312,7 @@ height: 252px;
     width: 300px;
 }
 footer{
+    bottom:0px;
     display:flex;
     justify-content: space-between;
     padding:30px 50px 100px 50px;
@@ -437,6 +438,8 @@ min-height: 600px;
 
 .container{
     margin-top:100px;
+    height: fit-content;
+    margin-bottom: 100px;
 }
 .legal span {
     margin:100px;
@@ -507,10 +510,19 @@ footer p{
 .top-part{
     display: flex;
     flex-direction: row;
+    width: fit-content;
 }
 .info-profil img{
     width:220px;
     height: 217px;
+}
+
+.info-profil{
+    width:500px;   
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+
 }
 
 .infotext {
@@ -525,7 +537,7 @@ footer p{
 .descri {
     font-family: 'Josefin Sans';
     font-style: normal;
-    width: 220px;
     height: 36px;
-margin-bottom: 500px;
+    margin-top: 30px;
+    text-align: justify;
 }

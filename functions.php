@@ -21,6 +21,23 @@ register_meta( 'post', 'block_name', array(
   ) );
   
 
+// Define the form options
+$options = array(
+    'id' => 'creaannonce',
+    'post_id' => 'new_post',
+    'field_groups' => array(30),
+    'submit_value' => 'Submit Form',
+    'updated_message' => 'Form updated!',
+    'new_post' => array(
+        'post_type' => 'post',
+        'post_status' => 'pending',
+    ),
+);
+
+// Register the form
+acf_register_form( $options );
+
+
 function my_theme_setup() {
     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'widgets' ) );
 }
