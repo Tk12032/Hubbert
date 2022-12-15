@@ -5,8 +5,6 @@ get_header(); ?>
 
 
 
-
-</div>
        
 
 
