@@ -2,10 +2,7 @@
 /* Template Name: PageConfigP */
 get_header(); ?>
 
-
-
-
-       
+   
 
 
 
