@@ -157,7 +157,7 @@ function carroussel_couleur($type, $nbr){
 else{
 	echo '<h5>On a pas encore de question a vous répondre mais ça arrive !</h5>';
 }
-       
+}       
 
 
 
@@ -165,7 +165,7 @@ else{
 function recherche_annonce($nbr) {
 
 	$content = new WP_Query([ // je crée une variable $services
-	'post_type' => ['services', 'outils'] // la je précise quel post_type je veux (dans mon cas "services")
+	'post_type' => ['services', 'outils'], // la je précise quel post_type je veux (dans mon cas "services")
 	  'post_status' => 'publish', // la je précise que je veux des posts qui sont publié
 	  'limit' => $nbr, // dans mon cas je n'en ai besoin que de trois
 	  'orderby' => 'date', // je les trie par date 
@@ -176,7 +176,7 @@ function recherche_annonce($nbr) {
   
 		while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
 		  $content->the_post(); // la récupère mon post
-		  if($type==='services'){
+		  if(get_post_type($content)==='services'){
 			  $image=get_field('illustrationimg');
 			  $nom_prenom=get_the_title();
 			  $description=get_the_content();
@@ -196,13 +196,6 @@ function recherche_annonce($nbr) {
   else{
 	  echo '<h5>On a pas encore de question a vous répondre mais ça arrive !</h5>';
   }
-  
-
-  
-
-
-
-
 
 }
 
