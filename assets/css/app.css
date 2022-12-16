@@ -564,6 +564,7 @@ p {
 
 .comment{
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 h3{
     font-family: Poppins;
@@ -591,4 +592,7 @@ h3{
     font-family:'Josefin Sans';
     margin-left: 16px;
     margin-top: 12px;
+}
+.comment p {
+    margin-top: 16px;
 }
