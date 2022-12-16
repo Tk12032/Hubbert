@@ -244,7 +244,12 @@ text-align: center;
     flex-direction: column;
     margin-bottom: 73px;
 }
-
+.no-scroll{
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
 
 .carroussel .carroussel--wrapper{
     display: flex;
