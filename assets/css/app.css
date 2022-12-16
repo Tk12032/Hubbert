@@ -246,11 +246,11 @@ text-align: center;
 }
 
 
-.carroussel{
+.carroussel .carroussel--wrapper{
     display: flex;
 }
 
-.carroussel > .profil {
+.carroussel  .profil {
     flex-shrink: 0;
    text-align: center;
    margin-left: 25px;
