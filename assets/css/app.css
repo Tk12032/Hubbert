@@ -586,3 +586,9 @@ h3{
     font-weight: 700;
     font-size: 32;
 }
+
+.versprofil img {
+    width:40px;
+    height: 40px;
+    border-radius: 15px;
+}
