@@ -85,6 +85,7 @@ Vars
 const $menu = document.querySelector('.carroussel')
 const $items = document.querySelectorAll('.carroussel--item')
 const $images = document.querySelectorAll('.carroussel--item img')
+const $body=document.querySelector('body');
 let menuWidth = $menu.clientWidth
 let itemWidth = $items[0].clientWidth
 let wrapWidth = $items.length * itemWidth
@@ -94,6 +95,15 @@ let oldScrollY = 0
 let scrollY = 0
 let y = 0
 
+/*scroll page*/
+
+$($menu).mouseenter(function(){
+
+  $body.classList.add('no-scroll');
+})
+$($menu).mouseleave(function(){
+  $body.classList.remove('no-scroll');
+})
 
 /*--------------------
 Lerp
