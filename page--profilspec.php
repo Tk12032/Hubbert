@@ -54,4 +54,10 @@ else:
   echo '</h5>'."Il n'y a personne ici !".'</h5>';
 endif;
 ?>
+
+
+<?php comments_template(); ?>
+
+
+
 <?php get_footer(); ?>
