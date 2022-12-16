@@ -6,7 +6,6 @@ get_header(); ?>
 
 <?php recherche_annonce(20);?> 
 
-
 </div>
 
 
