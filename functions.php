@@ -103,6 +103,7 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
   	    'rewrite' => ['slug' => 'question'], // j'applique une réécriture d'url "services" au lieu de "slug"
 		'menu_icon' => 'dashicons-clipboard' // je lui précise une icon dans la bar d'outil de l'admin wordpress
 	]);
+	add_post_type_support( 'profil', 'comments' );
 
 	
 	

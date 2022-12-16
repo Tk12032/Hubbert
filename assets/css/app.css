@@ -474,7 +474,7 @@ footer p{
 
 #menu-navbar{
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-around; 
 }
 
 #menu-navbar li:nth-child(1) a{
@@ -484,7 +484,6 @@ footer p{
     background-repeat: no-repeat;
     width:180px;
     margin-left: 40px;
-    margin-right: auto;
 }
 
 #menu-navbar li:nth-child(4) a{
@@ -496,9 +495,16 @@ footer p{
     background-image:url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/picto_profil_inact.svg);
     background-size: 20px;
     background-repeat: no-repeat;
+    justify-self: flex-end;
     background-position: center;
     margin-right:40px;
 }
+
+.navdroite{
+    justify-self: flex-end;
+    width: fit-content;
+}
+
 #menu-navbar li:nth-child(4):hover{
 
     background-image:url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/picto_profil_actif.svg);
