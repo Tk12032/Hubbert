@@ -12,18 +12,15 @@
     }
     
     &--wrapper {
-      display: flex;
       z-index: 1;
       height: 100%;
-      width:300px!important;
     }
     
     &--item {
       position: absolute;
       z-index: 1;
-      width: 300px !important;
-      height: 300px !important;
       overflow: hidden;
+      width: 330px;
       
       @media (max-width: 767px) {
         width: 40vw;
@@ -40,8 +37,6 @@
         padding: 0;
         border: none;
         outline: none;
-        width:30px !important;
-        height: 30px !important;
         box-shadow: none;
         cursor: pointer;
         overflow: hidden;
@@ -49,10 +44,12 @@
         transform-origin: center;
         
         img {
-          position: absolute;
           z-index: 1;
-          width: 100px;
-          height: 30px;
+          width:130px;
+          height: 150px;
+          border-radius:12px 0px 0px 12px;
+          overflow: hidden;
+
           object-fit: cover;
           vertical-align: middle;
           transform-origin: center;
@@ -64,7 +61,6 @@
           bottom: 1vw;
           left: 1vw;
           display: inline-block;
-          content: "0" counter(count);
           color: #ffffff;
           font-size: 3vw;
         }

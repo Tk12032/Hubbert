@@ -149,13 +149,15 @@ function carroussel_couleur($type, $nbr){
 			$image=get_field('photo_de_profil');
 			$nom_prenom=get_the_title();
 			$description=get_the_content();
-			echo '<div class="card profil carrousel--item">
+			echo '<div class="carrousel--item" style="padding: 0px 10px;"> ';
+			echo '<div class="card profil ">
 			<figure><img src="'.$image['url'].'"></figure>
 				<div class="card-body">
 					<h5 class="card-title">'.$nom_prenom.'</h5>
 					<p class="localite">'.get_field('localite').'</p>
 					<p class="card-text">'.$description.'</p>
 				</div>
+			</div>
 			</div>
 				';
 		}

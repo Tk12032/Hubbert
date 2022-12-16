@@ -34,6 +34,9 @@ body {
     display: flex;
     flex-flow: column wrap;
     background-color: transparent;
+    width: 310px;
+    display: flex;
+    align-content: flex-end;
 }
 
 .card-title{
@@ -256,36 +259,17 @@ text-align: center;
     display: none;
 }
 
-.carroussel .carroussel--wrapper{
-    display: flex;
-}
 
-.carroussel  .profil {
-    flex-shrink: 0;
-   text-align: center;
-   margin-left: 25px;
-   width: 310px;
-    height: 134px;
-    border: 2px solid #504136;
-    border-radius: 15px;
-
-}
-.carroussel p {
+.carrousel p {
     font-size:14px;
     line-height: 14px;
     margin-bottom:10px;
     text-align:start;
 }
-.carroussel img{
-    width:130px;
-    height: 150px;
-    border-radius:12px 0px 0px 12px;
-    overflow: hidden;
-}
-.carroussel h5{
+.carrousel h5{
     font-size:16px;
 }
-.carroussel .card-text{
+.carrousel .card-text{
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -294,9 +278,10 @@ text-align: center;
 }
 div.card-body{
     width: 160px;
+    height: 134px;
 }
 
-.carroussel > .tools {
+.carrousel > .tools {
     flex-shrink: 0;
    text-align: center;
    margin-left: 25px;
@@ -338,6 +323,7 @@ div.card-body{
     justify-content: space-between;
     height: 400px;
 }
+
 .card-body{
     display: flex;
     flex-direction: column;
