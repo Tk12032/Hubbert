@@ -27,7 +27,7 @@ get_header(); ?>
     </div>
     <div id="comments">
   <?php if ( have_comments() ) : ?>
-    <h3><?php printf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'your-theme' ), get_comments_number(), '<em>' . get_the_title() . '</em>' ); ?></h3>
+    <h3>Commentaires</h3>
     <ol class="comment-list">
       <?php wp_list_comments( array( 'style' => 'ol' ) ); ?>
 

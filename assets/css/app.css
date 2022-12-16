@@ -125,15 +125,14 @@ font-style: normal;
 height: 40px;
 font-size: 16px;
 color: #504136;
-width: fit-content;
 }
 
 .vert {
 
 /* vert cta */
-width:auto;
 border: 2px solid #AACF23;
 border-radius: 8px;
+width: 100px;
 
 }
 
@@ -145,6 +144,7 @@ border-radius: 8px;
     background-color: #AACF23;
     border-radius: 8px;
     opacity: 100%;
+    width: fit-content;
     
     }
 
@@ -170,6 +170,7 @@ transition: 0.4s;
 
     border: 2px solid #F17444;
     border-radius: 8px;
+    width: fit-content;
 
 }
 
@@ -457,7 +458,7 @@ p {
     font-weight: 300;
     font-size: 24px;
     color: #000000;
-;}
+}
 
 h5 {
 
@@ -474,7 +475,9 @@ h5 {
 
 #menu-navbar{
     display: flex;
-    justify-content: space-around; 
+    justify-content: center;
+    width: 100%;
+
 }
 
 #menu-navbar li:nth-child(1) a{
@@ -552,11 +555,8 @@ h5 {
 margin-bottom: 500px;
 }
 
-#menu-navbar{
-    width: 100%;
-    display:flex;
-    justify-content: flex-end;
-}
+    
+
 
 
 
