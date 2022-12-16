@@ -34,6 +34,11 @@ body {
 
 .card-title{
     font-size:20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
 
 .garden { 
@@ -241,13 +246,8 @@ text-align: center;
 }
 
 
-
 .carroussel{
-width: 100%;
-overflow-x: auto;
-display:flex;
-flex-direction: row;
-margin-bottom:45px;
+    display: flex;
 }
 
 .carroussel > .profil {
@@ -291,7 +291,7 @@ div.card-body{
    text-align: center;
    margin-left: 25px;
    width: 254px;
-height: 252px;
+    height: 252px;
     border: 2px solid #504136;
     border-radius: 15px;
 }
@@ -540,3 +540,18 @@ footer p{
     height: 36px;
 margin-bottom: 500px;
 }
+
+#menu-navbar{
+    width: 100%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
