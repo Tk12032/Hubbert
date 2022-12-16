@@ -563,12 +563,6 @@ h5 {
 }
 
     
-
-
-
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -585,4 +579,18 @@ h3{
     font-style: normal;
     font-weight: 700;
     font-size: 32;
+}
+
+
+.versprofil {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px;
+    
+    width: 218px;
+    height: 68px;
+
 }
