@@ -537,7 +537,7 @@ h5 {
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    max-height: 300px;
+    height: fit-content;
     
 }
 
@@ -553,8 +553,13 @@ h5 {
 .descri {
     font-family: 'Josefin Sans';
     font-style: normal;
-    height: 36px;
-margin-bottom: 500px;
+    margin-top: 30px;
+    overflow: scroll;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    text-align: justify;
 }
 
     
@@ -568,15 +573,16 @@ margin-bottom: 500px;
   box-sizing: border-box;
 }
 
-.commentlist {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 22px 10px 10px;
-    gap: 10px;
-    margin-left: 50px;
-    width: 491px;
-    height: 247px;
+.commentaires{
+    margin-top:50px;
+}
 
+.comment{
+    margin-top: 30px;
+}
+h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32;
 }
