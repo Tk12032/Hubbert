@@ -58,7 +58,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 <script src="<?php get_template_directory_uri(); ?>/assets/js/script.js"></script>
-<<<<<<< Updated upstream
 <script>
 
     //code qui sert à changer l'image du picto qd c'est en hover, en vrai si on passe part des svg ça pourrait accéléer, ou meme simplement mettre les deux images at the same place and while hovering set the opacity of the first at 0
@@ -83,11 +82,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
     
-=======
- <script>
-    $(function(){
-
->>>>>>> Stashed changes
 /*--------------------
 Vars
 --------------------*/
@@ -218,7 +212,6 @@ const render = () => {
 }
 render()
 
-});
 </script>
 </body>
 </html>
