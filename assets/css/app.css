@@ -563,12 +563,6 @@ h5 {
 }
 
     
-
-
-
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -591,4 +585,16 @@ h3{
     width:40px;
     height: 40px;
     border-radius: 15px;
+}
+.versprofil {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px;
+    
+    width: 218px;
+    height: 68px;
+
 }
