@@ -79,7 +79,9 @@
       
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-    <script>/*--------------------
+    <script>
+    
+/*--------------------
 Vars
 --------------------*/
 const $menu = document.querySelector('.carroussel')
