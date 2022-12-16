@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer">
     <div>
         <span class="border-bot">
             <h5>SUIVEZ NOUS</h5>

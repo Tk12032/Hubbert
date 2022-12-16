@@ -316,7 +316,7 @@ div.card-body{
 .logo-footer{
     width: 300px;
 }
-footer{
+.footer{
     bottom:0px;
     display:flex;
     justify-content: space-between;
@@ -326,7 +326,7 @@ footer{
     height: auto;
 }
 
-footer div{
+.footer div{
     width: 360px;
     display: flex;
     flex-direction: column;
@@ -338,14 +338,14 @@ footer div{
     flex-direction: column;
     justify-content: flex-start;
 }
-footer span{
+.footer span{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 45px;
 }
 
-footer p, footer a {
+.footer p, .footer a {
 font-family: 'Josefin Sans';
 font-style: normal;
 font-weight: 500;
@@ -354,7 +354,7 @@ line-height: 24px;
 width:360px;
 }
 
-footer h5{
+.footer h5{
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
@@ -366,7 +366,7 @@ border-bottom:  1px solid black;
 .text-justify{
     text-align:justify;
 }
-footer a {
+.footer a {
     margin-bottom: 8px;
 }
 .text-center{
@@ -468,7 +468,7 @@ h5 {
 
 }
 
-footer p{
+.footer p{
      color: #ECE4B7;
 }
 
