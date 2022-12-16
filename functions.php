@@ -142,15 +142,15 @@ function carroussel_couleur($type, $nbr){
   ]);
 
   if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts
-	echo '<div class="carroussel--wrapper">';
+	echo '<div class="carrousel--wrapper">';
       while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
 		$content->the_post(); // la récupère mon post
 		if($type==='profil'){
 			$image=get_field('photo_de_profil');
 			$nom_prenom=get_the_title();
 			$description=get_the_content();
-			echo '<div class="card profil carroussel--item" style="width: 18rem;">
-			<figure><img class="card-img-top" src="'.$image['url'].'" alt="Card image cap"></figure>
+			echo '<div class="card profil carrousel--item">
+			<figure><img src="'.$image['url'].'"></figure>
 				<div class="card-body">
 					<h5 class="card-title">'.$nom_prenom.'</h5>
 					<p class="localite">'.get_field('localite').'</p>

@@ -1,26 +1,3 @@
-img{
-    width: 300px !important;
-}
-.card-body{
-    margin:0px !important;
-}
-
-figure {
-    position: absolute;
-    z-index: 1;
-    display: block;
-    user-select: none;
-    -webkit-appearance: none;
-    padding: 0;
-    border: none;
-    outline: none;
-    width:300px !important;
-    height: 300px !important;
-    box-shadow: none;
-    cursor: pointer;
-    overflow: hidden;
-    pointer-events: none;
-    transform-origin: center;}
 
 .carrousel {
     overflow: hidden;
@@ -28,29 +5,22 @@ figure {
     width: 100%;
     position: relative;
     z-index: 1;
-    height: 100vh;
+    height: 200px;
     
     &.is-dragging {
       cursor: grabbing;
     }
     
     &--wrapper {
-      counter-reset: count;
       display: flex;
-      position: absolute;
       z-index: 1;
       height: 100%;
-      top: 0;
-      left: 0;
       width:300px!important;
     }
     
     &--item {
-      counter-increment: count;
       position: absolute;
       z-index: 1;
-      top: 0;
-      left: 0;
       width: 300px !important;
       height: 300px !important;
       overflow: hidden;
@@ -60,9 +30,6 @@ figure {
         height: 40vw;
       }
       
-      &:nth-child(n+10):before {
-        content: counter(count);
-      }
       
       figure {
         position: absolute;
@@ -73,8 +40,8 @@ figure {
         padding: 0;
         border: none;
         outline: none;
-        width:300px !important;
-        height: 300px !important;
+        width:30px !important;
+        height: 30px !important;
         box-shadow: none;
         cursor: pointer;
         overflow: hidden;
@@ -84,10 +51,8 @@ figure {
         img {
           position: absolute;
           z-index: 1;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+          width: 100px;
+          height: 30px;
           object-fit: cover;
           vertical-align: middle;
           transform-origin: center;

@@ -196,6 +196,5 @@ render()
 
 
 </script>
-</body>
-</html>
+
 

@@ -39,7 +39,7 @@ get_header(); ?>
     </section>
 
     <section class="services">
-        <div class="carroussel">
+        <div class="carrousel">
             <?php carroussel_couleur("profil",10); ?>
             <!-- fct php de création de card en ftc des meilleurs users -->
         </div>
@@ -78,7 +78,7 @@ get_header(); ?>
 
             </p>
         </span>
-        <div class="carroussel">
+        <div class="carrousel">
             <?php carroussel_couleur("tools",20); ?>
             <!-- fct php de création de card en ftc des meilleurs annonces d'outils -->
         </div>
