@@ -81,14 +81,21 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
-    
+   /*scroll page*/
+
+$($menu).mouseenter(function(){
+
+$body.classList.add('no-scroll');
+})
+$($menu).mouseleave(function(){
+$body.classList.remove('no-scroll');
+}) 
 /*--------------------
 Vars
 --------------------*/
 const $menu = document.querySelector('.carroussel')
 const $items = document.querySelectorAll('.carroussel--item')
 const $images = document.querySelectorAll('.carroussel--item img')
-const $body=document.querySelector('body');
 let menuWidth = $menu.clientWidth
 let itemWidth = $items[0].clientWidth
 let wrapWidth = $items.length * itemWidth
@@ -98,15 +105,6 @@ let oldScrollY = 0
 let scrollY = 0
 let y = 0
 
-/*scroll page*/
-
-$($menu).mouseenter(function(){
-
-  $body.classList.add('no-scroll');
-})
-$($menu).mouseleave(function(){
-  $body.classList.remove('no-scroll');
-})
 
 /*--------------------
 Lerp
@@ -127,7 +125,7 @@ const dispose = (scroll) => {
     modifiers: {
       x: (x, target) => {
         const s = gsap.utils.wrap(-itemWidth, wrapWidth - itemWidth, parseInt(x))
-        return `${s}px`
+        return `${s+100}px`
       }
     }
   })
@@ -139,7 +137,7 @@ dispose(0)
 Wheel
 --------------------*/
 const handleMouseWheel = (e) => {
-  scrollY -= e.deltaY * 0.8
+  scrollY -= e.deltaY * 0.9
 }
 
 
@@ -207,10 +205,11 @@ const render = () => {
   gsap.to($items, {
     skewX: -scrollSpeed * .2,
     rotate: scrollSpeed * .01,
-    scale: 1- Math.min(100, Math.abs(scrollSpeed)) * 0.003
+    scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * 0.003
   })
 }
 render()
+
 
 </script>
 </body>
