@@ -139,7 +139,6 @@ color: #504136;
 /* vert cta */
 border: 2px solid #AACF23;
 border-radius: 8px;
-width: 100px;
 
 }
 
@@ -300,7 +299,8 @@ div.card-body{
     display: flex;
     flex-direction: column;
     height: 120px;
-    justify-content: space-between;
+    width: fit-content;
+    align-content: center;
 }
 
 .logo-footer{
@@ -469,6 +469,7 @@ p {
     background-repeat: no-repeat;
     width:180px;
     margin-left: 40px;
+    margin: 0px auto;
 }
 
 #menu-navbar li:nth-child(4) a{
