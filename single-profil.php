@@ -57,7 +57,7 @@ endif;
 <h3>Commentaires</h3>
 <?php
 // Comment Loop
-if ( $comments !='' ) {
+if ( $comments ) {
   $current_post_id = get_the_ID();
 
 	foreach ( $comments as $comment ) {
@@ -73,9 +73,9 @@ if ( $comments !='' ) {
     }
     
 	}
-} 
+} else {
 	echo '<p>'."Cet utilisateur n'a pas encore de commentaires".'</p>';
-
+}
 ?>
 
   </div>
