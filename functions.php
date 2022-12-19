@@ -82,8 +82,8 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
     
     register_post_type('profil'/* le nom de mon type de contenu */, [ // tableau avec mes options 
 		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
-			'name' => __('Profil'), // __() permet a wordpress que c'est contenu de traduction
-			'singular_name' => __('Profil')
+			'name' => __('profil'), // __() permet a wordpress que c'est contenu de traduction
+			'singular_name' => __('profil')
 		],
    		'public' => true, // c'est un post_type publique
 		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
@@ -179,7 +179,23 @@ else{
 }
 }       
 
+//autoriser les comments
+function get_profil_posts() {
+    $profil_posts = get_posts( array(
+        'post_type' => 'profil',
+        'numberposts' => -1,
+    ) );
 
+    return $profil_posts;
+};
+$profil_posts = get_profil_posts();
+
+foreach ( $profil_posts as $profil_post ) {
+    wp_update_post( array(
+        'ID'            => $profil_post->ID,
+        'comment_status' => 'open',
+    ) );
+}
 
 
 function recherche_annonce($nbr) {
