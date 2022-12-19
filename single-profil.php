@@ -52,15 +52,20 @@ endif;
 <?php
 // Comment Loop
 if ( $comments ) {
-  
+  $current_post_id = get_the_ID();
+
 	foreach ( $comments as $comment ) {
-    echo '<article class="comment">';
-    echo '<div class="vert versprofil">';
-      echo '<div>'.get_avatar($comment).'</div>';
-      echo '<h5>'.$comment->comment_author.'</h5>';
-      echo '</div>';
-      echo '<p>' . $comment->comment_content . '</p>';
-    echo '</article>';
+    $comment_post_id = $comment->comment_post_ID;
+    if($comment_post_id==$current_post_id){
+      echo '<article class="comm  ent">';
+      echo '<div class="vert versprofil">';
+        echo '<div>'.get_avatar($comment).'</div>';
+        echo '<h5>'.$comment->comment_author.'</h5>';
+        echo '</div>';
+        echo '<p>' . $comment->comment_content . '</p>';
+      echo '</article>';
+    }
+    
 	}
 } else {
 	echo '<p>'."Cet utilisateur n'a pas encore de commentaires".'</p>';
