@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
     <title>Hubbert</title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/app.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/app.scss">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/scss/hubscss.scss">
 </head>
 <body>
 
