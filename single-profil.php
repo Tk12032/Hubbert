@@ -40,14 +40,13 @@ get_header(); ?>
 // The comment Query
 $comments_query = new WP_Comment_Query();
 $comments       = $comments_query->query( $args );
-?>
-<h3>Commentaires</h3>
-<?php
+
 update_post_meta( $post_id, 'comment_status', 'open' );
 if ( comments_open() || get_comments_number() ) :
     comment_form();
 endif;
-
+?>
+<h3>Commentaires</h3>
 
 // Comment Loop
 if ( $comments ) {
