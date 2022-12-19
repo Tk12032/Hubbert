@@ -30,6 +30,8 @@ body {
     
 }
 
+
+
 .card.profil{
     display: flex;
     flex-flow: column wrap;
@@ -195,7 +197,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 2;
-    top:0px;
+    top:30px;
     height: 86px;
 
 }

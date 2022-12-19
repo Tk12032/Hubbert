@@ -13,12 +13,12 @@
 
 <header> 
 <nav class="navbar navbar-expand-lg couleurnav">
-  <div class="container-fluid">
+  <div class="container">
             <?php 
             wp_nav_menu([
             'theme_location' => 'navbar',
             'container' => false,
-            'menu_class' => 'navbar-nav ml-auto'
+            'menu_class' => 'navbar-nav'
             ]); ?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
