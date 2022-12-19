@@ -277,6 +277,7 @@ text-align: center;
 }
 div.card-body{
     width: 160px;
+    height:132px;
 }
 
 .carrousel > .tools {
