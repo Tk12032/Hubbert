@@ -30,6 +30,9 @@ body {
     display: flex;
     flex-flow: column wrap;
     background-color: transparent;
+    width: 310px;
+    display: flex;
+    align-content: flex-end;
 }
 
 .card-title{
@@ -290,7 +293,6 @@ text-align: center;
 }
 div.card-body{
     width: 160px;
-    height: 134px;
 }
 
 .carroussel > .tools {
@@ -593,6 +595,7 @@ h3{
     font-family:'Josefin Sans';
     margin-left: 16px;
     margin-top: 12px;
+    min-width: 50px;
 }
 .comment p {
     margin-top: 16px;
