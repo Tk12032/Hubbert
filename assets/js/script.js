@@ -1,4 +1,4 @@
-/*scroll page*/
+function carroussel(){/*scroll page*/
 /*--------------------
 Vars
 --------------------*/
@@ -136,3 +136,6 @@ const render = () => {
   })
 }
 render()
+}
+carroussel();
+window.addEventListener ('resize', carroussel);

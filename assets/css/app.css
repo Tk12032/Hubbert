@@ -590,6 +590,7 @@ h3{
     padding: 4px 10px;
     min-width: 180px;
     height: 55px;
+    width: fit-content;
 }
 .versprofil h5{
     font-size:24;
@@ -600,4 +601,29 @@ h3{
 }
 .comment p {
     margin-top: 16px;
+}
+
+
+textarea{
+    box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+padding: 5px;
+gap: 10px;
+
+width: 459px;
+height: 44px;
+
+/* brun 1 */
+
+border: 2px solid #504136;
+border-radius: 10px;
+background-color: transparent;
+
+display: flex;
+justify-content: center;
+color:#504136;
 }

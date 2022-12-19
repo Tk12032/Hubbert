@@ -48,11 +48,13 @@ if ( comments_open() || get_comments_number() ) :
   comment_form(
     array(
         'title_reply'       => __( 'Commente quelque chose' ),
-        'label_submit'      => __( 'Post Comment' ),
-        'comment_field'     => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
+        'label_submit'      => __( 'Poster' ),
+        'logged_in_as' => '',
+        'comment_field'     => '<p><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
     )
 );
 endif;
+
 ?>
 <h3>Commentaires</h3>
 <?php
@@ -63,7 +65,7 @@ if ( $comments ) {
 	foreach ( $comments as $comment ) {
     $comment_post_id = $comment->comment_post_ID;
     if($comment_post_id==$current_post_id){
-      echo '<article class="comm  ent">';
+      echo '<article class="comment">';
       echo '<div class="vert versprofil">';
         echo '<div>'.get_avatar($comment).'</div>';
         echo '<h5>'.$comment->comment_author.'</h5>';
