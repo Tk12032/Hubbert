@@ -48,8 +48,6 @@ if ( comments_open() || get_comments_number() ) :
   comment_form(
     array(
         'title_reply'       => __( 'Commente quelque chose' ),
-        'title_reply_to'    => __( 'Leave a Reply to %s' ),
-        'cancel_reply_link' => __( 'Cancel Reply' ),
         'label_submit'      => __( 'Post Comment' ),
         'comment_field'     => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
     )

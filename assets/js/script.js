@@ -1,13 +1,13 @@
 /*scroll page*/
-
-
 /*--------------------
 Vars
 --------------------*/
+
 const $menu = document.querySelector('.carrousel')
 const $items = document.querySelectorAll('.carrousel--item')
 const $images = document.querySelectorAll('.carrousel--item img')
 const $body = document.querySelector('body')
+console.log($images);
 let menuWidth = $menu.clientWidth
 let itemWidth = $items[0].clientWidth
 let wrapWidth = $items.length * itemWidth
@@ -18,13 +18,20 @@ let scrollY = 0
 let y = 0
 
 
-$($menu).mouseenter(function(){
+/*$($menu).mouseenter(function(){
   const $body = document.querySelector('body')
 $body.classList.add('no-scroll');
-})
-$($menu).mouseleave(function(){
+})*/
+$menu.addEventListener('mouseenter', () => {
+    const $body = document.querySelector('body')
+    $body.classList.add('no-scroll');
+});
+/*$($menu).mouseleave(function(){
 $body.classList.remove('no-scroll');
-}) 
+})*/ 
+$menu.addEventListener('mouseleave', () => {
+    $body.classList.remove('no-scroll');
+});
 
 /*--------------------
 Lerp
