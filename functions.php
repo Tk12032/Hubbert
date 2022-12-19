@@ -54,9 +54,18 @@ function wp_bootstrap_styles_scripts() {
     wp_enqueue_style('boostrap','https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
     wp_enqueue_script('bootstrap-bundle',' https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js',false,'1.0.0', true);
     wp_enqueue_script('jquery');
-	wp_enqueue_script(get_template_directory_uri().'/assets/js/script.js');
 }    
 add_action('wp_enqueue_scripts','wp_bootstrap_styles_scripts');
+
+function script_la(){
+	wp_register_script('script-js',
+	get_template_directory_uri().'/assets/js/script.js',
+	array(), '0.1', true);
+
+
+	wp_enqueue_script('script-js');
+}
+add_action('wp_enqueue_scripts', 'script_la');
 
 
 function create_post_type() {	 // function dans la quel j'ajouterais tous mes type de contenu

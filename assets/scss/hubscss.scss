@@ -22,10 +22,6 @@
       overflow: hidden;
       width: 22vw;
       
-      @media (max-width: 767px) {
-        width: 40vw;
-        height: 40vw;
-      }
       
       
       figure {
@@ -33,7 +29,6 @@
         z-index: 1;
         display: block;
         user-select: none;
-        -webkit-appearance: none;
         padding: 0;
         border: none;
         outline: none;
