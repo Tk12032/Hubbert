@@ -339,6 +339,7 @@ div.card-body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-self: flex-end;
 }
 .footer span{
     display: flex;
