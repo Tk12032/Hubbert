@@ -519,6 +519,8 @@ p {
     display: flex;
     flex-direction: row;
     width: fit-content;
+    justify-content: space-between;
+    width: 100%;
 }
 .info-profil img{
     width:220px;

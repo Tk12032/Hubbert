@@ -31,7 +31,7 @@ get_header(); ?>
 
       </ol>
       <?php endif; ?>
-      <?php comment_form(); ?>
+      
   </div>
 
   <div class="commentaires">
@@ -43,8 +43,15 @@ $comments       = $comments_query->query( $args );
 ?>
 <h3>Commentaires</h3>
 <?php
+update_post_meta( $post_id, 'comment_status', 'open' );
+if ( comments_open() || get_comments_number() ) :
+    comment_form();
+endif;
+
+
 // Comment Loop
 if ( $comments ) {
+  
 	foreach ( $comments as $comment ) {
     echo '<article class="comment">';
     echo '<div class="vert versprofil">';
