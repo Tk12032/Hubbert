@@ -1,3 +1,7 @@
+html{
+    width: 100%;
+}
+
 body {
 
     color: #504136;
@@ -135,7 +139,6 @@ color: #504136;
 /* vert cta */
 border: 2px solid #AACF23;
 border-radius: 8px;
-width: 100px;
 
 }
 
@@ -255,36 +258,17 @@ text-align: center;
     display: none;
 }
 
-.carroussel .carroussel--wrapper{
-    display: flex;
-}
 
-.carroussel  .profil {
-    flex-shrink: 0;
-   text-align: center;
-   margin-left: 25px;
-   width: 310px;
-    height: 134px;
-    border: 2px solid #504136;
-    border-radius: 15px;
-
-}
-.carroussel p {
+.carrousel p {
     font-size:14px;
     line-height: 14px;
     margin-bottom:10px;
     text-align:start;
 }
-.carroussel img{
-    width:130px;
-    height: 150px;
-    border-radius:12px 0px 0px 12px;
-    overflow: hidden;
-}
-.carroussel h5{
+.carrousel h5{
     font-size:16px;
 }
-.carroussel .card-text{
+.carrousel .card-text{
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -293,9 +277,10 @@ text-align: center;
 }
 div.card-body{
     width: 160px;
+    height: 134px;
 }
 
-.carroussel > .tools {
+.carrousel > .tools {
     flex-shrink: 0;
    text-align: center;
    margin-left: 25px;
@@ -314,7 +299,8 @@ div.card-body{
     display: flex;
     flex-direction: column;
     height: 120px;
-    justify-content: space-between;
+    width: fit-content;
+    align-content: center;
 }
 
 .logo-footer{
@@ -337,6 +323,7 @@ div.card-body{
     justify-content: space-between;
     height: 400px;
 }
+
 .card-body{
     display: flex;
     flex-direction: column;
@@ -398,12 +385,17 @@ button{
     background-color: transparent;
 }
  
+.boutonplus{
+    align-self: flex-end;
+    width: fit-content;
+    padding: 0px 5px;
+    color:#504136;
+  }
 
 /* c'est pour le FAQ */
 
 .faq {
 
-padding-top: 100px;
 width: 817px;       
 justify-content: center;
 min-height: 600px;
@@ -412,6 +404,12 @@ min-height: 600px;
 .faq span {
     margin:100px;
 }
+
+a{
+    text-decoration: none;
+}
+
+
 
 .question p {
 
@@ -482,6 +480,7 @@ p {
     background-repeat: no-repeat;
     width:180px;
     margin-left: 40px;
+    margin: 0px auto;
 }
 
 #menu-navbar li:nth-child(4) a{
@@ -520,6 +519,8 @@ p {
     display: flex;
     flex-direction: row;
     width: fit-content;
+    justify-content: space-between;
+    width: 100%;
 }
 .info-profil img{
     width:220px;
@@ -595,10 +596,7 @@ h3{
     font-family:'Josefin Sans';
     margin-left: 16px;
     margin-top: 12px;
-    min-width: 50px;
 }
 .comment p {
     margin-top: 16px;
 }
-
-
