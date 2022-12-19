@@ -385,6 +385,12 @@ button{
     background-color: transparent;
 }
  
+.boutonplus{
+    align-self: flex-end;
+    width: fit-content;
+    padding: 0px 5px;
+    color:#504136;
+  }
 
 /* c'est pour le FAQ */
 
@@ -398,6 +404,12 @@ min-height: 600px;
 .faq span {
     margin:100px;
 }
+
+a{
+    text-decoration: none;
+}
+
+
 
 .question p {
 

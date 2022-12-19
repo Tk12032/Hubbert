@@ -164,7 +164,7 @@ function carroussel_couleur($type, $nbr){
 				<div class="card-body">
 					<h5 class="card-title">'.$nom_prenom.'</h5>
 					<p class="localite">'.get_field('localite').'</p>
-					<p class="card-text">'.$description.'</p>
+					<a href="'.get_the_permalink().'" class="vert boutonplus">+</a>
 				</div>
 			</div>
 			</div>
