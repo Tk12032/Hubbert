@@ -67,7 +67,7 @@ if ( $comments ) {
 	foreach ( $comments as $comment ) {
     $comment_post_id = $comment->comment_post_ID;
     if($comment_post_id==$current_post_id){
-      echo '<article class="comm  ent">';
+      echo '<article class="comment">';
       echo '<div class="vert versprofil">';
         echo '<div>'.get_avatar($comment).'</div>';
         echo '<h5>'.$comment->comment_author.'</h5>';
