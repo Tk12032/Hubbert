@@ -16,6 +16,12 @@
   <div class="container">
             <?php 
             wp_nav_menu([
+              'theme_location' => 'home',
+              'container' => false,
+              'menu_class' => 'navbar-nav'
+              ]);
+
+            wp_nav_menu([
             'theme_location' => 'navbar',
             'container' => false,
             'menu_class' => 'navbar-nav'
