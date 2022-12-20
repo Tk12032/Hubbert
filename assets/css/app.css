@@ -555,6 +555,8 @@ p {
     height: 36px;
     font-family: 'Josefin Sans';
     font-style: normal;
+    
+    
 }
 
 
@@ -584,7 +586,7 @@ p {
     margin-bottom: 10px;
 }
 h3{
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 32;
@@ -673,4 +675,22 @@ color:#504136;
 ul{
     width: fit-content;
     padding-left: 0px;
+}
+
+.pdp {
+
+    border-radius: 12px;
+
+}
+
+.infotext h5 {
+
+margin: 20px 0px;
+font-size: 20px;
+
+}
+
+.infotext h5:first-child {
+
+    font-size: 24px;
 }
