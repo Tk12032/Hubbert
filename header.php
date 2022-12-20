@@ -13,7 +13,7 @@
 
 <header> 
 <nav class="navbar navbar-expand-lg couleurnav">
-  <div class="container">
+  <div class="nav-container">
             <?php 
             wp_nav_menu([
               'theme_location' => 'home',
