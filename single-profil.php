@@ -52,7 +52,8 @@ if ( comments_open() || get_comments_number() ) :
     array(
         'title_reply'       => __( 'Commente quelque chose' ),
         'label_submit'      => __( 'Post Comment' ),
-        'comment_field'     => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
+        'logged_in_as' => '',
+        'comment_field'     => '<p><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
     )
 );
 endif;
