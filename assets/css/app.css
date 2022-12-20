@@ -140,26 +140,29 @@ color: #504136;
 .vert {
 
 /* vert cta */
-border: 2px solid #AACF23;
+border: 3px solid #AACF23;
 border-radius: 8px;
+}
 
+.blanc{
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .vert-plein {
 
     /* vert cta */
     
-    border: 2px solid #AACF23;
+    border: 3px solid #AACF23;
     background-color: #AACF23;
     border-radius: 8px;
     opacity: 100%;
-    width: fit-content;
+    width: 50px;
     
     }
 
 .vert-plein:hover {
     background-color:#95B61E;
-    border: 2px solid #95B61E;
+    border: 3px solid #95B61E;
     color: #504136;
     transition: 0.4s;
     }
@@ -167,7 +170,7 @@ border-radius: 8px;
 .vert:hover {
 
 background-color:#AACF23;
-border: 2px solid #AACF23;
+border: 3px solid #AACF23;
 color: #504136;
 transition: 0.4s;
 
@@ -177,7 +180,7 @@ transition: 0.4s;
 
  /* orange cta */
 
-    border: 2px solid #F17444;
+    border: 3px solid #F17444;
     border-radius: 8px;
     width: fit-content;
 
@@ -186,7 +189,7 @@ transition: 0.4s;
 .orange:hover {
 
     background-color:#F17444;
-    border: 2px solid #F17444;
+    border: 3px solid #F17444;
     color: #504136;
     transition: 0.4s;
     
@@ -303,7 +306,8 @@ div.card-body{
     flex-direction: column;
     height: 120px;
     width: fit-content;
-    align-content: center;
+    align-items: center;
+    justify-self: center;
 }
 
 .logo-footer{
@@ -645,4 +649,28 @@ color:#504136;
     align-items: center;
     padding: 0 50px;
 
+}
+
+.boutmid li{
+    margin:10px;
+    width: 100%;
+    display:block;
+
+}
+
+.boutmid a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-style: normal;
+    height: 40px;
+    font-size: 16px;
+    color: #504136;
+}
+
+ul{
+    width: fit-content;
+    padding-left: 0px;
 }

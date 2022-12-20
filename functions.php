@@ -5,15 +5,9 @@ add_theme_support('menus');
 register_nav_menu('footer', 'navigation_footer');
 register_nav_menu('navbar', 'header');
 register_nav_menu('home', 'headerlogo');
-
-
-
-
-//test onverra
-//add_theme_support( 'post-templates', array(
- //   'page-template-name' => 'Template Name',
-//) );
-//fin du test lokum parano
+register_nav_menu('servicarr', 'servicarrou');
+register_nav_menu('outilcarr', 'outilcarrou');
+register_nav_menu('conect', 'conect');
 
 register_meta( 'post', 'block_name', array(
 	'show_in_rest' => true,
@@ -34,10 +28,6 @@ $options = array(
         'post_status' => 'pending',
     ),
 );
-
-// Register the form
-acf_register_form( $options );
-
 
 
 	
