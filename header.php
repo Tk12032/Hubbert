@@ -34,4 +34,12 @@
 
 
 <?php block_header_area(); ?>
+
 </header>
+
+<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>  
+<div class="message">
+
+            
+
+</div>

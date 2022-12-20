@@ -57,6 +57,7 @@ get_header(); ?>
     </section>
 
     <section class="outils">
+<?php echo do_shortcode('[bp-better-messages]'); ?>
         <span>
             <h2>
 
