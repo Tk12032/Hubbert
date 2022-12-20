@@ -57,7 +57,6 @@ get_header(); ?>
     </section>
 
     <section class="outils">
-<?php echo do_shortcode('[bp-better-messages]'); ?>
         <span>
             <h2>
 
@@ -86,8 +85,8 @@ get_header(); ?>
 
             </p>
         </span>
-        <div class="carrousel">
-            <?php carroussel_couleur("tools",20); ?>
+        <div class="carousel">
+            <?php carroussel_couleur("outil",10); ?>
             <!-- fct php de création de card en ftc des meilleurs annonces d'outils -->
         </div>
         <div class="bouton-page">
