@@ -472,11 +472,16 @@ p {
      color: #ECE4B7;
 }
 
-#menu-navbar{
+#menu-home li{
     display: flex;
-    justify-content: center;
+    align-content: center;
+    width: fit-content;
+    height: fit-content;
 }
-
+#menu-home {
+    width: fit-content;
+    height: fit-content;
+}
 #menu-home a{
     color:transparent;
     background-image:url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/hubbert_noir.png);
@@ -637,6 +642,7 @@ color:#504136;
     width:100%;
     display:flex;
     justify-content:space-between;
-    padding: 0 20px;
+    align-items: center;
+    padding: 0 50px;
 
 }
