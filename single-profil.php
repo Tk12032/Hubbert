@@ -10,8 +10,11 @@ get_header(); ?>
         <div class="top-part">
 
             <span class="infotext">
-                <h5><?php echo the_title(); ?></h5>
-                <h4><?php echo get_field('localite'); ?></h4>
+                <h5><?php echo the_title(); ?></h4>
+                <h5><?php echo get_field('age'); ?></h5>
+                <h5><?php echo get_field('localite'); ?></h5>
+                <h5><?php echo get_field('numero'); ?></h5>
+               
 
             </span>
             <img class="pdp" src="<?php echo $image['url']; ?>" alt="Photo d'un très bel homme">
@@ -48,13 +51,12 @@ if ( comments_open() || get_comments_number() ) :
   comment_form(
     array(
         'title_reply'       => __( 'Commente quelque chose' ),
-        'label_submit'      => __( 'Poster' ),
+        'label_submit'      => __( 'Post Comment' ),
         'logged_in_as' => '',
         'comment_field'     => '<p><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
     )
 );
 endif;
-
 ?>
 <h3>Commentaires</h3>
 <?php
@@ -65,7 +67,7 @@ if ( $comments ) {
 	foreach ( $comments as $comment ) {
     $comment_post_id = $comment->comment_post_ID;
     if($comment_post_id==$current_post_id){
-      echo '<article class="comment">';
+      echo '<article class="comm  ent">';
       echo '<div class="vert versprofil">';
         echo '<div>'.get_avatar($comment).'</div>';
         echo '<h5>'.$comment->comment_author.'</h5>';
