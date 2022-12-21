@@ -251,7 +251,7 @@ font-size: 27px;
 line-height: 27px;
 text-align: center;
 }
-.outils span{
+.outils {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -317,18 +317,20 @@ div.card-body{
     bottom:0px;
     display:flex;
     justify-content: space-between;
-    padding:30px 50px 100px 50px;
+    align-items: flex-start;
+    padding:30px 50px 30px 50px;
     background-color: #504136;
     color:#ECE4B7;
-    height: auto;
+    height: fit-content;
 }
 
 .footer div{
     width: 360px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 400px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 100px;
 }
 
 .card-body{
@@ -336,7 +338,7 @@ div.card-body{
     flex-direction: column;
     justify-content: flex-start;
 }
-.footer span{
+.footer div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -359,6 +361,7 @@ font-weight: 700;
 font-size: 32px;
 line-height: 48px;
 border-bottom:  1px solid black;
+margin: 30px 0px 25px 0px;
 }
 
 .text-justify{
@@ -369,8 +372,10 @@ border-bottom:  1px solid black;
 }
 .text-center{
     text-align: center;
+
 }.border-bot{
     border-bottom: 1px solid #000;
+    padding-bottom: 120px;
 }
 
 .rond {
@@ -409,9 +414,7 @@ justify-content: center;
 min-height: 600px;
 }
 
-.faq span {
-    margin:100px;
-}
+
 
 a{
     text-decoration: none;
@@ -459,9 +462,7 @@ min-height: 600px;
     margin-right: 50px;
     width: 100%;
 }
-.legal span {
-    margin:100px;
-}
+
 
 p {
 
