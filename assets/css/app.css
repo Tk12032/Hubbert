@@ -455,11 +455,12 @@ min-height: 600px;
 }
 
 .container{
-    margin-top:100px;
+    padding-top: 100px;
     height: fit-content;
     margin-bottom: 100px;
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 1000px;
     width: 100%;
 }
 

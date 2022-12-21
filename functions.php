@@ -203,8 +203,8 @@ function boutonpicto($type,$couleur,$shape){
     $nomimg="picto_".$type."_inact.png";
     $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
     echo '
-    <button class="pictobouton '.$couleur.' '.$shape.' '.$type.'" alt="'.$type.'">
-    <img class="pictobouton '.$type.'" src="'.$adresse.'">
+    <button class="pictobouton '.$couleur.' '.$shape.' '.$type.'" >
+    <img class="pictobouton '.$type.'" alt="'.$type.'" src="'.$adresse.'">
     </button>';
 }
 
