@@ -30,7 +30,14 @@ get_header(); ?>
         <p><?php echo get_the_content(); ?> </p>
                 <button style="border:none">                
         <?php echo '<div style="width:fit-content" class="vert versprofil">';?>   
-        <h5>Contacter</h5><!-- en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
+        <h5 style="font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+color: #504136;
+text-align: center;">Contacter</h5><!-- à ranger en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
         </button>
         </div>
 
@@ -53,8 +60,8 @@ $content = new WP_Query([ // je crée une variable $services
 		$content->the_post(); // la récupère mon post
 			$image=get_field('ImgAnnonces');
 			$nom_prenom=get_the_title();
-			echo '<div class="profil carrousel--item" style="padding: 0px 10px;"> ';
-			echo '<div class="card profil ">
+			echo '<div class="outil carrousel--item" style="padding: 0px 10px;"> ';
+			echo '<div class="card outil ">
 			<figure><img src="'.$image['url'].'" alt="'.$nom_prenom.'"></figure>
 				<div class="card-body">
 					<h5 class="card-title">'.$nom_prenom.'</h5>
