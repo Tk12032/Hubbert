@@ -460,8 +460,8 @@ min-height: 600px;
     margin-bottom: 100px;
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 1000px;
     width: 100%;
+    min-height: 1000px;
 }
 
 
@@ -702,4 +702,15 @@ font-size: 20px;
 .recherchannonce{
     display: flex;
     flex-direction: row;
+}
+
+
+.infoannonce{
+    display: flex;
+    flex-direction: row;
+}
+
+.infodroite{
+    margin-left:22px;
+    text-align: justify;
 }
