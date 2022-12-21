@@ -4,15 +4,10 @@ add_theme_support('post-thumbnails');
 add_theme_support('menus');
 register_nav_menu('footer', 'navigation_footer');
 register_nav_menu('navbar', 'header');
-
-
-
-
-//test onverra
-//add_theme_support( 'post-templates', array(
- //   'page-template-name' => 'Template Name',
-//) );
-//fin du test lokum parano
+register_nav_menu('home', 'headerlogo');
+register_nav_menu('servicarr', 'servicarrou');
+register_nav_menu('outilcarr', 'outilcarrou');
+register_nav_menu('conect', 'conect');
 
 register_meta( 'post', 'block_name', array(
 	'show_in_rest' => true,
@@ -33,10 +28,6 @@ $options = array(
         'post_status' => 'pending',
     ),
 );
-
-// Register the form
-acf_register_form( $options );
-
 
 
 	
@@ -126,12 +117,6 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
 add_action('init', 'create_post_type');
 
 
-function bouton_hubbert($contenu,$adresse,$couleur) {
-
-  echo  '<a class = "nav-link bouton-hubbert '.$couleur.'" href= $adresse >'.$contenu.'</a>';
-
-}
-
 function carroussel_couleur($type, $nbr){
 
   $content = new WP_Query([ // je crée une variable $services
@@ -143,16 +128,16 @@ function carroussel_couleur($type, $nbr){
   ]);
 
   if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts
+	if($type==='profil'){
 	echo '<div class="carrousel--wrapper">';
       while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
 		$content->the_post(); // la récupère mon post
 		if($type==='profil'){
 			$image=get_field('photo_de_profil');
 			$nom_prenom=get_the_title();
-			$description=get_the_content();
-			echo '<div class="carrousel--item" style="padding: 0px 10px;"> ';
+			echo '<div class="profil carrousel--item" style="padding: 0px 10px;"> ';
 			echo '<div class="card profil ">
-			<figure><img src="'.$image['url'].'"></figure>
+			<figure><img src="'.$image['url'].'" alt="'.$nom_prenom.'"></figure>
 				<div class="card-body">
 					<h5 class="card-title">'.$nom_prenom.'</h5>
 					<p class="localite">'.get_field('localite').'</p>
@@ -162,8 +147,31 @@ function carroussel_couleur($type, $nbr){
 			</div>
 				';
 		}
+		
 	}
-	echo '</div>';
+}	else if($type==='outil'){
+	echo '<div class="carousel--wrapper">';
+      while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
+		$content->the_post(); // la récupère mon post
+	if($type==='outil'){
+		$image=get_field('ImgAnnonces');
+		$nom_prenom=get_the_title();
+		echo '<div class="carousel--item" style="padding: 0px 10px;"> ';
+		echo '<div class="card tool">
+		<figure><img src="'.$image['url'].'" alt="'.the_title().'"></figure>
+			<div class="card-body">
+				<h5 class="card-title">'.$nom_prenom.'</h5>
+				<p class="localite">'.get_field('prix').'</p>
+				<a href="'.get_the_permalink().'" class="vert boutonplus">+</a>
+			</div>
+		</div>
+		</div>
+			';
+		}
+
+	}
+}
+echo '</div>';
 	
 }
 else{
@@ -190,48 +198,13 @@ foreach ( $profil_posts as $profil_post ) {
 }
 
 
-function recherche_annonce($nbr) {
-
-	$content = new WP_Query([ // je crée une variable $services
-	'post_type' =>['services','outils'], // la je précise quel post_type je veux (dans mon cas "services")
-	  'post_status' => 'publish', // la je précise que je veux des posts qui sont publié
-	  'limit' => $nbr, // dans mon cas je n'en ai besoin que de trois
-	  'orderby' => 'date', // je les trie par date 
-	  'date' => true // je récupéère ma date
-	]);
-  
-	if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts
-  
-		while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
-		  $content->the_post(); // la récupère mon post
-		  echo 'yo';
-			  $image=get_field('illustrationimg');
-			  $nom_prenom=get_the_title();
-			  $description=get_the_content();
-			  echo '<div class="card profil" style="width: 18rem;">
-				  <img class="card-img-top" src="'.$image['url'].'" alt="Card image cap">
-				  <div class="card-body">
-					  <h5 class="card-title">'.$nom_prenom.'</h5>
-					  <p class="prix">'.get_field('prix').'</p>
-					  <p class="card-text">'.$description.'</p>
-				  </div>
-			  </div>
-				  ';
-	  }
-	  
-  }
-  else{
-	  echo '<h5>On a pas encore de question a vous répondre mais ça arrive !</h5>';
-  }
-
-}
 
 function boutonpicto($type,$couleur,$shape){
     $nomimg="picto_".$type."_inact.png";
     $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
     echo '
-    <button class="pictobouton '.$couleur.' '.$shape.' '.$type.'">
-    <img class="pictobouton '.$type.'" src="'.$adresse.'">
+    <button class="pictobouton '.$couleur.' '.$shape.' '.$type.'" >
+    <img class="pictobouton '.$type.'" alt="'.$type.'" src="'.$adresse.'">
     </button>';
 }
 

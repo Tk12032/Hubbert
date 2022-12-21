@@ -7,7 +7,6 @@ get_header(); ?>
  
 <section class="garden">
         <div class="texte-central">
-            <span>
                 <h1>
                 <?php 
                     $homepage = new WP_Query([ // je crée une variable $q
@@ -33,8 +32,11 @@ get_header(); ?>
                  ?>
 
                 </p>
-            </span>
-            <?php bouton_hubbert("Je me connecte","index.php","vert nav-item menu-item"); ?>
+            <?php wp_nav_menu([
+              'theme_location' => 'conect',
+              'container' => false,
+              'menu_class' => 'boutmid'
+              ]); ?>
         </div>
     </section>
 
@@ -44,13 +46,15 @@ get_header(); ?>
             <!-- fct php de création de card en ftc des meilleurs users -->
         </div>
         <div class="bouton-page">
-        <?php bouton_hubbert("Demander un service","index.php","vert"); ?>
-        <?php bouton_hubbert("Proposer un service","index.php","orange"); ?>
+        <?php wp_nav_menu([
+              'theme_location' => 'servicarr',
+              'container' => false,
+              'menu_class' => 'boutmid'
+              ]); ?>
         </div>
     </section>
 
     <section class="outils">
-        <span>
             <h2>
 
             <?php 
@@ -77,15 +81,17 @@ get_header(); ?>
                  ?>
 
             </p>
-        </span>
-        <div class="carrousel">
-            <?php carroussel_couleur("tools",20); ?>
+        <div class="carousel">
+            <?php carroussel_couleur("outil",10); ?>
             <!-- fct php de création de card en ftc des meilleurs annonces d'outils -->
         </div>
         <div class="bouton-page">
-        <?php bouton_hubbert("Demander un outil","index.php","vert"); ?>
-        <?php bouton_hubbert("Proposer un outil","index.php","orange"); ?>
-
+        <?php wp_nav_menu([
+              'theme_location' => 'outilcarr',
+              'container' => false,
+              'menu_class' => 'boutmid'
+              ]); ?>
+        </div>
 
         
        
