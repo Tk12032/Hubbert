@@ -458,11 +458,9 @@ min-height: 600px;
 .container{
     padding-top: 100px;
     height: fit-content;
-    margin-bottom: 100px;
     margin-left: 50px;
     margin-right: 50px;
     width: 100%;
-    min-height: 1000px;
 }
 
 
@@ -729,4 +727,9 @@ font-size: 20px;
 }
 .infodroite > *{
     margin:15px 0px;
+    overflow: scroll;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }

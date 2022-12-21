@@ -34,12 +34,10 @@ get_header(); ?>
         </button>
         </div>
 
-        </div>
-
-        
-        
+        </div>     
 </div>
-<div class="carrousel">
+<div class="carrousel" style="margin-bottom:100px; margin-top:200px">
+<h3 style="margin-left:50px">Annonces qui pourraient aussi vous intéresser</h3>
         <?php
 $content = new WP_Query([ // je crée une variable $services
     'post_type' => 'outil', // la je précise quel post_type je veux (dans mon cas "services")
