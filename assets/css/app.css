@@ -308,6 +308,7 @@ div.card-body{
     width: fit-content;
     align-items: center;
     justify-self: center;
+    margin-top: 25px;
 }
 
 .logo-footer{
@@ -702,4 +703,16 @@ font-size: 20px;
 .recherchannonce{
     display: flex;
     flex-direction: row;
+}
+
+.carousel--wrapper {
+
+    margin-top: 50px;
+
+}
+
+.carrousel--wrapper {
+
+    margin-top: 50px;
+
 }
