@@ -117,12 +117,6 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
 add_action('init', 'create_post_type');
 
 
-function bouton_hubbert($contenu,$adresse,$couleur) {
-
-  echo  '<a class = "nav-link bouton-hubbert '.$couleur.'" href= $adresse >'.$contenu.'</a>';
-
-}
-
 function carroussel_couleur($type, $nbr){
 
   $content = new WP_Query([ // je crée une variable $services
@@ -209,7 +203,7 @@ function boutonpicto($type,$couleur,$shape){
     $nomimg="picto_".$type."_inact.png";
     $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
     echo '
-    <button class="pictobouton '.$couleur.' '.$shape.' '.$type.'">
+    <button class="pictobouton '.$couleur.' alt="'.$type.'" '.$shape.' '.$type.'">
     <img class="pictobouton '.$type.'" src="'.$adresse.'">
     </button>';
 }
