@@ -714,3 +714,6 @@ font-size: 20px;
     margin-left:22px;
     text-align: justify;
 }
+.infodroite > *{
+    margin:15px 0px;
+}
