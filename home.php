@@ -7,7 +7,6 @@ get_header(); ?>
  
 <section class="garden">
         <div class="texte-central">
-            <span>
                 <h1>
                 <?php 
                     $homepage = new WP_Query([ // je crée une variable $q
@@ -33,7 +32,6 @@ get_header(); ?>
                  ?>
 
                 </p>
-            </span>
             <?php wp_nav_menu([
               'theme_location' => 'conect',
               'container' => false,
