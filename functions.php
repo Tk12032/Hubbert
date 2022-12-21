@@ -174,9 +174,10 @@ function carroussel_couleur($type, $nbr){
 		</div>
 			';
 		}
+
 	}
 }
-
+echo '</div></div>';
 	
 }
 else{
