@@ -55,7 +55,6 @@ get_header(); ?>
     </section>
 
     <section class="outils">
-        <span>
             <h2>
 
             <?php 
@@ -82,7 +81,6 @@ get_header(); ?>
                  ?>
 
             </p>
-        </span>
         <div class="carousel">
             <?php carroussel_couleur("outil",10); ?>
             <!-- fct php de création de card en ftc des meilleurs annonces d'outils -->
