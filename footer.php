@@ -10,7 +10,7 @@
             <a>S'abonner à la newsletter</a>
         </span>
         <!--ligne-->
-        <img class="logo-footer" src="<?php echo get_template_directory_uri(); ?>/assets/img/hubbert_noir.png" alt="logo_Hubbert">
+        <img class="logo-footer" src="<?php echo get_template_directory_uri(); ?>/assets/img/hubbert beige.png" alt="logo_Hubbert">
     </div>
     <div class="text-center">
         <span>
