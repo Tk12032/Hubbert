@@ -137,7 +137,7 @@ function carroussel_couleur($type, $nbr){
 			$nom_prenom=get_the_title();
 			echo '<div class="profil carrousel--item" style="padding: 0px 10px;"> ';
 			echo '<div class="card profil ">
-			<figure><img src="'.$image['url'].'"></figure>
+			<figure><img src="'.$image['url'].'" alt="'.$nom_prenom.'"></figure>
 				<div class="card-body">
 					<h5 class="card-title">'.$nom_prenom.'</h5>
 					<p class="localite">'.get_field('localite').'</p>
@@ -158,7 +158,7 @@ function carroussel_couleur($type, $nbr){
 		$nom_prenom=get_the_title();
 		echo '<div class="carousel--item" style="padding: 0px 10px;"> ';
 		echo '<div class="card tool">
-		<figure><img src="'.$image['url'].'"></figure>
+		<figure><img src="'.$image['url'].'" alt="'.the_title().'"></figure>
 			<div class="card-body">
 				<h5 class="card-title">'.$nom_prenom.'</h5>
 				<p class="localite">'.get_field('prix').'</p>
@@ -203,7 +203,7 @@ function boutonpicto($type,$couleur,$shape){
     $nomimg="picto_".$type."_inact.png";
     $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
     echo '
-    <button class="pictobouton '.$couleur.' alt="'.$type.'" '.$shape.' '.$type.'">
+    <button class="pictobouton '.$couleur.' '.$shape.' '.$type.'" alt="'.$type.'">
     <img class="pictobouton '.$type.'" src="'.$adresse.'">
     </button>';
 }
