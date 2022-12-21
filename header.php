@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html>
 <head>
+    <?php language_attributes(); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
-    <title>Hubbert</title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/app.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/scss/hubscss.scss">
 </head>

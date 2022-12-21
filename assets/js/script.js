@@ -143,7 +143,8 @@ carroussel1();
 window.addEventListener ('resize', carroussel1);
 
 
-function carroussel2(){/*scroll page*/
+function carroussel2(){
+  /*scroll page*/
 /*--------------------
 Vars
 --------------------*/

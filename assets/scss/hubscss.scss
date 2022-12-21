@@ -20,7 +20,7 @@
       position: absolute;
       z-index: 1;
       overflow: hidden;
-      width: 22vw;
+      width: 400px;
       
       
       
@@ -53,11 +53,11 @@
         &:before {
           position: absolute;
           z-index: 2;
-          bottom: 1vw;
-          left: 1vw;
+          bottom: 10px;
+          left: 10px;
           display: inline-block;
           color: #ffffff;
-          font-size: 3vw;
+          font-size: 24px;
         }
       }
     }
@@ -125,7 +125,7 @@
       position: absolute;
       z-index: 1;
       overflow: hidden;
-      width: 22vw;
+      width: 400px;
       
       
       
@@ -158,11 +158,11 @@
         &:before {
           position: absolute;
           z-index: 2;
-          bottom: 1vw;
-          left: 1vw;
+          bottom: 10px;
+          left: 10px;
           display: inline-block;
           color: #ffffff;
-          font-size: 3vw;
+          font-size: 24px;
         }
       }
     }

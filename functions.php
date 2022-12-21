@@ -177,7 +177,7 @@ function carroussel_couleur($type, $nbr){
 
 	}
 }
-echo '</div></div>';
+echo '</div>';
 	
 }
 else{
@@ -204,41 +204,6 @@ foreach ( $profil_posts as $profil_post ) {
 }
 
 
-function recherche_annonce($nbr) {
-
-	$content = new WP_Query([ // je crée une variable $services
-	'post_type' =>['services','outils'], // la je précise quel post_type je veux (dans mon cas "services")
-	  'post_status' => 'publish', // la je précise que je veux des posts qui sont publié
-	  'limit' => $nbr, // dans mon cas je n'en ai besoin que de trois
-	  'orderby' => 'date', // je les trie par date 
-	  'date' => true // je récupéère ma date
-	]);
-  
-	if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts
-  
-		while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
-		  $content->the_post(); // la récupère mon post
-		  echo 'yo';
-			  $image=get_field('illustrationimg');
-			  $nom_prenom=get_the_title();
-			  $description=get_the_content();
-			  echo '<div class="card profil" style="width: 18rem;">
-				  <img class="card-img-top" src="'.$image['url'].'" alt="Card image cap">
-				  <div class="card-body">
-					  <h5 class="card-title">'.$nom_prenom.'</h5>
-					  <p class="prix">'.get_field('prix').'</p>
-					  <p class="card-text">'.$description.'</p>
-				  </div>
-			  </div>
-				  ';
-	  }
-	  
-  }
-  else{
-	  echo '<h5>On a pas encore de question a vous répondre mais ça arrive !</h5>';
-  }
-
-}
 
 function boutonpicto($type,$couleur,$shape){
     $nomimg="picto_".$type."_inact.png";
