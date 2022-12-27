@@ -734,10 +734,4 @@ font-size: 20px;
     text-overflow: ellipsis;
 }
 
-.annoncfiltre {
-
-    padding-block-end: 500px;
-    margin-left: 50px;
-
-}
-    
+.annoncfiltre {}
