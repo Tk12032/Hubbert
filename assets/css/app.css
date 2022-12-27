@@ -128,8 +128,8 @@ header .nav-item a, main .nav-item a{
 
 display: flex;
 justify-content: center;
-align-items: center;
 font-family: 'Poppins';
+align-items: center;
 font-weight: bold;
 font-style: normal;
 height: 40px;
@@ -347,7 +347,6 @@ div.card-body{
 }
 
 .footer p, .footer a {
-font-family: 'Josefin Sans';
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
@@ -356,7 +355,6 @@ width:360px;
 }
 
 .footer h5{
-font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
 font-size: 32px;
@@ -588,7 +586,7 @@ p {
     max-width: 500px;
 }
 h3{
-    font-family: 'Poppins';
+    font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 32;
@@ -665,8 +663,8 @@ color:#504136;
 .boutmid a{
     display: flex;
     justify-content: center;
-    align-items: center;
     font-family: 'Poppins';
+    align-items: center;
     font-weight: bold;
     font-style: normal;
     height: 40px;

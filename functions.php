@@ -8,6 +8,7 @@ register_nav_menu('home', 'headerlogo');
 register_nav_menu('servicarr', 'servicarrou');
 register_nav_menu('outilcarr', 'outilcarrou');
 register_nav_menu('conect', 'conect');
+add_theme_support( 'widgets' );
 
 register_meta( 'post', 'block_name', array(
 	'show_in_rest' => true,
@@ -52,16 +53,6 @@ add_action('wp_enqueue_scripts','wp_bootstrap_styles_scripts');
 
 
 function create_post_type() {	 // function dans la quel j'ajouterais tous mes type de contenu
-	register_post_type('services'/* le nom de mon type de contenu */, [ // tableau avec mes options 
-		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
-		'name' => __('Services'), // __() permet a wordpress que c'est contenu de traduction
-		'singular_name' => __('Services')
-		],
-    	'public' => true, // c'est un post_type publique
-		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
-  	    'rewrite' => ['slug' => 'services'], // j'applique une réécriture d'url "services" au lieu de "slug"
-		'menu_icon' => 'dashicons-clipboard' // je lui précise une icon dans la bar d'outil de l'admin wordpress
-	]);
     
     register_post_type('profil'/* le nom de mon type de contenu */, [ // tableau avec mes options 
 		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
@@ -74,14 +65,14 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
 		'menu_icon' => 'dashicons-admin-users' // je lui précise une icon dans la bar d'outil de l'admin wordpress
 	]);
 
-    register_post_type('outil'/* le nom de mon type de contenu */, [ // tableau avec mes options 
+    register_post_type('annonce'/* le nom de mon type de contenu */, [ // tableau avec mes options 
 		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
-			'name' => __('outils'), // __() permet a wordpress que c'est contenu de traduction
-			'singular_name' => __('outils')
+			'name' => __('annonce'), // __() permet a wordpress que c'est contenu de traduction
+			'singular_name' => __('annonce')
 		],
 		'public' => true, // c'est un post_type publique
 		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
-  	'rewrite' => ['slug' => 'outils'], // j'applique une réécriture d'url "services" au lieu de "slug"
+  	'rewrite' => ['slug' => 'annonce'], // j'applique une réécriture d'url "services" au lieu de "slug"
 		'menu_icon' => 'dashicons-admin-tools' // je lui précise une icon dans la bar d'outil de l'admin wordpress
 	]);
 
