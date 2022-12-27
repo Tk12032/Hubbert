@@ -273,6 +273,7 @@ text-align: center;
 }
 .carrousel h5{
     font-size:16px;
+    font-family: 'Poppins';
 }
 .carrousel .card-text{
         overflow: hidden;
