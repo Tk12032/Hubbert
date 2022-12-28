@@ -33,24 +33,6 @@ body {
 
 
 
-.card.profil{
-    display: flex;
-    flex-flow: column wrap;
-    background-color: transparent;
-    width: 310px;
-    display: flex;
-    align-content: flex-end;
-}
-
-.card-title{
-    font-size:20px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-}
-
 .garden { 
 
     background-color: #000;
@@ -265,38 +247,6 @@ text-align: center;
 }
 
 
-.carrousel p {
-    font-size:14px;
-    line-height: 14px;
-    margin-bottom:10px;
-    text-align:start;
-}
-.carrousel h5{
-    font-size:16px;
-    font-family: 'Poppins';
-}
-.carrousel .card-text{
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-}
-div.card-body{
-    width: 160px;
-    height:132px;
-}
-/*pipi*/
-.carrousel > .tools {
-    flex-shrink: 0;
-   text-align: center;
-   margin-left: 25px;
-   width: 254px;
-    height: 252px;
-    border: 2px solid #504136;
-    border-radius: 15px;
-}
-
 .tools p {
     font-size: 16px;
     width: 254px;
@@ -335,11 +285,7 @@ div.card-body{
     margin-bottom: 100px;
 }
 
-.card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
+
 .footer div{
     display: flex;
     flex-direction: column;
@@ -702,18 +648,6 @@ font-size: 20px;
     flex-direction: row;
 }
 
-.carousel--wrapper {
-
-    margin-top: 50px;
-
-}
-
-.carrousel--wrapper {
-
-    margin-top: 50px;
-
-}
-
 
 .infoannonce{
     display: flex;
@@ -733,4 +667,34 @@ font-size: 20px;
     text-overflow: ellipsis;
 }
 
-.annoncfiltre {}
+/*carroussel aled */
+.carrousel .annonce img, .carrousel .annonce figure {
+    width: 260px;
+    height: 180px;
+    border-radius: 13px 13px 0px 0px;
+}
+
+.carrousel .annonce.card{
+    width: 260px;
+    height: 250px;
+    border-radius: 13px;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end ;
+
+}
+.carrousel--wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.carrousel .annonce .cardbody{
+    width: 90%;
+    height: 33px;
+    display: flex;
+    justify-self: flex-end;
+    margin: 10px 5px; 
+    justify-content: space-between;
+}
+.card-title{
+    width: fit-content;
+}

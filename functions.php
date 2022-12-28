@@ -126,15 +126,16 @@ function carroussel_couleur($type, $nbr){
 		$content->the_post(); // la récupère mon post
 			$image=get_field('image_dillustration');
 			$title=get_the_title();
-			echo '<div class="profil carrousel--item" style="padding: 0px 10px;"> ';
-			echo '<div class="card profil ">
+			echo '<div class="'.$type.' carrousel--item"> ';
+			echo '<div class="card '.$type.' ">
 			<figure><img src="'.$image['url'].'" alt="'.$title.'"></figure>
-				<div class="card-body">
+				<div class="cardbody">
 					<h5 class="card-title">'.$title.'</h5>
 					<a href="'.get_the_permalink().'" class="vert boutonplus">+</a>
 				</div>
 			</div>
 			</div>
+			
 				';		
 	}
 }
@@ -142,6 +143,7 @@ function carroussel_couleur($type, $nbr){
 else{
 	echo '<h5>On a pas encore de question a vous répondre mais ça arrive !</h5>';
 }
+echo '</div>';
 }       
 
 //autoriser les comments
