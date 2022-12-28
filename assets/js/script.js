@@ -111,8 +111,8 @@ $menu.addEventListener('selectstart', () => { return false })
 Resize
 --------------------*/
 window.addEventListener('resize', () => {
-  menuWidth = $menu.clientWidth/100
-  itemWidth = $items.clientWidth/100
+  menuWidth = $menu.clientWidth
+  itemWidth = $items.clientWidth
   wrapWidth = $items.length * itemWidth
 })
 

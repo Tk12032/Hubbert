@@ -106,7 +106,9 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
 
 }
 add_action('init', 'create_post_type');
-
+add_post_type_support( 'annonce', array(
+    'author', 'excerpt',
+) );
 
 function carroussel_couleur($type, $nbr){
 
@@ -119,52 +121,24 @@ function carroussel_couleur($type, $nbr){
   ]);
 
   if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts
-	if($type==='profil'){
 	echo '<div class="carrousel--wrapper">';
       while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
 		$content->the_post(); // la récupère mon post
-		if($type==='profil'){
-			$image=get_field('photo_de_profil');
-			$nom_prenom=get_the_title();
+			$image=get_field('image_dillustration');
+			$title=get_the_title();
 			echo '<div class="profil carrousel--item" style="padding: 0px 10px;"> ';
 			echo '<div class="card profil ">
-			<figure><img src="'.$image['url'].'" alt="'.$nom_prenom.'"></figure>
+			<figure><img src="'.$image['url'].'" alt="'.$title.'"></figure>
 				<div class="card-body">
-					<h5 class="card-title">'.$nom_prenom.'</h5>
-					<p class="localite">'.get_field('localite').'</p>
+					<h5 class="card-title">'.$title.'</h5>
 					<a href="'.get_the_permalink().'" class="vert boutonplus">+</a>
 				</div>
 			</div>
 			</div>
-				';
-		}
-		
-	}
-}	else if($type==='outil'){
-	echo '<div class="carousel--wrapper">';
-      while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
-		$content->the_post(); // la récupère mon post
-	if($type==='outil'){
-		$image=get_field('ImgAnnonces');
-		$nom_prenom=get_the_title();
-		echo '<div class="carousel--item" style="padding: 0px 10px;"> ';
-		echo '<div class="card tool">
-		<figure><img src="'.$image['url'].'" alt="'.the_title().'"></figure>
-			<div class="card-body">
-				<h5 class="card-title">'.$nom_prenom.'</h5>
-				<p class="localite">'.get_field('prix').'</p>
-				<a href="'.get_the_permalink().'" class="vert boutonplus">+</a>
-			</div>
-		</div>
-		</div>
-			';
-		}
-
+				';		
 	}
 }
-echo '</div>';
 	
-}
 else{
 	echo '<h5>On a pas encore de question a vous répondre mais ça arrive !</h5>';
 }
