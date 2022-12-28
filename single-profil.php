@@ -31,7 +31,7 @@ get_header(); ?>
 
       </ol>
       <?php endif; ?>
-      
+      <?php comment_form(); ?>
   </div>
 
   <div class="commentaires">
@@ -40,38 +40,19 @@ get_header(); ?>
 // The comment Query
 $comments_query = new WP_Comment_Query();
 $comments       = $comments_query->query( $args );
-
-
-
-update_post_meta( $post_id, 'comment_status', 'open' );
-if ( comments_open() || get_comments_number() ) :
-  comment_form(
-    array(
-        'title_reply'       => __( 'Commente quelque chose' ),
-        'label_submit'      => __( 'Post Comment' ),
-        'comment_field'     => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
-    )
-);
-endif;
 ?>
 <h3>Commentaires</h3>
 <?php
 // Comment Loop
 if ( $comments ) {
-  $current_post_id = get_the_ID();
-
 	foreach ( $comments as $comment ) {
-    $comment_post_id = $comment->comment_post_ID;
-    if($comment_post_id==$current_post_id){
-      echo '<article class="comm  ent">';
-      echo '<div class="vert versprofil">';
-        echo '<div>'.get_avatar($comment).'</div>';
-        echo '<h5>'.$comment->comment_author.'</h5>';
-        echo '</div>';
-        echo '<p>' . $comment->comment_content . '</p>';
-      echo '</article>';
-    }
-    
+    echo '<article class="comment">';
+    echo '<div class="vert versprofil">';
+      echo '<div>'.get_avatar($comment).'</div>';
+      echo '<h5>'.$comment->comment_author.'</h5>';
+      echo '</div>';
+      echo '<p>' . $comment->comment_content . '</p>';
+    echo '</article>';
 	}
 } else {
 	echo '<p>'."Cet utilisateur n'a pas encore de commentaires".'</p>';

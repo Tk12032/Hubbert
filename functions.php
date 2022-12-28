@@ -9,9 +9,9 @@ register_nav_menu('navbar', 'header');
 
 
 //test onverra
-//add_theme_support( 'post-templates', array(
- //   'page-template-name' => 'Template Name',
-//) );
+add_theme_support( 'post-templates', array(
+    'page-template-name' => 'Template Name',
+) );
 //fin du test lokum parano
 
 register_meta( 'post', 'block_name', array(
@@ -54,10 +54,9 @@ function wp_bootstrap_styles_scripts() {
     wp_enqueue_style('boostrap','https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
     wp_enqueue_script('bootstrap-bundle',' https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js',false,'1.0.0', true);
     wp_enqueue_script('jquery');
-	wp_enqueue_script('script', get_template_directory_uri().'/assets/js/script.js', ['jquery'], 1, true);
+	wp_enqueue_script(get_template_directory_uri().'/assets/js/script.js');
 }    
 add_action('wp_enqueue_scripts','wp_bootstrap_styles_scripts');
-
 
 
 function create_post_type() {	 // function dans la quel j'ajouterais tous mes type de contenu
@@ -74,8 +73,8 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
     
     register_post_type('profil'/* le nom de mon type de contenu */, [ // tableau avec mes options 
 		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
-			'name' => __('profil'), // __() permet a wordpress que c'est contenu de traduction
-			'singular_name' => __('profil')
+			'name' => __('Profil'), // __() permet a wordpress que c'est contenu de traduction
+			'singular_name' => __('Profil')
 		],
    		'public' => true, // c'est un post_type publique
 		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
@@ -143,22 +142,20 @@ function carroussel_couleur($type, $nbr){
   ]);
 
   if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts
-	echo '<div class="carrousel--wrapper">';
+	echo '<div class="carroussel--wrapper">';
       while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
 		$content->the_post(); // la récupère mon post
 		if($type==='profil'){
 			$image=get_field('photo_de_profil');
 			$nom_prenom=get_the_title();
 			$description=get_the_content();
-			echo '<div class="carrousel--item" style="padding: 0px 10px;"> ';
-			echo '<div class="card profil ">
-			<figure><img src="'.$image['url'].'"></figure>
+			echo '<div class="card profil carroussel--item" style="width: 18rem;">
+			<figure><img class="card-img-top" src="'.$image['url'].'" alt="Card image cap"></figure>
 				<div class="card-body">
 					<h5 class="card-title">'.$nom_prenom.'</h5>
 					<p class="localite">'.get_field('localite').'</p>
-					<a href="'.get_the_permalink().'" class="vert boutonplus">+</a>
+					<p class="card-text">'.$description.'</p>
 				</div>
-			</div>
 			</div>
 				';
 		}
@@ -171,23 +168,7 @@ else{
 }
 }       
 
-//autoriser les comments
-function get_profil_posts() {
-    $profil_posts = get_posts( array(
-        'post_type' => 'profil',
-        'numberposts' => -1,
-    ) );
 
-    return $profil_posts;
-};
-$profil_posts = get_profil_posts();
-
-foreach ( $profil_posts as $profil_post ) {
-    wp_update_post( array(
-        'ID'            => $profil_post->ID,
-        'comment_status' => 'open',
-    ) );
-}
 
 
 function recherche_annonce($nbr) {

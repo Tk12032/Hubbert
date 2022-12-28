@@ -1,51 +1,45 @@
-
-.carrousel {
-    overflow: hidden;
+  
+  .carroussel {
     cursor: grab;
     width: 100%;
     position: relative;
     z-index: 1;
-    height: 200px;
+    height: 40vh;
     
     &.is-dragging {
       cursor: grabbing;
     }
     
     &--wrapper {
+      counter-reset: count;
+      display: flex;
+      position: absolute;
       z-index: 1;
-      height: 100%;
     }
     
     &--item {
-      position: absolute;
+      counter-increment: count;
       z-index: 1;
-      overflow: hidden;
-      width: 22vw;
       
+      @media (max-width: 767px) {
+        height: 40vw;
+      }
       
+      &:nth-child(n+10):before {
+        content: counter(count);
+      }
       
       figure {
-        position: absolute;
-        z-index: 1;
-        display: block;
-        user-select: none;
-        padding: 0;
-        border: none;
-        outline: none;
-        box-shadow: none;
         cursor: pointer;
-        overflow: hidden;
+        width: 100%;
         pointer-events: none;
         transform-origin: center;
         
         img {
           z-index: 1;
-          width: 130px;
-          height: 150px;
-          border-radius:12px 0px 0px 12px;
-          overflow: hidden;
-
-          object-fit: cover;
+          top: 0;
+          left: 0;
+          object-fit:contain;
           vertical-align: middle;
           transform-origin: center;
         }
@@ -53,10 +47,8 @@
         &:before {
           position: absolute;
           z-index: 2;
-          bottom: 1vw;
-          left: 1vw;
           display: inline-block;
-          color: #ffffff;
+          content: "0" counter(count);
           font-size: 3vw;
         }
       }
@@ -64,20 +56,9 @@
   }
   
   .version {
-    display: inline-block;
     position: fixed;
     text-align: center;
     z-index: 1;
-    text-decoration: none;
-    background: #333;
-    font-family: sans-serif;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 12px;
-    border-radius: 10px;
-    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2);
-    top: -30px;
-    right: -50px;
     bottom: auto;
     transform: rotate(45deg);
     transform-origin: 0% 100%;
@@ -88,9 +69,7 @@
     &:before {
       content: '';
       position: absolute;
-      z-index: -1;
       width: 100%;
-      height: 100px;
       bottom: 0;
       right: 0%;
       background: transparent;
@@ -98,10 +77,6 @@
     
     @media (max-width: 767px) {
       transform: scale(.6) rotate(45deg) ;
-      right: -100px;
     }
   }
-
-
-
   

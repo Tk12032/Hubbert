@@ -39,7 +39,7 @@ get_header(); ?>
     </section>
 
     <section class="services">
-        <div class="carrousel">
+        <div class="carroussel">
             <?php carroussel_couleur("profil",10); ?>
             <!-- fct php de création de card en ftc des meilleurs users -->
         </div>
@@ -78,16 +78,13 @@ get_header(); ?>
 
             </p>
         </span>
-        <div class="carrousel">
+        <div class="carroussel">
             <?php carroussel_couleur("tools",20); ?>
             <!-- fct php de création de card en ftc des meilleurs annonces d'outils -->
         </div>
         <div class="bouton-page">
         <?php bouton_hubbert("Demander un outil","index.php","vert"); ?>
         <?php bouton_hubbert("Proposer un outil","index.php","orange"); ?>
-
-
-        
        
     </section>
 
