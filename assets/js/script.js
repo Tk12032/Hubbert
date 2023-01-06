@@ -1,5 +1,4 @@
 
-
 const $menu = document.querySelector('.carrousel')
 const $items = document.querySelectorAll('.carrousel--item')
 const $images = document.querySelectorAll('.carrousel--item img')
@@ -134,3 +133,5 @@ const render = () => {
 }
 render()
 
+
+  

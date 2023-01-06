@@ -46,8 +46,9 @@ function wp_bootstrap_styles_scripts() {
     wp_enqueue_style('boostrap','https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
     //wp_enqueue_script('bootstrap-bundle',' https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js',false,'1.0.0', true);
     wp_enqueue_script('jquery');
-	wp_enqueue_script('script', get_template_directory_uri().'/assets/js/script.js', ['jquery'], 1, true);
-	wp_enqueue_script('script', get_template_directory_uri().'/assets/js/hubbert-ajax.js', ['jquery'], 1, true);
+	wp_enqueue_script('hubcarrou', get_template_directory_uri().'/assets/js/script.js', ['jquery'], 1, true);
+	wp_enqueue_script('hubfiltre', get_template_directory_uri().'/assets/js/hubbertfiltre.js', ['jquery'], 1, true);
+	wp_enqueue_script('hubajax', get_template_directory_uri().'/assets/js/hubbert-ajax.js', ['jquery'], 1, true);
 }    
 add_action('wp_enqueue_scripts','wp_bootstrap_styles_scripts');
 

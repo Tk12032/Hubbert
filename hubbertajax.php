@@ -12,16 +12,9 @@ function create_mypost(){
 		'post_title' => $title),
 		true);
 
-
-	echo $title;
-	echo $content;
 	die();
 }
 add_action('wp_ajax_create_post', 'create_mypost');
-
-
-
-
 
 
 
