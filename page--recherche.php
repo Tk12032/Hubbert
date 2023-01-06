@@ -7,11 +7,11 @@ get_header(); ?>
     <aside class="filtres" style="width:270px">
         <div class ="filtre-check-box">
             <div class="check">  
-            <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils"/>
+            <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils" checked>
                 <label for="checkoutils">Outils</label>
             </div>
             <div class="check">
-                <input class="checkbox-effect" id="checkservices" type="checkbox" name="checkservices"/>
+                <input class="checkbox-effect" id="checkservices" type="checkbox" name="checkservices" checked>
                 <label for="checkservices">Services</label>
             </div>
         </div>
@@ -65,7 +65,6 @@ get_header(); ?>
     </section>
 
 </div>
-
 
 
 <?php get_footer(); ?>

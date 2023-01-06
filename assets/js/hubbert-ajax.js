@@ -100,11 +100,28 @@ parent.innerHTML = '';
   parent.appendChild(article);
         }
       }
+      else {
+        var parent = document.getElementById('parent');
+
+  // Si le tableau est vide, ajoutez un élément h5 à l'élément parent
+  var h5 = document.createElement('h5');
+  h5.innerHTML = "Il n'y a pas d'article correspondant à votre recherche";
+  parent.appendChild(h5);
+      }
     },
     error : function(){
         console.log("ça n'a pas marché, vous avez tout cassé")
     }
   }); 
+}
+
+var currentUrl = window.location.href;
+console.log(currentUrl)
+
+// Vérifiez si l'URL de la page actuelle correspond à l'URL de la page souhaitée
+if (currentUrl == 'http://localhost/test-wordpress/demander-un-service-outil/') {
+  // Si l'URL correspond, exécutez la fonction
+  filter();
 }
 
 
