@@ -53,7 +53,7 @@ get_header(); ?>
               ]); ?>
         </div>
     </section>
-
+<?php do_action('create_post'); ?>
     <section class="outils">
             <h2>
 

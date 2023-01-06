@@ -71,18 +71,18 @@ Touch
 let touchStart = 0
 let touchX = 0
 let isDragging = false
-const handleTouchStart = (e) => {
+const handleTouchStart = (e) => {//dit si l'user est entrain de faire bouger le carroussel
   touchStart = e.clientX || e.touches[0].clientX
   isDragging = true
   $menu.classList.add('is-dragging')
 }
-const handleTouchMove = (e) => {
+const handleTouchMove = (e) => {//renvoie la valeur qui sert a deplacer le carroussel
   if (!isDragging) return
   touchX = e.clientX || e.touches[0].clientX
   scrollY += (touchX - touchStart) * 2.5
   touchStart = touchX
 }
-const handleTouchEnd = () => {
+const handleTouchEnd = () => {//dit si l'user arrete de déplacer le carroussel
   isDragging = false
   $menu.classList.remove('is-dragging')
 }
@@ -133,3 +133,4 @@ const render = () => {
   })
 }
 render()
+

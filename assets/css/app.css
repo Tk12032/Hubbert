@@ -344,11 +344,11 @@ button{
 }
  
 .boutonplus{
-    align-self: flex-end;
     width: fit-content;
     padding: 0px 5px;
     color:#504136;
-    margin-top: 20px;
+    font-weight: 700;
+    line-height: 25px;
   }
 
 /* c'est pour le FAQ */
@@ -403,8 +403,6 @@ min-height: 600px;
 .container{
     padding-top: 100px;
     height: fit-content;
-    margin-left: 50px;
-    margin-right: 50px;
     width: 100%;
 }
 
@@ -646,6 +644,7 @@ font-size: 20px;
 .recherchannonce{
     display: flex;
     flex-direction: row;
+    margin: 100px 50px;
 }
 
 
@@ -658,13 +657,10 @@ font-size: 20px;
     margin-left:22px;
     text-align: justify;
 }
-.infodroite > *{
+.description{
     margin:15px 0px;
     overflow: scroll;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
+    height: 270px;
 }
 
 /*carroussel aled */
@@ -692,9 +688,55 @@ font-size: 20px;
     height: 33px;
     display: flex;
     justify-self: flex-end;
-    margin: 10px 5px; 
+    margin: 10px 15px; 
     justify-content: space-between;
 }
 .card-title{
     width: fit-content;
+}
+
+.card{
+    background-color: transparent;
+}
+
+/*recherche annonce*/
+.card-text{
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+.recherche .card {
+    margin:15px;
+    border-radius: 15px;
+}
+.recherche img{
+    border-radius:15px 0px 0px 15px;
+}
+.recherche .card-body{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:330px;
+}
+
+.bot-card-body{
+    justify-self: flex-end;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*Filtre recherche*/
+
+.filtre-check-box{
+    display: flex;
+    flex-direction: column;
 }
