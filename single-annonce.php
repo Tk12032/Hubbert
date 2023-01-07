@@ -54,11 +54,11 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
 
     <div class ="filtre-check-box" style="flex-direction:row">
             <div class="check" style="margin-right:60px">  
-            <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils" oninput="checkedbox()">
+            <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils" onchange="checkedboxoutil()" <?php $outil = get_field('type_dannonce'); if($outil=='outil'){echo 'checked';} ?>>
                 <label for="checkoutils">Outils</label>
             </div>
             <div class="check">
-                <input class="checkbox-effect" id="checkservices" type="checkbox" name="checkservices" oninput="checkedbox()">
+                <input class="checkbox-effect" id="checkservices" type="checkbox" name="checkservices" onchange="checkedboxservice()" <?php $service = get_field('type_dannonce'); if($service=='service'){echo 'checked';} ?>>
                 <label for="checkservices">Services</label>
             </div>
         </div>
@@ -90,11 +90,7 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
     </section>
 </div>
 
-<<<<<<< Updated upstream
-<button class="bouton">Sauver / Poster</button>
-=======
-<button class="bouton" class="vert">Sauver / Poster</button>
->>>>>>> Stashed changes
+<button class="vert bouton" style="align-self:flex-end">Sauver / Poster</button>
 
 </div>
 <?php
