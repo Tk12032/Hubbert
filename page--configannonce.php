@@ -3,6 +3,10 @@
 get_header(); ?>
 <div class="container">
 
+    <div>
+        <h1></h1>
+        <p></p>
+    </div>
 
 
 
