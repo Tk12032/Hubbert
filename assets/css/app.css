@@ -460,6 +460,7 @@ min-height: 600px;
     padding-top: 100px;
     height: fit-content;
     width: 100%;
+    margin-bottom: 175px;
 }
 
 
@@ -888,5 +889,13 @@ input[type="range"] {
     line-height: 30px;
     color: #504136;
     text-align: center;
+    margin-top: 30px;
+
+}
+
+.connect p {
+
+margin-top: 15px;
+margin-bottom: 0em;
 
 }

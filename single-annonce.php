@@ -90,14 +90,7 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
     </section>
 </div>
 
-<button style="font-family: 'Poppins';
-align-self:flex-end;
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 30px;
-color: #504136;
-text-align: center;" class="vert">Sauver / Poster</button>
+<button class="bouton">Sauver / Poster</button>
 
 </div>
 <?php
