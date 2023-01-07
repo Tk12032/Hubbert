@@ -899,3 +899,9 @@ margin-top: 15px;
 margin-bottom: 0em;
 
 }
+
+textarea {
+
+resize: none;
+
+}
