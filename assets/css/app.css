@@ -774,16 +774,6 @@ margin-left: 175px;
     width: 641px;
     height: 20px;
 }
-<<<<<<< HEAD
-
-.bout_inscris {
-
-    width: 342px;
-    height: 50px;
-    border: 3px solid #AACF23;
-    border-radius: 8px;
-
-=======
 .carrousel .annonce .cardbody{
     width: 90%;
     height: 33px;
@@ -791,7 +781,6 @@ margin-left: 175px;
     justify-self: flex-end;
     margin: 10px 15px; 
     justify-content: space-between;
->>>>>>> 1ca147e8eea2ccfede30d97260242061a48d9016
 }
 
 .orange_connect {
@@ -799,26 +788,6 @@ margin-left: 175px;
     border: 3px solid #F17444;
     border-radius: 8px;
     width: fit-content;
-<<<<<<< HEAD
-    margin-bottom: 63px;
-    margin-left: 177px;
-    margin-top: 30px;
-    
-}
-
-
-/* huh? */
-.connect {
-
-    position: absolute;
-    width: 315px;
-    height: 24px;
-    margin-left: 175px;
-    margin-top: 30px;
-    font-weight: 700;
-    
-}
-=======
 }
 
 .card{
@@ -928,4 +897,3 @@ input[type="range"] {
   }
 /*checkbox*/
 
->>>>>>> 1ca147e8eea2ccfede30d97260242061a48d9016
