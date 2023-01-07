@@ -880,6 +880,22 @@ input[type="range"] {
   }
 /*checkbox*/
 
+/* configannonce*/
+
+.configannonc h5{
+    display: flex;
+    align-items: center;
+}
+
+.configannonc .modif{
+    margin-left:15px;
+}
+
+.configannonc .imgillu{
+    border-radius: 15px;
+    margin-bottom:30px;
+}
+
 .bouton {
 
     font-family: 'Poppins';

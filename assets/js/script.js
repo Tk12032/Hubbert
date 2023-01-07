@@ -134,4 +134,27 @@ const render = () => {
 render()
 
 
-  
+//config annonce
+
+function checkedboxoutil() {
+  const outil = document.getElementById('checkoutils');
+  const service = document.getElementById('checkservices');
+  if (outil.checked) {
+    service.checked = false;
+  } else {
+    service.checked = true;
+  }
+} 
+
+function checkedboxservice() {
+  const service = document.getElementById('checkservices');
+  const outil = document.getElementById('checkoutils');
+
+  if (service.checked) {
+    outil.checked = false;
+  } else {
+    outil.checked = true;
+  }
+}
+
+
