@@ -54,11 +54,11 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
 
     <div class ="filtre-check-box" style="flex-direction:row">
             <div class="check" style="margin-right:60px">  
-            <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils" checked>
+            <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils" oninput="checkedbox()">
                 <label for="checkoutils">Outils</label>
             </div>
             <div class="check">
-                <input class="checkbox-effect" id="checkservices" type="checkbox" name="checkservices" checked>
+                <input class="checkbox-effect" id="checkservices" type="checkbox" name="checkservices" oninput="checkedbox()">
                 <label for="checkservices">Services</label>
             </div>
         </div>
@@ -90,7 +90,11 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
     </section>
 </div>
 
+<<<<<<< Updated upstream
 <button class="bouton">Sauver / Poster</button>
+=======
+<button class="bouton" class="vert">Sauver / Poster</button>
+>>>>>>> Stashed changes
 
 </div>
 <?php

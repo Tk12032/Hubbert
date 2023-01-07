@@ -134,4 +134,16 @@ const render = () => {
 render()
 
 
-  
+//config annonce
+
+function checkedbox(){
+  const outil = document.getElementById('checkoutils')
+  const service = document.getElementById('checkservices')
+
+  if(outil.checked){
+      service.checked = false;
+  }
+  if(service.checked){
+    outil.checked = false;
+  }
+}
