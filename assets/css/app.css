@@ -731,7 +731,7 @@ font-size: 20px;
     height: 270px;
 }
 
-.rectangle_connect {
+.rectangle-connect {
 
 border: 3px solid beige;
 border-radius: 8px;
@@ -742,7 +742,7 @@ margin-left: 175px;
 margin-top: 63px;
 }
 
-.container_connexion {
+.container-connexion {
 
     padding-top: 130px;
     height: fit-content;
@@ -751,16 +751,8 @@ margin-top: 63px;
     width: 100%;
 }
 
-.texte_connect {
 
-position: absolute;
-width: 800px;
-height: 32px;
-margin-top: 150px;
-margin-left: 175px;
-}
-
-.texte_connect h1{
+.texte-connect h1{
 
     width: 361px;
     height: 32px;
@@ -769,12 +761,7 @@ margin-left: 175px;
 
 }
 
-.texte_connect p{
 
-    position: absolute;
-    width: 641px;
-    height: 20px;
-}
 .carrousel .annonce .cardbody{
     width: 90%;
     height: 33px;
@@ -784,12 +771,6 @@ margin-left: 175px;
     justify-content: space-between;
 }
 
-.orange_connect {
-
-    border: 3px solid #F17444;
-    border-radius: 8px;
-    width: fit-content;
-}
 
 .card{
     background-color: transparent;
@@ -898,16 +879,14 @@ input[type="range"] {
   }
 /*checkbox*/
 
-/*config annonce*/
-.configannonc h5 {
-    display: flex;
-    align-items: center;
-}
-.modif{
-    margin-left: 25px;
-}
+.bouton {
 
-.configannonc .imgillu{
-    border-radius: 15px;
-    margin-bottom: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #504136;
+    text-align: center;
+
 }

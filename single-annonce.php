@@ -132,14 +132,7 @@ else:
         <p class="description"><?php echo get_field('description'); ?> </p>
                 <button style="border:none">                
         <?php echo '<div style="width:fit-content" class="vert versprofil">';?>   
-        <h5 style="font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 30px;
-/* identical to box height */
-color: #504136;
-text-align: center;">Contacter</h5><!-- à ranger en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
+        <h5 class="bouton">Contacter</h5><!-- à ranger en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
         </button>
         </div>
 
