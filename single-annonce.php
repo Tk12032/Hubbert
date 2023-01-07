@@ -67,7 +67,7 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
                         </div>
                 </div>
 
-                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px"><?php 
+                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px"><textarea><?php 
                 $title = get_the_title();
                 if($type!=='page'){
                         the_title(); 
@@ -75,21 +75,22 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
                 else {
                         echo 'Titre';
                 }
-                echo $modif?></h5>
+                ?></textarea></h5>
                 
-                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px"><?php 
+                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px">
+                <input style="width:65px; background-color:transparent; border-radius:5px;" type="number" id="tentacles" name="prix" min="1" max="100" value="<?php 
                 $prix = get_field('prix');
                 if($prix!=''){
-                        echo $prix.'€/jour'; 
+                        echo $prix; 
                 }
                 else {
-                        echo 'Prix €/jour';
+                        echo 10;
                 }
-                echo $modif?></h5>
-                <h5><?php if(get_field('localite')==''){
+                ?>">€/jour</h5>
+                <h5><textarea><?php if(get_field('localite')==''){
                         echo 'Localité';}
                         else{
-                        echo get_field('localite');} echo $modif?></h5> 
+                        echo get_field('localite');}?></textarea></h5> 
         </div>
         <button class="vert bouton" style="align-self:flex-end">Sauver / Poster</button>
     </section>

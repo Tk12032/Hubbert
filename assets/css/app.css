@@ -917,13 +917,6 @@ margin-bottom: 0em;
 
 }
 
-<<<<<<< Updated upstream
-textarea {
-
-resize: none;
-
-}
-=======
 input[type="file"]::-webkit-file-upload-button {
     padding: 5px 10px;
     background-color: transparent;
@@ -949,4 +942,3 @@ input[type="file"]::-webkit-file-upload-button {
     transition: 0.4s;
   }
   
->>>>>>> Stashed changes
