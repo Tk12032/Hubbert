@@ -625,16 +625,15 @@ textarea{
     box-sizing: border-box;
 
 /* Auto layout */
-
+font-size: 16px;
 display: flex;
 flex-direction: row;
 padding: 5px;
 gap: 10px;
 
 width: 459px;
-height: 44px;
+resize : none;
 
-/* brun 1 */
 
 border: 2px solid #504136;
 border-radius: 10px;
@@ -729,7 +728,8 @@ font-size: 20px;
 .description{
     margin:15px 0px;
     overflow: scroll;
-    height: 270px;
+    height: 190px;
+
 }
 
 .rectangle-connect {
@@ -898,6 +898,7 @@ input[type="range"] {
 
 .bouton {
 
+    padding: 5px 10px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -916,8 +917,36 @@ margin-bottom: 0em;
 
 }
 
+<<<<<<< Updated upstream
 textarea {
 
 resize: none;
 
 }
+=======
+input[type="file"]::-webkit-file-upload-button {
+    padding: 5px 10px;
+    background-color: transparent;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #504136;
+    text-align: center;
+    margin-top: 30px;
+    border: 3px solid #AACF23;
+    border-radius: 8px;
+    content: "Sélectionner un fichier";
+  }
+ 
+
+
+  input[type="file"]::-webkit-file-upload-button:hover {
+    background-color:#AACF23;
+    border: 3px solid #AACF23;
+    color: #504136;
+    transition: 0.4s;
+  }
+  
+>>>>>>> Stashed changes
