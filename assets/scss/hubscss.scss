@@ -134,7 +134,7 @@ label {
   align-items:center;
   margin-top:5px;
   border-radius: 5px;
-  @include position-absolute($left: 2px, $top: 0);
+  @include position-absolute($left: 0px, $top: 5px);
   color: #AACF23;
   background-color: #AACF23;
   @include transition-mix;

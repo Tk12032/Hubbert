@@ -142,6 +142,7 @@ color: #504136;
 /* vert cta */
 border: 3px solid #AACF23;
 border-radius: 8px;
+display: flex;
 }
 
 .blanc{
@@ -462,7 +463,7 @@ min-height: 600px;
 }
 
 
-p {
+p, label {
 
     font-family: 'Josefin Sans';
     font-style: normal;
@@ -897,3 +898,16 @@ input[type="range"] {
   }
 /*checkbox*/
 
+/*config annonce*/
+.configannonc h5 {
+    display: flex;
+    align-items: center;
+}
+.modif{
+    margin-left: 25px;
+}
+
+.configannonc .imgillu{
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
