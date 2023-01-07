@@ -730,7 +730,7 @@ font-size: 20px;
     height: 270px;
 }
 
-.rectangle_connect {
+.rectangle-connect {
 
 border: 3px solid beige;
 border-radius: 8px;
@@ -741,7 +741,7 @@ margin-left: 175px;
 margin-top: 63px;
 }
 
-.container_connexion {
+.container-connexion {
 
     padding-top: 130px;
     height: fit-content;
@@ -750,16 +750,8 @@ margin-top: 63px;
     width: 100%;
 }
 
-.texte_connect {
 
-position: absolute;
-width: 800px;
-height: 32px;
-margin-top: 150px;
-margin-left: 175px;
-}
-
-.texte_connect h1{
+.texte-connect h1{
 
     width: 361px;
     height: 32px;
@@ -768,22 +760,7 @@ margin-left: 175px;
 
 }
 
-.texte_connect p{
 
-    position: absolute;
-    width: 641px;
-    height: 20px;
-}
-<<<<<<< HEAD
-
-.bout_inscris {
-
-    width: 342px;
-    height: 50px;
-    border: 3px solid #AACF23;
-    border-radius: 8px;
-
-=======
 .carrousel .annonce .cardbody{
     width: 90%;
     height: 33px;
@@ -791,35 +768,8 @@ margin-left: 175px;
     justify-self: flex-end;
     margin: 10px 15px; 
     justify-content: space-between;
->>>>>>> 1ca147e8eea2ccfede30d97260242061a48d9016
 }
 
-.orange_connect {
-
-    border: 3px solid #F17444;
-    border-radius: 8px;
-    width: fit-content;
-<<<<<<< HEAD
-    margin-bottom: 63px;
-    margin-left: 177px;
-    margin-top: 30px;
-    
-}
-
-
-/* huh? */
-.connect {
-
-    position: absolute;
-    width: 315px;
-    height: 24px;
-    margin-left: 175px;
-    margin-top: 30px;
-    font-weight: 700;
-    
-}
-=======
-}
 
 .card{
     background-color: transparent;
@@ -928,4 +878,14 @@ input[type="range"] {
   }
 /*checkbox*/
 
->>>>>>> 1ca147e8eea2ccfede30d97260242061a48d9016
+.bouton {
+
+    "font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #504136;
+    text-align: center;
+
+}

@@ -2,38 +2,37 @@
 /* Template Name: PageConnexion */
 get_header(); ?>
 
-<h1 class='texte_connect h1'> Connecte toi à Hubbert </h1>
-<br>
-<br>
-<p class='texte_connect p'> Complete le plus possible ton profil pour ne pas devoir y retourner plus tard </p>
-<br>
-<br>
-<div class="container_connexion"> </div>
+<div class="connect container">
+<h1 class='texte-connect h1'> Connecte toi à Hubbert </h1>
 
-<p class='connect'> Nom </p>
+<p class='texte-connect p'> Complete le plus possible ton profil pour ne pas devoir y retourner plus tard </p>
 
-<section class="rectangle_connect"> </section>
+<p> Nom </p>
 
-<p class='connect'> Prénom </p>
+<textarea> </textarea>
 
-<section class="rectangle_connect"> </section>
+<p> Prénom </p>
 
-<p class='connect'> localité </p>
+<textarea> </textarea>
 
-<section class="rectangle_connect"> </section>
+<p> localité </p>
 
-<p class='connect'> Mail </p>
+<textarea> </textarea>
 
-<section class="rectangle_connect"> </section>
+<p> Mail </p>
 
-<p class='connect'> Mot de passe </p>
+<textarea> </textarea>
 
-<section class="rectangle_connect"> </section>
+<p> Mot de passe </p>
 
-<p class='connect'> Confirmer le mot de passe </p>
+<textarea> </textarea>
 
-<section class="rectangle_connect"> </section>
+<p> Confirmer le mot de passe </p>
 
-<section class="orange_connect"> Je m'inscris</section>
+<textarea> </textarea>
+
+<section class="orange bouton"> Je m'inscris</section>
+
+</div>
 
 <?php get_footer(); ?>
