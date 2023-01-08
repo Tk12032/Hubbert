@@ -116,7 +116,6 @@ parent.innerHTML = '';
 }
 
 var currentUrl = window.location.href;
-console.log(currentUrl)
 
 // Vérifiez si l'URL de la page actuelle correspond à l'URL de la page souhaitée
 if (currentUrl == 'http://localhost/test-wordpress/demander-un-service-outil/') {
@@ -124,4 +123,51 @@ if (currentUrl == 'http://localhost/test-wordpress/demander-un-service-outil/') 
   filter();
 }
 
+
+function postMajAnnonc(){
+
+  const postype = document.getElementById('posttype').innerText
+  const postid = document.getElementById('postid').innerText
+  const userid = document.getElementById('currentuserid').innerText
+    const description = document.getElementById('description').value
+    const titre = document.getElementById('titre').value
+    const prix = document.getElementById('prix').value
+    const localite = document.getElementById('localite').value
+    const outil = document.getElementById('checkoutils').checked
+    const services = document.getElementById('checkservices').checked
+    const jstart = document.getElementById('fromSlider').value
+    const jend = document.getElementById('toSlider').value
+    const hstart = document.getElementById('fromSlider2').value
+    const hend = document.getElementById('toSlider2').value
+
+      
+
+    $.ajax({
+      url: hubajaxurl,
+      type: 'POST',
+      data: {//tableau en Json
+        action : 'postannonc',
+        postType : postype,
+        postID : postid,
+        descrip : description,
+        title : titre,
+        lieu : localite,
+        outil : outil,
+        service : services,
+        prix : prix,
+        jourstart : jstart,
+        jourend : jend,
+        heurestart : hstart,
+        heureend : hend,
+        userid : userid
+      },
+      success: function(response) {
+        console.log(response)
+        window.location.href = response;
+      },
+      error : function(){
+          console.log("ça n'a pas marché, vous avez tout cassé")
+      }
+    }); 
+}
 

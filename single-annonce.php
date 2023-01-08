@@ -8,6 +8,10 @@ global $post;
 $a_id=$post->post_author;
 $idauthor = get_the_author_meta( 'ID', $a_id );
 $type = get_post_type();
+echo '<p style="display:none" id="posttype">'. $type . '</p>';
+$postid = get_the_ID();
+echo '<p style="display:none" id="postid">'. $postid . '</p>';
+echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';
 $modif = '<button class="modif vert"><img style ="width:34px;height:34px" src="'.get_template_directory_uri().'/assets/img/picto_crayon_inact.svg"></button>';
 if(($idauthor===$idcurrent)||($type=='page')):?>
 
@@ -35,15 +39,18 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
                         echo '<img class="imgillu" style="width:460px; height:330px" src="'.$image['url'].'" alt="'.get_the_title().'">';  
                 }
                 else {
-                        echo '<div style="width:460px; height: 330px; display:flex; align-items:center; justify-content:center"><img class="imgillu" style="width:150px; height: 130px" src="'.get_template_directory_uri().'/assets/img/picto_noimage_inact.svg" alt="Très joli pictogramme signifiant que tu'."'".'as pas encore posté d'."'".'image"></div>';
+                        echo '<div style="width:460px; height: 330px; display:flex; align-items:center; justify-content:center"><img style="width:150px; height: 130px" src="'.get_template_directory_uri().'/assets/img/picto_noimage_inact.svg" alt="Très joli pictogramme signifiant que tu'."'".'as pas encore posté d'."'".'image"></div>';
                 }
         ?>
-        <form style="display:flex" action="" method="post" enctype="multipart/form-data">
-                        <input id="file-upload" type="file" name="image" id="image" >
+                <form style="display:flex" action="" method="post" enctype="multipart/form-data">
+                        <input id="file-upload" type="file" name="image" onchange="imgannoncmaj()">
+                        <div id="filelist"></div>
                 </form>
+
+
         </div>
         <div style="display:flex">
-                <p class="description" ><textarea><?php $description = get_field('description');
+                <p class="description" ><textarea id="description"><?php $description = get_field('description');
                 if($description!=''){
                         echo $description;
                 }
@@ -58,7 +65,7 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
         <div style="height:300px; display:flex; flex-direction:column; justify-content:space-between">
                 <div class ="filtre-check-box" style="flex-direction:row">
                         <div class="check" style="margin-right:60px">  
-                                <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils" onchange="checkedboxoutil()" <?php $outil = get_field('type_dannonce'); if($outil=='outil'){echo 'checked';} ?>>
+                                <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils" onchange="checkedboxoutil()" <?php $outil = get_field('type_dannonce'); if(($outil=='outil')||($type=='page')){echo 'checked';}?>>
                                 <label for="checkoutils">Outils</label>
                         </div>
                         <div class="check">
@@ -67,7 +74,7 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
                         </div>
                 </div>
 
-                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px"><textarea><?php 
+                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px"><textarea id="titre"><?php 
                 $title = get_the_title();
                 if($type!=='page'){
                         the_title(); 
@@ -78,7 +85,7 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
                 ?></textarea></h5>
                 
                 <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px">
-                <input style="width:65px; background-color:transparent; border-radius:5px;" type="number" id="tentacles" name="prix" min="1" max="100" value="<?php 
+                <input id="prix" style="width:65px; background-color:transparent; border-radius:5px;" type="number" id="tentacles" name="prix" min="1" max="100" value="<?php 
                 $prix = get_field('prix');
                 if($prix!=''){
                         echo $prix; 
@@ -87,12 +94,36 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
                         echo 10;
                 }
                 ?>">€/jour</h5>
-                <h5><textarea><?php if(get_field('localite')==''){
+                <h5><textarea id="localite"><?php if(get_field('localite')==''){
+                        echo get_field('localite');
                         echo 'Localité';}
                         else{
                         echo get_field('localite');}?></textarea></h5> 
         </div>
-        <button class="vert bouton" style="align-self:flex-end">Sauver / Poster</button>
+
+        <div class="range_container" style="width:170px">
+            <div><label>Jours</label></div>
+                <div class="sliders_control">
+                    <input id="fromSlider" type="range" value="<?php echo get_field('jourstart') ?>" min="0" max="6" oninput="doublslider()">
+                    
+                    <input id="toSlider" type="range" value="<?php echo get_field('jend') ?>" min="0" max="6" oninput="doublslider()">   
+                </div>
+            <div style="display:flex;justify-content:space-between;margin-top:10px"><output id="startday">Lundi</output><output id="endday">Dimanche</output></div>
+        </div>
+
+
+        <div class="range_container" style="width:170px">
+            <div><label>Heures</label></div>
+                <div class="sliders_control">
+                    <input id="fromSlider2" type="range" value="<?php echo get_field('heure_de_debut') ?>" min="7" max="20" oninput="doublslider2()">
+                    
+                    <input id="toSlider2" type="range" value="<?php echo get_field('heure-de-fin') ?>" min="7" max="20" oninput="doublslider2()">   
+                </div>
+            <div style="display:flex;justify-content:space-between;margin-top:10px"><output id="starthour">7h</output><output id="endhour">20h</output></div>
+        </div>
+
+
+        <button class="vert bouton" style="align-self:flex-end" onclick="postMajAnnonc()">Sauver / Poster</button>
     </section>
 </div>
 
