@@ -104,9 +104,9 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
         <div class="range_container" style="width:170px">
             <div><label>Jours</label></div>
                 <div class="sliders_control">
-                    <input id="fromSlider" type="range" value="0" min="0" max="6" oninput="doublslider()">
+                    <input id="fromSlider" type="range" value="<?php echo get_field('jourstart') ?>" min="0" max="6" oninput="doublslider()">
                     
-                    <input id="toSlider" type="range" value="6" min="0" max="6" oninput="doublslider()">   
+                    <input id="toSlider" type="range" value="<?php echo get_field('jend') ?>" min="0" max="6" oninput="doublslider()">   
                 </div>
             <div style="display:flex;justify-content:space-between;margin-top:10px"><output id="startday">Lundi</output><output id="endday">Dimanche</output></div>
         </div>
@@ -115,9 +115,9 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
         <div class="range_container" style="width:170px">
             <div><label>Heures</label></div>
                 <div class="sliders_control">
-                    <input id="fromSlider2" type="range" value="7" min="7" max="20" oninput="doublslider2()">
+                    <input id="fromSlider2" type="range" value="<?php echo get_field('heure_de_debut') ?>" min="7" max="20" oninput="doublslider2()">
                     
-                    <input id="toSlider2" type="range" value="20" min="7" max="20" oninput="doublslider2()">   
+                    <input id="toSlider2" type="range" value="<?php echo get_field('heure-de-fin') ?>" min="7" max="20" oninput="doublslider2()">   
                 </div>
             <div style="display:flex;justify-content:space-between;margin-top:10px"><output id="starthour">7h</output><output id="endhour">20h</output></div>
         </div>

@@ -16,10 +16,10 @@ function create_post(){
 	}
 	$prix = $_POST['prix'];//
 	$postype = $_POST['postType']; // sert à savoir si le post est à modifier ou non (si posttype = annonce, il est modifier, si posttype='page' c'est que l'user est sur la page création d'annonce et donc on doit créer un nouveau post)
-	$jstart = $_POST['jstart'];
-	$jend = $_POST['jend'];
-	$hstart = $_POST['hstart'];//
-	$hend = $_POST['hend'];//
+	$jstart = $_POST['jourstart'];
+	$jend = $_POST['jourend'];
+	$hstart = $_POST['heurestart'];//
+	$hend = $_POST['heureend'];//
 	$currentuser = $_POST['userid'];//
 
 	$ID = $_POST['postID']; // sert à savoir l'id du post si c'est un post qui est mis à jour
@@ -50,8 +50,8 @@ if($postype == 'page'){// dans les deux cas le code appliquer est presque le mem
 
 
 	if ( $post_id != 0 ) {//on change les fields acf du post
-		update_field( 'type_dannonce',$type, $post_id );
-		update_field( 'heure_de_debut',$hstart, $post_id );
+		update_field('type_dannonce',$type, $post_id );
+		update_field('heure_de_debut',$hstart, $post_id );
 		update_field('heure-de-fin', $hend, $post_id );
 		update_field('prix', $prix, $post_id );
 		update_field('localite', $localite, $post_id );
