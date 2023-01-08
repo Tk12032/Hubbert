@@ -2,19 +2,68 @@
 
 require_once '../../../wp-load.php';//rajoute l'environnement wordpress (sinon les fonctions wp ne fonctionne pas)
 
-function create_mypost(){
-		echo 'test';
-	$title = $_POST["title"];
-	$content = $_POST["content"];
 
-	wp_insert_post(
-		array('post_content' => $content,
-		'post_title' => $title),
-		true);
 
+function create_post(){
+//sortir le contenu de la requete
+	$title = $_POST["title"];//
+	$content = $_POST["descrip"];//
+	$localite = $_POST['lieu'];//
+	if($_POST['outil']=='true'){//
+		$type='outil';
+	}else{
+		$type='service';
+	}
+	$prix = $_POST['prix'];//
+	$postype = $_POST['postType']; // sert à savoir si le post est à modifier ou non (si posttype = annonce, il est modifier, si posttype='page' c'est que l'user est sur la page création d'annonce et donc on doit créer un nouveau post)
+	$jstart = $_POST['jstart'];
+	$jend = $_POST['jend'];
+	$hstart = $_POST['hstart'];//
+	$hend = $_POST['hend'];//
+	$currentuser = $_POST['userid'];//
+
+	$ID = $_POST['postID']; // sert à savoir l'id du post si c'est un post qui est mis à jour
+
+	//creation post 
+if($postype == 'page'){// dans les deux cas le code appliquer est presque le memme juste l'ID change, car soit il est update soit il est nouveaiu
+	$post_id = wp_insert_post(
+		array(
+			'ID' => 0,
+			'post_author' => $currentuser,
+			'post_title' => $title,
+			'post_status' => 'publish',
+			'post_type' => 'annonce'
+		)
+	);  
+}
+	else { // si le post est mis à jour
+		$post_id = wp_insert_post(
+			array(
+				'ID' => $ID,
+				'post_author' => $currentuser,
+				'post_title' => $title,
+				'post_status' => 'publish',
+				'post_type' => 'annonce'
+			)
+		);
+	}
+
+
+	if ( $post_id != 0 ) {//on change les fields acf du post
+		update_field( 'type_dannonce',$type, $post_id );
+		update_field( 'heure_de_debut',$hstart, $post_id );
+		update_field('heure-de-fin', $hend, $post_id );
+		update_field('prix', $prix, $post_id );
+		update_field('localite', $localite, $post_id );
+		update_field('description', $content, $post_id );
+		update_field('jourstart', $jstart, $post_id );
+		update_field('jend', $jend, $post_id );
+	  }
+
+	echo get_permalink($post_id);
 	die();
 }
-add_action('wp_ajax_create_post', 'create_mypost');
+add_action('wp_ajax_postannonc', 'create_post');
 
 function filter(){
 	
@@ -90,9 +139,7 @@ function filter(){
 	die();
 }
 
-
 add_action('wp_ajax_filter','filter');
-
 
 
 do_action('wp_ajax_'.$_POST['action']);

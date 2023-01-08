@@ -2,7 +2,7 @@
 /* Template Name: PageRecherche */
 get_header(); ?>
 
-<div class = "recherchannonce"> 
+<div class = "recherchannonce" style="padding: 100px 50px;"> 
 
     <aside class="filtres" style="width:270px">
         <div class ="filtre-check-box">

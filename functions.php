@@ -49,6 +49,8 @@ function wp_bootstrap_styles_scripts() {
 	wp_enqueue_script('hubcarrou', get_template_directory_uri().'/assets/js/script.js', ['jquery'], 1, true);
 	wp_enqueue_script('hubfiltre', get_template_directory_uri().'/assets/js/hubbertfiltre.js', ['jquery'], 1, true);
 	wp_enqueue_script('hubajax', get_template_directory_uri().'/assets/js/hubbert-ajax.js', ['jquery'], 1, true);
+
+
 }    
 add_action('wp_enqueue_scripts','wp_bootstrap_styles_scripts');
 
