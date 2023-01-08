@@ -15,9 +15,6 @@ get_header(); ?>
 
 <textarea> </textarea>
 
-<p> localité </p>
-
-<textarea> </textarea>
 
 <p> Mail </p>
 
