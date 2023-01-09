@@ -9,15 +9,15 @@ get_header(); ?>
 
 <p> Nom </p>
 
-<textarea> </textarea>
+<textarea id="name"> </textarea>
 
-<p> Prénom </p>
+<p > Prénom </p>
 
-<textarea> </textarea>
+<textarea id="prenom"> </textarea>
 
 <p> localité </p>
 
-<textarea> </textarea>
+<textarea id="prenom"> </textarea>
 
 <p> Mail </p>
 

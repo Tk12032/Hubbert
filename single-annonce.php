@@ -13,7 +13,7 @@ $postid = get_the_ID();
 echo '<p style="display:none" id="postid">'. $postid . '</p>';
 echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';
 $modif = '<button class="modif vert"><img style ="width:34px;height:34px" src="'.get_template_directory_uri().'/assets/img/picto_crayon_inact.svg"></button>';
-if(($idauthor===$idcurrent)||($type=='page')):?>
+if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU qu'on arrive sur la page via le bouton proposer un service / outil?>
 
 <div class="container" style="display:flex; flex-direction:column;height:fit-content; width:63%">
 
@@ -42,9 +42,9 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
                         echo '<div style="width:460px; height: 330px; display:flex; align-items:center; justify-content:center"><img style="width:150px; height: 130px" src="'.get_template_directory_uri().'/assets/img/picto_noimage_inact.svg" alt="Très joli pictogramme signifiant que tu'."'".'as pas encore posté d'."'".'image"></div>';
                 }
         ?>
-                <form style="display:flex" action="" method="post" enctype="multipart/form-data">
-                        <input id="file-upload" type="file" name="image" onchange="imgannoncmaj()">
-                        <div id="filelist"></div>
+                <form id="image-form" style="display:flex; align-items:flex-end" enctype="multipart/form-data">
+                <input type="file" name="image" id="image-input">
+                <button  class="vert imgupload" type="submit" id="submit-button">Envoyer</button>
                 </form>
 
 

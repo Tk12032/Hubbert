@@ -9,6 +9,11 @@ function create_post(){
 	$title = $_POST["title"];//
 	$content = $_POST["descrip"];//
 	$localite = $_POST['lieu'];//
+	
+	if($_POST['imgid']!=0){
+		$imgid = $_POST['imgid'];
+	}
+	
 	if($_POST['outil']=='true'){//
 		$type='outil';
 	}else{
@@ -59,7 +64,9 @@ if($postype == 'page'){// dans les deux cas le code appliquer est presque le mem
 		update_field('jourstart', $jstart, $post_id );
 		update_field('jend', $jend, $post_id );
 	  }
-
+	if ($_POST['imgid']!=0){
+		update_field('image_dillustration', $imgid, $post_id );
+	}
 	echo get_permalink($post_id);
 	die();
 }

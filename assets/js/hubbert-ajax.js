@@ -123,9 +123,30 @@ if (currentUrl == 'http://localhost/test-wordpress/demander-un-service-outil/') 
   filter();
 }
 
+let attachementId = 0;//permettre de modifier l'id d'une image upload
+
+$(document).ready(function() {
+  $('#image-form').on('submit', function(e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+    $.ajax({
+    url: '/test-wordpress/wp-content/themes/Hubbert/uploadimg.php',
+    type: 'POST',
+    data: formData,
+    success: function(data) {
+    console.log(data)
+    attachementId = data;
+    },
+    cache: false,
+    contentType: false,
+    processData: false
+    });
+  });
+});
+
 
 function postMajAnnonc(){
-
+ console.log(attachementId)
   const postype = document.getElementById('posttype').innerText
   const postid = document.getElementById('postid').innerText
   const userid = document.getElementById('currentuserid').innerText
@@ -159,7 +180,8 @@ function postMajAnnonc(){
         jourend : jend,
         heurestart : hstart,
         heureend : hend,
-        userid : userid
+        userid : userid,
+        imgid : attachementId
       },
       success: function(response) {
         console.log(response)
@@ -170,4 +192,8 @@ function postMajAnnonc(){
       }
     }); 
 }
+
+
+
+
 

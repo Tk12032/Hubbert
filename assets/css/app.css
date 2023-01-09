@@ -916,7 +916,7 @@ margin-bottom: 0em;
 
 }
 
-input[type="file"]::-webkit-file-upload-button {
+input[type="file"]::-webkit-file-upload-button, .imgupload {
     padding: 5px 10px;
     background-color: transparent;
     font-family: 'Poppins';
