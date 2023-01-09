@@ -15,10 +15,6 @@ get_header(); ?>
 
 <textarea id="prenom"> </textarea>
 
-<p> localité </p>
-
-<textarea id="prenom"> </textarea>
-
 <p> Mail </p>
 
 <textarea> </textarea>
