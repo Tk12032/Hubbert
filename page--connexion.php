@@ -17,17 +17,17 @@ get_header(); ?>
 
 <p> Mail </p>
 
-<textarea> </textarea>
+<textarea id="mail"> </textarea>
 
 <p> Mot de passe </p>
 
-<textarea> </textarea>
+<textarea id="mdp1"> </textarea>
 
 <p> Confirmer le mot de passe </p>
 
-<textarea> </textarea>
+<textarea id="mdp2"> </textarea>
 
-<section class="orange bouton"> Je m'inscris</section>
+<button class="orange bouton"> Je m'inscris</button>
 
 </div>
 
