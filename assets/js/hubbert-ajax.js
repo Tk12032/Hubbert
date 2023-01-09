@@ -197,3 +197,58 @@ function postMajAnnonc(){
 
 
 
+
+
+
+function newuser(){
+
+  const name = document.getElementById('name').value
+  const prenom = document.getElementById('prenom').value
+  const mail = document.getElementById('mail').value
+  const mdp1 = document.getElementById('mdp1').value
+  const mdp2 = document.getElementById('mdp2').value
+  const userID = 0;
+  const idpost = 0;
+  const description = '';
+  const localite = '';
+  const age = 0;
+  if((name =="")|| (name.indexOf(' ') !== -1)){
+    console.log('Not all field Complete or not valid');
+    return 0;
+  }
+  if((prenom ==="")||(prenom.indexOf(' ') !== -1)){console.log('Not all field Complete or not valid');return 0;}
+  if((mail ==="")||(mail.indexOf(' ') !== -1)){console.log('Not all field Complete or not valid ');return 0;}
+  if((mdp1=='')||(mdp1.indexOf(' ') !== -1)){console.log('Not all field Complete or not valid');return 0;}
+  if((mdp2=='')||(mdp2.indexOf(' ') !== -1)){console.log('Not all field Complete or not valid');return 0;}
+  if(mdp1!=mdp2){
+    console.log('NotSameMdp')
+    return 0;
+  }
+   
+
+     $.ajax({
+       url: hubajaxurl,
+       type: 'POST',
+       data: {//tableau en Json
+         action : 'newuser',
+         name : name,
+         prenom : prenom,
+         mail : mail,
+         mdp : mdp1,
+         ID : userID,
+         IDpost : idpost,
+         description : description,
+         localite:localite,
+         imgid : attachementId,
+         age : age,
+        
+       },
+       success: function(response) {
+         console.log(response)
+         window.location.href = response;
+       },
+       error : function(){
+           console.log("ça n'a pas marché, vous avez tout cassé")
+       }
+     }); 
+ }

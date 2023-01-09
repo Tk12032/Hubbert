@@ -13,7 +13,7 @@ get_header(); ?>
                 <h5><?php echo the_title(); ?></h4>
                 <h5><?php echo get_field('age'); ?></h5>
                 <h5><?php echo get_field('localite'); ?></h5>
-                <h5><?php echo get_field('numero'); ?></h5>
+
                
 
             </span>

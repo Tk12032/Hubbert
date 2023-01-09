@@ -42,7 +42,7 @@ get_header(); ?>
 
     <section class="services">
         <div class="carousel">
-            <?php carroussel_couleur("profil",10); ?>
+            
             <!-- fct php de création de card en ftc des meilleurs users -->
         </div>
         <div class="bouton-page">

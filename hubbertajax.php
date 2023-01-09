@@ -147,7 +147,58 @@ function filter(){
 }
 
 add_action('wp_ajax_filter','filter');
+add_action('wp_ajax_newuser','createuser');
 
+function createuser(){
+	$nom = $_POST["name"];//
+	$prenom = $_POST["prenom"];//
+	$mail = $_POST['mail'];//
+	$mdp = $_POST['mdp'];//
+	$userid = $_POST['ID'];//
+	$idpost = $_POST['IDpost'];
+	$description = $_POST['description'];
+	$localite=$_POST['localite'];
+	$imgid = $_POST['imgid'];
+	$age = $_POST['age'];
+
+
+ $arguser = array(
+	'ID'=> $userid,
+	'user_login' => $mail,
+	'display_name' => $nom.' '.$prenom,
+	'user_pass' =>$mdp,
+	'user_email' => $mail,
+ );
+ $newuserid = wp_insert_user($arguser);//on ajoute un user coté wordpress. Mnt pour le display d'une page de profil on va combiné un user et un posttype
+
+ $argposttype = array(
+	'ID'=> $idpost,
+	'post_content'=> $description,
+	'post_author' =>$newuserid,
+	'post_title' => $nom.' '.$prenom,
+	'post_type' => 'profil',
+	'post_status' => 'publish',
+
+ );
+$post_id = wp_insert_post($argposttype);
+
+
+	update_field('IDUSER',$newuserid, $post_id );// on garde l'id de l'user dans le post pour pouvoir appelé certain contenu de l'user avec le post. 
+	
+	if ($_POST['localite']!=''){
+		update_field('localite', $localite, $post_id );
+	}
+	if ($_POST['age']>17){
+		update_field('localite', $age, $post_id );
+	}
+	
+	update_field('localite',$localite, $post_id );
+	if ($_POST['imgid']!=0){
+		update_field('profilepicture', $imgid, $post_id );
+	}
+	echo get_permalink($post_id);
+  
+}
 
 do_action('wp_ajax_'.$_POST['action']);
 do_action('wp_ajax_'.$_GET['action']);

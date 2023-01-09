@@ -620,26 +620,22 @@ h3{
 }
 
 
-textarea{
-    box-sizing: border-box;
-
-/* Auto layout */
-font-size: 16px;
-display: flex;
-flex-direction: row;
-padding: 5px;
-gap: 10px;
+input[type="textarea"], input[type="password"], textarea{
+box-sizing: border-box;
 
 width: 459px;
 resize : none;
+font-size: 20px;
+line-height: 20px;
 
 
 border: 2px solid #504136;
 border-radius: 10px;
 background-color: transparent;
+padding:15px;
 
 display: flex;
-justify-content: center;
+align-content: center;
 color:#504136;
 }
 
@@ -913,7 +909,13 @@ input[type="range"] {
 
 margin-top: 15px;
 margin-bottom: 0em;
+}
 
+.connect label{
+    display: flex;
+    margin: 30px 0px;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 input[type="file"]::-webkit-file-upload-button, .imgupload {
