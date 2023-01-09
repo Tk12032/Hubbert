@@ -12,7 +12,7 @@ echo '<p style="display:none" id="posttype">'. $type . '</p>';
 $postid = get_the_ID();
 echo '<p style="display:none" id="postid">'. $postid . '</p>';
 echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';
-$modif = '<button class="modif vert"><img style ="width:34px;height:34px" src="'.get_template_directory_uri().'/assets/img/picto_crayon_inact.svg"></button>';
+
 if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU qu'on arrive sur la page via le bouton proposer un service / outil?>
 
 <div class="container" style="display:flex; flex-direction:column;height:fit-content; width:63%">

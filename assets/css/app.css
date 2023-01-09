@@ -137,9 +137,8 @@ font-size: 16px;
 color: #504136;
 }
 
-.vert {
+input[type="submit"], .vert{
 
-/* vert cta */
 border: 3px solid #AACF23;
 border-radius: 8px;
 display: flex;
@@ -168,7 +167,7 @@ display: flex;
     transition: 0.4s;
     }
 
-.vert:hover {
+.vert:hover , input[type="submit"]:hover {
 
 background-color:#AACF23;
 border: 3px solid #AACF23;
@@ -535,10 +534,7 @@ p, label {
     justify-content: space-between;
     width: 100%;
 }
-.info-profil img{
-    width:220px;
-    height: 217px;
-}
+
 
 .info-profil{
     width:500px;   
@@ -620,10 +616,9 @@ h3{
 }
 
 
-input[type="textarea"], input[type="password"], textarea{
+input[type="textarea"], input[type="password"], textarea, input[type="submit"]{
 box-sizing: border-box;
 
-width: 459px;
 resize : none;
 font-size: 20px;
 line-height: 20px;
@@ -638,7 +633,15 @@ display: flex;
 align-content: center;
 color:#504136;
 }
-
+.info-profil textarea {
+    line-height: 15px;
+    padding-bottom: 0px;
+}
+.avatar{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 .nav-container {
 
     width:100%;
@@ -943,3 +946,11 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
     transition: 0.4s;
   }
   
+
+  #commentform{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+  }
+
+

@@ -189,7 +189,7 @@ $post_id = wp_insert_post($argposttype);
 		update_field('localite', $localite, $post_id );
 	}
 	if ($_POST['age']>17){
-		update_field('localite', $age, $post_id );
+		update_field('age', $age, $post_id );
 	}
 	
 	update_field('localite',$localite, $post_id );
@@ -199,6 +199,47 @@ $post_id = wp_insert_post($argposttype);
 	echo get_permalink($post_id);
   
 }
+function majuser(){
+	$nom = $_POST["name"];
+	$age = $_POST['age'];
+	$description = $_POST['description'];
+	$localite=$_POST['localite'];
+	$post_id = $_POST['postID'];
+	if($_POST['imgid']!=0){
+		$imgid = $_POST['imgid'];
+	}
+
+	$argposttype = array(
+		'ID'=> $post_id,
+		'post_content'=> $description,
+		'post_title' => $nom,
+		'post_type' => 'profil',
+		'post_status' => 'publish',
+	
+	 );
+	$post_id = wp_insert_post($argposttype);
+
+
+	if ($_POST['localite']!=''){
+		update_field('localite', $localite, $post_id );
+	}
+	if ($_POST['age']>17){
+		update_field('age', $age, $post_id );
+	}
+	
+	update_field('localite',$localite, $post_id );
+	
+
+	if ($_POST['imgid']!=0){
+		update_field('image_dillustration', $imgid, $post_id );
+	}
+
+	echo get_permalink($post_id);
+
+	die();
+}
+
+add_action('wp_ajax_majuser','majuser');
 
 do_action('wp_ajax_'.$_POST['action']);
 do_action('wp_ajax_'.$_GET['action']);

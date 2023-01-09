@@ -195,7 +195,34 @@ function postMajAnnonc(){
 
 
 
+function majprofil(){
+  const postid = document.getElementById('postid').innerText
+  const name = document.getElementById('name').value
+  const age = document.getElementById('age').value
+  const localite = document.getElementById('localite').value
+  const description = document.getElementById('description').value
 
+  $.ajax({
+    url: hubajaxurl,
+    type: 'POST',
+    data: {//tableau en Json
+      action : 'majuser',
+      name : name,
+      description : description,
+      localite:localite,
+      age : age,
+      postID: postid,
+      
+    },
+    success: function(response) {
+      console.log(response)
+      window.location.href = response;
+    },
+    error : function(){
+        console.log("ça n'a pas marché, vous avez tout cassé")
+    }
+  }); 
+}
 
 
 

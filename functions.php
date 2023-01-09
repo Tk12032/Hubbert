@@ -113,6 +113,9 @@ add_action('init', 'create_post_type');
 add_post_type_support( 'annonce', array(
     'author', 'excerpt',
 ) );
+add_post_type_support( 'profil', array(
+    'author', 'excerpt',
+) );
 
 function carroussel_couleur($type, $nbr){
 
