@@ -307,8 +307,9 @@ function newuser(){
     }
   }); 
 }
-
-
+//tentative de création de messagerie un peu  à la dernière minute, peut-être que c'était un peu trop ambitieux ? Qui sait ? PERSONNE,
+//Nous sommes les meilleurs, c'est juste que là wordpress n'aide pas (ce n'est pas de la mauvaise fois promis). La bise.
+/*
 function createmessage(){
 const author = document.getElementById('author').innerHTML
 const useridentite = document.getElementById('currentuserid').innerHTML
@@ -338,4 +339,4 @@ console.log('yo')
 
 
 
-}
+}*/

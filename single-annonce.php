@@ -150,10 +150,15 @@ else:
                 echo 'Trou perdu';}
                 else{
                 echo get_field('localite');} ?></h5>
+<<<<<<< Updated upstream
         <p class="description"><?php echo get_field('description'); ?> </p>
                 <button style="border:none">                
         <?php echo '<div style="width:fit-content" class="vert versprofil">';?>   
         <h5 class="bouton">Contacter</h5><!-- à ranger en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
+=======
+        <p class="description"><?php echo get_field('description'); ?> </p>   
+        <button class="vert bouton" onclick="//createmessage()">Contacter</button><!-- à ranger en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
+>>>>>>> Stashed changes
         </button>
         </div>
 

@@ -286,6 +286,9 @@ function login(){
 
 add_action('wp_ajax_login','login');
 
+//tentative de création de messagerie un peu  à la dernière minute, peut-être que c'était un peu trop ambitieux ? Qui sait ? PERSONNE,
+//Nous sommes les meilleurs, c'est juste que là wordpress n'aide pas (ce n'est pas de la mauvaise fois promis). La bise.
+/*
 function messagecreate(){
 	$author = $_POST['author'];
 	$client = $_POST['userdata'];
@@ -309,12 +312,13 @@ function messagecreate(){
 		'comment_content' => "Bonjour, je suis intéressé par votre annonce de". $title . "."
 	));
 	echo 'yes';
+	echo $title;
 
 }
 
 
 
-add_action('wp_ajax_message','messagecreate');
+add_action('wp_ajax_message','messagecreate');*/
 
 
 do_action('wp_ajax_'.$_POST['action']);

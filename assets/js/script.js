@@ -292,6 +292,9 @@ function checkedboxservice() {
 }
 
 
+
+
+
 function messagerieonoff(){
  
   const messagerie = document.getElementById('messagerie')

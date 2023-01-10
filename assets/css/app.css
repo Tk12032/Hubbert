@@ -1163,7 +1163,16 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
     content: "Sélectionner un fichier";
   }
  
+  .conversation{
+    background-color: #ECE4B7;
+    border-radius: 15px;
+    padding: 10px 10px;
+  }
 
+  .convcontent-off{
+    display:none;
+    
+  }
 
   input[type="file"]::-webkit-file-upload-button:hover {
     background-color:#AACF23;

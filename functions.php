@@ -224,7 +224,22 @@ foreach ( $profil_posts as $profil_post ) {
 }
 
 
+function get_message_posts() {
+    $message_posts = get_posts( array(
+        'post_type' => 'message',
+        'numberposts' => -1,
+    ) );
 
+    return $message_posts;
+};
+$message_posts = get_message_posts();
+
+foreach ( $message_posts as $message_post ) {
+    wp_update_post( array(
+        'ID'            => $message_post->ID,
+        'comment_status' => 'open',
+    ) );
+}
 
 
 
