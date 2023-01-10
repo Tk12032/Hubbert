@@ -23,7 +23,7 @@ if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU
     <p>Complete le plus possible ton annonces pour aider la recherche des autres utilisateurs</p>
 </div>
 
-<div style="display:flex">
+<div class= "configannonceform">
     <section style="width:460px;margin-right:5%;">
         <div>
                 
@@ -55,9 +55,9 @@ if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU
     </section>
 
     <section class = "annonceform">
-        <div style="height:300px; display:flex; flex-direction:column; justify-content:space-between">
+        <div class = "configpart1">
                 <div class ="filtre-check-box" style="flex-direction:row">
-                        <div class="check" style="margin-right:60px">  
+                        <div class="check">  
                                 <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils" onchange="checkedboxoutil()" <?php $outil = get_field('type_dannonce'); if(($outil=='outil')||($type=='page')){echo 'checked';}?>>
                                 <label for="checkoutils">Outils</label>
                         </div>
@@ -129,7 +129,7 @@ else:
         <?php $image = get_field('image_dillustration');
         echo '<img style="width:700px; height:500px" src="'.$image['url'].'" alt="'.get_the_title().'">'; ?>
         <div class="infodroite">
-                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px" id="title"><?php the_title() ?></h5>
+                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px"><?php the_title() ?></h5>
                 <?php 
                 
                 $auteur = get_the_author_meta( 'user_nicename', $a_id );
@@ -150,8 +150,10 @@ else:
                 echo 'Trou perdu';}
                 else{
                 echo get_field('localite');} ?></h5>
-        <p class="description"><?php echo get_field('description'); ?> </p>   
-        <button class="vert bouton" onclick="createmessage()">Contacter</button><!-- à ranger en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
+        <p class="description"><?php echo get_field('description'); ?> </p>
+                <button style="border:none">                
+        <?php echo '<div style="width:fit-content" class="vert versprofil">';?>   
+        <h5 class="bouton">Contacter</h5><!-- à ranger en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
         </button>
         </div>
 

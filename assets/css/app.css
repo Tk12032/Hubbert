@@ -1085,6 +1085,24 @@ input[type="range"] {
 
 }
 
+.configannonceform {
+
+display: block;
+
+}
+
+
+@media screen and (min-width: 800px) {
+
+    .configannonceform {
+
+        display: flex;
+        
+        }
+
+}
+
+
 .check {
 
     margin-right:60px;
