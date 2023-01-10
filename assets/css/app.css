@@ -437,6 +437,21 @@ div.card-body{
     height: fit-content;
 }
 
+@media screen and (max-width: 600px){
+
+    .footer{
+        bottom:0px;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding:30px 50px 30px 50px;
+        background-color: #504136;
+        color:#ECE4B7;
+        height: fit-content;
+    }
+
+}
+
+
 .footer div{
     width: 360px;
     display: flex;
