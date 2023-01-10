@@ -196,11 +196,13 @@ function postMajAnnonc(){
 
 
 function majprofil(){
+  const userid = document.getElementById('currentuserid').innerText
   const postid = document.getElementById('postid').innerText
   const name = document.getElementById('name').value
   const age = document.getElementById('age').value
   const localite = document.getElementById('localite').value
   const description = document.getElementById('description').value
+  const postype = document.getElementById('posttype').innerText
 
   $.ajax({
     url: hubajaxurl,
@@ -208,10 +210,12 @@ function majprofil(){
     data: {//tableau en Json
       action : 'majuser',
       name : name,
+      postType : postype,
       description : description,
       localite:localite,
       age : age,
       postID: postid,
+      userid : userid,
       
     },
     success: function(response) {
@@ -235,7 +239,6 @@ function newuser(){
   const mdp1 = document.getElementById('mdp1').value
   const mdp2 = document.getElementById('mdp2').value
   const userID = 0;
-  const idpost = 0;
   const description = '';
   const localite = '';
   const age = 0;
@@ -263,7 +266,6 @@ function newuser(){
          mail : mail,
          mdp : mdp1,
          ID : userID,
-         IDpost : idpost,
          description : description,
          localite:localite,
          imgid : attachementId,
@@ -279,3 +281,29 @@ function newuser(){
        }
      }); 
  }
+
+ function login(){
+  const mdp1 = document.getElementById('mdp12').value
+  const mail = document.getElementById('mail2').value
+
+
+  if((mail ==="")||(mail.indexOf(' ') !== -1)){console.log('Not all field Complete or not valid ');return 0;}
+  if((mdp1=='')||(mdp1.indexOf(' ') !== -1)){console.log('Not all field Complete or not valid');return 0;}
+
+  $.ajax({
+    url: hubajaxurl,
+    type: 'POST',
+    data: {//tableau en Json
+      action : 'login',
+      mail : mail,
+      mdp : mdp1, 
+    },
+    success: function(response) {
+      console.log(response)
+      window.location.href = response;
+    },
+    error : function(){
+        console.log("ça n'a pas marché, vous avez tout cassé")
+    }
+  }); 
+}

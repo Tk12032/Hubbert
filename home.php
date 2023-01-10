@@ -2,7 +2,6 @@
 /* Template Name: PageHome */
 get_header(); ?>
 
-<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>  
 
  
 <section class="garden">

@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<header> 
+<header style="display:flex; width:100%; justify-content:flex-end"> 
 <nav class="navbar navbar-expand-lg couleurnav">
   <div class="nav-container">
             <?php 
@@ -35,12 +35,14 @@
 
 
 <?php block_header_area(); ?>
-
-</header>
-
-<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>  
-<div class="message">
-
-            
+<div class="message" id="messagerie">
+<button class="pictobouton vert-plein messagerie rectangle" onclick="messagerieonoff()">
+    <img style="z-index:2" class="pictobouton messagerie" alt="messagerie" src="<?php echo get_template_directory_uri()?>/assets/img/picto_messagerie_inact.png" >
+</button>
 
 </div>
+</header>
+
+
+
+
