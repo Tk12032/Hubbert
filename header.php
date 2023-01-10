@@ -35,11 +35,14 @@
 
 
 <?php block_header_area(); ?>
-<div class="message">
-<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>
-     yo       
+<div class="message" id="messagerie">
+<button class="pictobouton vert-plein messagerie rectangle" onclick="messagerieonoff()">
+    <img style="z-index:2" class="pictobouton messagerie" alt="messagerie" src="<?php echo get_template_directory_uri()?>/assets/img/picto_messagerie_inact.png" >
+</button>
 
 </div>
 </header>
 
-<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>  
+
+
+

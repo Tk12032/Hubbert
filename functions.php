@@ -214,14 +214,7 @@ foreach ( $profil_posts as $profil_post ) {
 
 
 
-function boutonpicto($type,$couleur,$shape){
-    $nomimg="picto_".$type."_inact.png";
-    $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
-    echo '
-    <button class="pictobouton '.$couleur.' '.$shape.' '.$type.'" >
-    <img style="z-index:2" class="pictobouton '.$type.'" alt="'.$type.'" src="'.$adresse.'">
-    </button>';
-}
+
 
 
 function montheme_menu_class($classes) {

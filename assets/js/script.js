@@ -292,3 +292,16 @@ function checkedboxservice() {
 }
 
 
+function messagerieonoff(){
+ 
+  const messagerie = document.getElementById('messagerie')
+
+  if(messagerie.classList.contains('messagerieon')){
+    messagerie.classList.remove("messagerieon");
+    return 0;
+  }
+  
+  messagerie.classList.add("messagerieon");
+}
+
+
