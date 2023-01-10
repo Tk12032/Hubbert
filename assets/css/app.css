@@ -2,6 +2,7 @@ html{
     width: 100%;
 }
 
+
 body {
 
     color: #504136;
@@ -91,6 +92,7 @@ body {
         position: absolute;
         left: 50px;
         top: 35%;
+        
    
    }
    
@@ -98,13 +100,31 @@ body {
 }
 
 
+
+
 .texte-central h1 {
 
     width: 399px;
     height: 96px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
 
 }
+@media screen and (max-width: 800px) {
 
+    .texte-central h1 {
+
+        width: 258px;
+        height: fit-content;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32px;
+    
+    }
+   
+
+}
 
 .texte-profil h1 {
 
@@ -114,30 +134,35 @@ body {
 }
 
 
-h1 {
-
-
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 48px;
-    
-}
-
 .texte-central p {
 
 /* texte de l'acceil */
-
+    color: #504136;
     width: 356.85px;
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 24px;
-    color: #504136;
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: 800px) {
+
+    .texte-central p {
+
+        /* texte de l'acceil */
+        
+            width: 258px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 24px;
+            margin-bottom: 30px;
+        }
+   
+
+}
+
 
 header .nav-item a, main .nav-item a{
 
@@ -259,14 +284,14 @@ margin-bottom: 25px;
 @media screen and (max-width: 600px) {
 
     h2{
-        width: 295px;
+        width: 380px;
         height: 128px;
         
         font-family: 'Josefin Sans';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
-        line-height: 24px;
+        font-size: 35px;
+        line-height: 35px;
         text-align: center;
         margin-bottom: -43px;
         }
@@ -274,11 +299,12 @@ margin-bottom: 25px;
 } 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-width: 600px) {
 
     h2{
-        width: 295px;
+        width: 500px;
         height: 128px;
+        margin-bottom: 5px;
         
         font-family: 'Josefin Sans';
         font-style: normal;
@@ -286,7 +312,6 @@ margin-bottom: 25px;
         font-size: 45px;
         line-height: 45px;
         text-align: center;
-        margin-bottom: -43px;
         }
 
 } 
@@ -320,10 +345,10 @@ text-align: center;
 
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-width: 600px){
 
     .outils p{
-    width: 475px;
+    width: 550px;
     height: 81px;
     
     font-family: 'Josefin Sans';
