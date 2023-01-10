@@ -63,6 +63,9 @@ body {
 
 }
 
+
+
+
 .messagerie {
     right: 50px;
     position: fixed;
@@ -80,6 +83,20 @@ body {
      top: 35%;
 
 }
+
+@media screen and (max-width: 600px) {
+
+    .texte-central {
+
+        position: absolute;
+        left: 50px;
+        top: 35%;
+   
+   }
+   
+
+}
+
 
 .texte-central h1 {
 
@@ -227,7 +244,7 @@ margin-top: 77px;
     }
 
 h2{
-    width: 637px;
+width: 637px;
 height: 128px;
 
 font-family: 'Josefin Sans';
@@ -239,8 +256,26 @@ text-align: center;
 margin-bottom: 25px;
 }
 
+@media screen and (max-width: 600px) {
+
+    h2{
+        width: 295px;
+        height: 128px;
+        
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: -43px;
+        }
+
+} 
+
+
 .outils p{
-    width: 946px;
+width: 946px;
 height: 81px;
 
 font-family: 'Josefin Sans';
@@ -250,6 +285,26 @@ font-size: 27px;
 line-height: 27px;
 text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+
+    .outils p{
+    width: 475px;
+    height: 81px;
+    
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    }
+    
+
+}
+
+
+
+
 .outils {
     display: flex;
     align-items: center;
