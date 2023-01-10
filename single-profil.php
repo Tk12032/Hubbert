@@ -16,9 +16,13 @@ $idauthor = get_the_author_meta( 'ID', $a_id );
 echo '<p style="display:none" id="posttype">'. $type . '</p>';
 $postid = get_the_ID();
 echo '<p style="display:none" id="postid">'. $postid . '</p>';
-echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';
+echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';?>
 
-if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU qu'on arrive sur la page via le bouton proposer un service / outil?>
+
+<div class="container" style="display:flex; width:100%; justify-content:space-between">
+
+
+<?php if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU qu'on arrive sur la page via le bouton proposer un service / outil?>
 <?php //$image=get_field('profilepicture'); 
 
 $profilcurrent = new wp_Query([
@@ -37,7 +41,8 @@ $profilcurrent = new wp_Query([
 if($profilcurrent->have_posts()){
   $profilcurrent->the_post();?>
 
-  <div class="container">
+  
+  <div>
     <div class="info-profil">
  
         <div class="top-part">
@@ -131,21 +136,15 @@ if ( $comments ) {
 }
 ?>
 
+
+    </div>
+
   </div>
-
-    
-</div>
-
-
-
-
-
 
 <?php
 else:
 ?>
-
-<div class="container">
+<div>
     <div class="info-profil">
  
         <div class="top-part">
@@ -235,7 +234,52 @@ if ( $comments ) {
     
 </div>
 
-
-
+<div>
 <?php endif;?>
+
+<div class="rightpart" style="display:flex;flex-direction:column; overflow:scroll; height:600px;margin: auto -58px;">
+<?php 
+
+$content = new WP_Query([ // je crée une variable $services
+  'post_type' => 'annonce', // la je précise quel post_type je veux (dans mon cas "services")
+  'post_status' => 'publish', // la je précise que je veux des posts qui sont publié
+  'orderby' => 'date', // je les trie par date 
+  'date' => true, // je récupéère ma date
+  'author' => $idauthor,
+]);
+
+if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts
+
+    while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
+  $content->the_post(); // la récupère mon post
+    $image=get_field('image_dillustration');
+    $title=get_the_title();
+    echo 
+    
+   '<div style="width:800px; margin: 15px 0px; border-radius:15px" class="card flex-row">
+      <img class="card-img-left" style="width: 460px;px; height:330px; border-radius:15px 0px 0px 15px" src="'.$image['url'].'">
+      <div class="card-body">
+        <div>
+          <h4 class="card-title h5 h4-sm" style="font-family:\'Poppins\';text-transform: uppercase;font-weight:600;font-size:24px">'.$title.'</h4>
+          <p class="card-text">'.get_field('description').'</p>
+        </div>
+        <div class="bot-card-body">
+          <h5>'.get_field('prix').'€ par jour</h5>
+          <a href="'.get_the_permalink().'" class="vert boutonplus">+</a>
+        </div>
+      </div>
+    </div>';		
+    }
+}
+
+else{
+echo "<h5>Il n'y a pas d'annonces sur ce profil on dirait ...</h5>";
+}
+
+?>
+
+    </div>
+
+  </div>
+</div>
 <?php get_footer(); ?>

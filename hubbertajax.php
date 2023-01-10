@@ -196,7 +196,14 @@ $post_id = wp_insert_post($argposttype);
 	if ($_POST['imgid']!=0){
 		update_field('profilepicture', $imgid, $post_id );
 	}
-	echo get_permalink($post_id);
+	wp_logout();
+	
+	wp_signon(array(
+		'user_login' => $mail,
+		'user_password' => $mdp,
+
+	));
+		echo get_permalink($post_id);	
   
 }
 function majuser(){

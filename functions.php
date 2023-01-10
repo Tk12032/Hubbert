@@ -219,7 +219,7 @@ function boutonpicto($type,$couleur,$shape){
     $adresse=get_template_directory_uri().'/assets/img/'.$nomimg;
     echo '
     <button class="pictobouton '.$couleur.' '.$shape.' '.$type.'" >
-    <img class="pictobouton '.$type.'" alt="'.$type.'" src="'.$adresse.'">
+    <img style="z-index:2" class="pictobouton '.$type.'" alt="'.$type.'" src="'.$adresse.'">
     </button>';
 }
 
@@ -255,7 +255,12 @@ function create_post() {
   add_action('wp_ajax_create_post', 'create_post');
    */
 
-
+   add_action('after_setup_theme', 'remove_admin_bar');
+   function remove_admin_bar() {
+   if (!current_user_can('administrator') && !is_admin()) {
+	 show_admin_bar(false);
+   }
+   }
 
 
 
