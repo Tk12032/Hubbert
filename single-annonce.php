@@ -12,6 +12,7 @@ echo '<p style="display:none" id="posttype">'. get_post_type() . '</p>';
 $postid = get_the_ID();
 echo '<p style="display:none" id="postid">'. $postid . '</p>';
 echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';
+echo '<p style="display:none" id="author">'. $idauthor . '</p>';
 
 if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU qu'on arrive sur la page via le bouton proposer un service / outil?>
 
@@ -136,7 +137,7 @@ else:
         <?php $image = get_field('image_dillustration');
         echo '<img style="width:700px; height:500px" src="'.$image['url'].'" alt="'.get_the_title().'">'; ?>
         <div class="infodroite">
-                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px"><?php the_title() ?></h5>
+                <h5 style="font-family:'Poppins';text-transform: uppercase;font-weight:600;font-size:24px" id="title"><?php the_title() ?></h5>
                 <?php 
                 
                 $auteur = get_the_author_meta( 'user_nicename', $a_id );
@@ -157,10 +158,8 @@ else:
                 echo 'Trou perdu';}
                 else{
                 echo get_field('localite');} ?></h5>
-        <p class="description"><?php echo get_field('description'); ?> </p>
-                <button style="border:none">                
-        <?php echo '<div style="width:fit-content" class="vert versprofil">';?>   
-        <h5 class="bouton">Contacter</h5><!-- à ranger en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
+        <p class="description"><?php echo get_field('description'); ?> </p>   
+        <button class="vert bouton" onclick="createmessage()">Contacter</button><!-- à ranger en théorie actionner ce bouton devrait ouvrir une conversation dans la messagerie de l'utilisateur-->
         </button>
         </div>
 

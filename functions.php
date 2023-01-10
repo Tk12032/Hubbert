@@ -80,6 +80,17 @@ function create_post_type() {	 // function dans la quel j'ajouterais tous mes ty
 		'menu_icon' => 'dashicons-admin-tools' // je lui précise une icon dans la bar d'outil de l'admin wordpress
 	]);
 
+	register_post_type('message'/* le nom de mon type de contenu */, [ // tableau avec mes options 
+		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
+			'name' => __('message'), // __() permet a wordpress que c'est contenu de traduction
+			'singular_name' => __('message')
+		],
+		'public' => true, // c'est un post_type publique
+		'has_archive' => false, // en cas de suppression on peut retrouver notre post disparu
+  	'rewrite' => ['slug' => 'message'], // j'applique une réécriture d'url "services" au lieu de "slug"
+		'menu_icon' => 'dashicons-admin-tools' // je lui précise une icon dans la bar d'outil de l'admin wordpress
+	]);
+
     register_post_type('question'/* le nom de mon type de contenu */, [ // tableau avec mes options 
 		'labels' => [ // ça sera le nom afficher dans mon menu word press avec la traduction
 			'name' => __('question'), // __() permet a wordpress que c'est contenu de traduction

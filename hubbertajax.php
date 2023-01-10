@@ -286,6 +286,37 @@ function login(){
 
 add_action('wp_ajax_login','login');
 
+function messagecreate(){
+	$author = $_POST['author'];
+	$client = $_POST['userdata'];
+	$title = $_POST['title'];
+
+
+
+	$argposttype = array(
+		'ID'=>0,
+		'post_title' => $title.' '.$client,
+		'post_type' => 'message',
+		'post_status' => 'publish',
+	
+	 );
+	$post_id = wp_insert_post($argposttype);
+	update_field('idauthor', $author, $post_id );
+	update_field('idclient', $client, $post_id );
+
+	wp_insert_comment(array(
+		'user_id'=> $client,
+		'comment_content' => "Bonjour, je suis intéressé par votre annonce de". $title . "."
+	));
+	echo 'yes';
+
+}
+
+
+
+add_action('wp_ajax_message','messagecreate');
+
+
 do_action('wp_ajax_'.$_POST['action']);
 do_action('wp_ajax_'.$_GET['action']);
 ?>
