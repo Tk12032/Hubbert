@@ -65,6 +65,7 @@ body {
 }
 
 
+
 .off * {
     display:none;
 }
@@ -791,9 +792,10 @@ color:#504136;
     padding-bottom: 0px;
 }
 .avatar{
-    width: 100%;
+    width: 255px;
     height: 200px;
     object-fit: cover;
+    border-radius: 15px;
 }
 .nav-container {
 
@@ -1228,4 +1230,37 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
      position:fixed; 
      z-index: -1; 
      overflow:scroll;
+}
+
+
+/*c'est pour la page profil*/
+
+.rightpart {
+
+    display:flex;
+    flex-direction:column;
+    overflow:scroll;
+    height:600px;
+    margin: auto -58px;
+
+}
+
+.containerprofil {
+
+    width:100%; 
+    justify-content:space-between;
+
+}
+
+
+@media screen and (min-width: 800px) {
+
+    .containerprofil {
+
+        display:flex;
+        width:100%; 
+        justify-content:space-between;
+    
+    }
+    
 }
