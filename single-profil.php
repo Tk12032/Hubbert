@@ -19,7 +19,7 @@ echo '<p style="display:none" id="postid">'. $postid . '</p>';
 echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';?>
 
 
-<div class="container" style="display:flex; width:100%; justify-content:space-between">
+<div class="container containerprofil" >
 
 
 <?php if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU qu'on arrive sur la page via le bouton proposer un service / outil?>
@@ -237,7 +237,7 @@ if ( $comments ) {
 <div>
 <?php endif;?>
 
-<div class="rightpart" style="display:flex;flex-direction:column; overflow:scroll; height:600px;margin: auto -58px;">
+<div class="rightpart">
 <?php 
 
 $content = new WP_Query([ // je crée une variable $services
