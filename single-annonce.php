@@ -15,22 +15,14 @@ echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';
 
 if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU qu'on arrive sur la page via le bouton proposer un service / outil?>
 
-<div class="container" style="display:flex; flex-direction:column;height:fit-content; width:63%">
+<div class="container configannonce" style="display:flex; flex-direction:column;height:fit-content; width:63%">
 
 <div>
-    <h1 style="font-family: 'Josefin Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 32px;">Configure ton annonces avant de la poster !</h1>
-    <p style="font-family: 'Josefin Sans';
-font-style: normal;
-font-weight: 300;
-font-size: 20px;
-line-height: 20px;">Complete le plus possible ton annonces pour aider la recherche des autres utilisateurs</p>
+    <h1>Configure ton annonces avant de la poster !</h1>
+    <p>Complete le plus possible ton annonces pour aider la recherche des autres utilisateurs</p>
 </div>
 
-<div class="configannonc" style="display:flex">
+<div style="display:flex">
     <section style="width:460px;margin-right:5%;">
         <div>
                 
@@ -61,7 +53,7 @@ line-height: 20px;">Complete le plus possible ton annonces pour aider la recherc
         
     </section>
 
-    <section style="height:550px;display:flex;flex-direction:column;justify-content:space-between">
+    <section class = "annonceform">
         <div style="height:300px; display:flex; flex-direction:column; justify-content:space-between">
                 <div class ="filtre-check-box" style="flex-direction:row">
                         <div class="check" style="margin-right:60px">  

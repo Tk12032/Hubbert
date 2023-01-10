@@ -847,10 +847,21 @@ font-size: 20px;
 
 
 .recherchannonce{
-    display: flex;
+
     flex-direction: row;
     
 }
+
+@media screen and (min-width: 800px) {
+
+    .recherchannonce{
+          display: flex;
+          flex-direction: row;
+        
+    }
+
+}
+
 
 .carousel--wrapper {
 
@@ -1031,19 +1042,63 @@ input[type="range"] {
 
 /* configannonce*/
 
-.configannonc h5{
+.configannonce h1 {
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+
+.configannonce p {
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+
+}
+
+
+.configannonce h5{
     display: flex;
     align-items: center;
 }
 
-.configannonc .modif{
-    margin-left:15px;
-}
-
-.configannonc .imgillu{
+.configannonce .imgillu{
     border-radius: 15px;
     margin-bottom:30px;
 }
+
+
+.annonceform {
+
+    height:550px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+}
+
+.check {
+
+    margin-right:60px;
+
+}
+
+
+.configpart1 {
+
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+}
+
 
 .bouton {
 
