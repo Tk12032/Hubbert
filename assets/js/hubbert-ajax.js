@@ -307,3 +307,35 @@ function newuser(){
     }
   }); 
 }
+
+
+function createmessage(){
+const author = document.getElementById('author').innerHTML
+const useridentite = document.getElementById('currentuserid').innerHTML
+const titre = document.getElementById('title').innerHTML
+console.log('yo')
+
+$.ajax({
+  url: hubajaxurl,
+  type: 'POST',
+  data: {//tableau en Json
+    action : 'message',
+    author : author,
+    userdata : useridentite,
+    title : titre
+  },
+  success: function(response) {
+    console.log(response)
+    messagerieonoff()
+  },
+  error : function(){
+      console.log("ça n'a pas marché, vous avez tout cassé")
+  }
+}); 
+
+console.log('yo')
+
+
+
+
+}
