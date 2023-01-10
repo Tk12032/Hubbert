@@ -5,6 +5,14 @@ get_header(); ?>
 <div class = "recherchannonce" style="padding: 100px 50px;"> 
 
     <aside class="filtres" style="width:270px">
+
+
+    <button class= 'filtre-picto vert'> 
+        <img src="<?php echo get_template_directory_uri() ?>/assets/img/picto_filtre_inact.svg">
+        </button>
+
+
+
         <div class ="filtre-check-box">
             <div class="check">  
             <input class="checkbox-effect" id="checkoutils" type="checkbox" name="checkoutils" checked>
@@ -55,15 +63,20 @@ get_header(); ?>
             <img style="width:20px" class="recherchepicto" src="<?php echo get_template_directory_uri() ?>/assets/img/picto_recherche_inact.svg">
             <p style="margin:0px 10px;">C'est parti !</p>
         </button>
+
+
+
     </aside>
 
-    <section style="width:100%" id="parent" class="recherche">
+<section style="width:100%"> 
 
+    <div style="width:100%" id="parent" class="recherche">
+
+     
         
-
         <div id="readmore"></div>
-    </section>
-
+    </div>
+</section>
 </div>
 
 
