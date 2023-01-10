@@ -50,8 +50,9 @@
           <h5>A PROPOS DE NOUS</h5>
             <!--ligne-->
             <p class="text-justify">Hubbert est une initiative étudiante qui a la volonté de diminuer l’emprunte carbone de chacun. C’est pourquoi nous vous proposons une plateforme qui vous permet de louer des outils de jardinage et rendre des services aux personnes qui en ont besoin dans leur jardin. </p>
- 
-        
+            
+            <!--ligne-->
+            <img class="logo-footer2" alt="logohubbert" src="<?php echo get_template_directory_uri(); ?>/assets/img/hubbert beige.png" alt="logo_Hubbert">
     </div>
 
 
