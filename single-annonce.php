@@ -8,7 +8,7 @@ global $post;
 $a_id=$post->post_author;
 $idauthor = get_the_author_meta( 'ID', $a_id );
 $type = get_post_type();
-echo '<p style="display:none" id="posttype">'. $type . '</p>';
+echo '<p style="display:none" id="posttype">'. get_post_type() . '</p>';
 $postid = get_the_ID();
 echo '<p style="display:none" id="postid">'. $postid . '</p>';
 echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';
@@ -168,7 +168,7 @@ else:
 </div>
 <div class="carrousel" style="margin-bottom:100px; margin-top:200px">
 <h3 style="margin-left:50px">Annonces qui pourraient aussi vous intéresser</h3>
-        <?php carroussel_couleur('annonce','10') ?>
+        <?php carroussel_annonce() ?>
         </div>
 <?php endif; ?>
 <?php get_footer(); ?>

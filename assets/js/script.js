@@ -132,6 +132,140 @@ const render = () => {
   })
 }
 render()
+// 2eme carrou
+
+const $menu2 = document.querySelector('.carouselprofil')
+const $items2 = document.querySelectorAll('.carouselprofil--item')
+const $images2 = document.querySelectorAll('.carouselprofil--item img')
+let menuWidth2 = $menu2.clientWidth
+console.log($items)
+let itemWidth2 = $items2[0].clientWidth
+let wrapWidth2 = $items2.length * itemWidth2
+
+let scrollSpeed2 = 0
+let oldScrollY2 = 0
+let scrollY2 = 0
+let y2 = 0
+
+
+/*$($menu).mouseenter(function(){
+  const $body = document.querySelector('body')
+$body.classList.add('no-scroll');
+})*/
+$menu2.addEventListener('mouseenter', () => {
+    $body.classList.add('no-scroll');
+});
+/*$($menu).mouseleave(function(){
+$body.classList.remove('no-scroll');
+})*/ 
+$menu2.addEventListener('mouseleave', () => {
+    $body.classList.remove('no-scroll');
+});
+
+/*--------------------
+Lerp
+--------------------*/
+const lerp2 = (v0, v1, t) => {
+  return v0 * ( 1 - t ) + v1 * t
+}
+
+
+/*--------------------
+Dispose
+--------------------*/
+const dispose2 = (scroll2) => {
+  gsap.set($items2, {
+    x: (i) => {
+      return i * itemWidth2 + scroll2
+    },
+    modifiers: {
+      x: (x, target) => {
+        const s = gsap.utils.wrap(-itemWidth2, wrapWidth2 - itemWidth2, parseInt(x))
+        return `${s}px`
+      }
+    }
+  })
+} 
+dispose2(0)
+
+
+/*--------------------
+Wheel
+--------------------*/
+const handleMouseWheel2 = (e2) => {
+  scrollY2 -= e2.deltaY * 0.9
+}
+
+
+/*--------------------
+Touch
+--------------------*/
+let touchStart2 = 0
+let touchX2 = 0
+let isDragging2 = false
+const handleTouchStart2 = (e) => {//dit si l'user est entrain de faire bouger le carroussel
+  touchStart2 = e2.clientX || e.touches[0].clientX
+  isDragging2 = true
+  $menu2.classList.add('is-dragging')
+}
+const handleTouchMove2 = (e2) => {//renvoie la valeur qui sert a deplacer le carroussel
+  if (!isDragging2) return
+  touchX2 = e.clientX || e.touches[0].clientX
+  scrollY2 += (touchX2 - touchStart2) * 2.5
+  touchStart2 = touchX2
+}
+const handleTouchEnd2 = () => {//dit si l'user arrete de déplacer le carroussel
+  isDragging2 = false
+  $menu2.classList.remove('is-dragging')
+}
+
+
+/*--------------------
+Listeners
+--------------------*/
+$menu2.addEventListener('mousewheel', handleMouseWheel2)
+
+$menu2.addEventListener('touchstart', handleTouchStart2)
+$menu2.addEventListener('touchmove', handleTouchMove2)
+$menu2.addEventListener('touchend', handleTouchEnd2)
+
+$menu2.addEventListener('mousedown', handleTouchStart2)
+$menu2.addEventListener('mousemove', handleTouchMove2)
+$menu2.addEventListener('mouseleave', handleTouchEnd2)
+$menu2.addEventListener('mouseup', handleTouchEnd2)
+
+$menu2.addEventListener('selectstart', () => { return false })
+
+
+/*--------------------
+Resize
+--------------------*/
+window.addEventListener('resize', () => {
+  menuWidth2 = $menu2.clientWidth
+  itemWidth2 = $items2[0].clientWidth
+  wrapWidth2 = $items2.length * itemWidth2
+})
+
+
+/*--------------------
+Render
+--------------------*/
+const render2 = () => {
+  requestAnimationFrame(render2)
+  y2 = lerp2(y2, scrollY2, .1)
+  dispose2(y2)
+  
+  scrollSpeed2 = y2 - oldScrollY2
+  oldScrollY2 = y2
+  
+  gsap.to($items2, {
+    skewX: -scrollSpeed2 * .2,
+    rotate: scrollSpeed2 * .01,
+    scale: 1 - Math.min(100, Math.abs(scrollSpeed2)) * 0.003
+  })
+}
+render2()
+
 
 
 //config annonce
