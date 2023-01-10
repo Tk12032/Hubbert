@@ -298,9 +298,10 @@ function messagerieonoff(){
 
   if(messagerie.classList.contains('messagerieon')){
     messagerie.classList.remove("messagerieon");
+    messagerie.classList.add("off");
     return 0;
   }
-  
+  messagerie.classList.remove("off");
   messagerie.classList.add("messagerieon");
 }
 

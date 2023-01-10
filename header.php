@@ -35,12 +35,49 @@
 
 
 <?php block_header_area(); ?>
-<div class="message" id="messagerie">
+
+
+<div class="message off" id="messagerie">
+<?php 
+$current_user = get_currentuserinfo();
+$idcurrent = $current_user->ID;
+echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';
+
+$messages = new wp_Query([	
+  'post_type' => 'message', // la je précise quel post_type je veux (dans mon cas "services")
+  'meta_query'    => array(
+    'relation' => 'OR',
+    array(
+      'key'       => 'idauthor',
+      'value'     => $idcurrent,
+      'type'      => 'NUMERIC',
+      'compare'   => '='
+    ),
+    array(
+      'key'       => 'idclient',
+      'value'     => $idcurrent,
+      'type'      => 'NUMERIC',
+      'compare'   => '='
+    ),
+  )]);
+
+  while($messages->have_posts()){
+    $messages->the_post();
+    echo '<p>'.get_the_title().'</p>';
+  }
+
+?>
+
+      
+  </div>
+  
+
+
+</div>
+
 <button class="pictobouton vert-plein messagerie rectangle" onclick="messagerieonoff()">
     <img style="z-index:2" class="pictobouton messagerie" alt="messagerie" src="<?php echo get_template_directory_uri()?>/assets/img/picto_messagerie_inact.png" >
 </button>
-
-</div>
 </header>
 
 
