@@ -8,7 +8,7 @@ global $post;
 $a_id=$post->post_author;
 $idauthor = get_the_author_meta( 'ID', $a_id );
 $type = get_post_type();
-echo '<p style="display:none" id="posttype">'. $type . '</p>';
+echo '<p style="display:none" id="posttype">'. get_post_type(); . '</p>';
 $postid = get_the_ID();
 echo '<p style="display:none" id="postid">'. $postid . '</p>';
 echo '<p style="display:none" id="currentuserid">'. $idcurrent . '</p>';

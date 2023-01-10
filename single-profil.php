@@ -9,9 +9,10 @@ get_header(); ?>
 $current_user = get_currentuserinfo();
 $idcurrent = $current_user->ID;
 global $post;
+$type = get_post_type();
 $a_id=$post->post_author;
 $idauthor = get_the_author_meta( 'ID', $a_id );
-$type = get_post_type();
+
 echo '<p style="display:none" id="posttype">'. $type . '</p>';
 $postid = get_the_ID();
 echo '<p style="display:none" id="postid">'. $postid . '</p>';
@@ -21,7 +22,7 @@ if(($idauthor===$idcurrent)||($type=='page'))://si l'user actuel est l'auteur OU
 <?php //$image=get_field('profilepicture'); 
 
 $profilcurrent = new wp_Query([
-		
+	
 		
   'post_type' => 'profil', 
   'post_status' => 'publish', 
@@ -143,6 +144,7 @@ if ( $comments ) {
 <?php
 else:
 ?>
+
 <div class="container">
     <div class="info-profil">
  
@@ -169,7 +171,7 @@ else:
         <span class="descri">                
             <p><?php echo the_content(); ?></p>
         </span>
-
+                
     </div>
 
     <div id="comments">
@@ -235,5 +237,5 @@ if ( $comments ) {
 
 
 
-<?php endif; ?>
+<?php endif;?>
 <?php get_footer(); ?>

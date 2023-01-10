@@ -117,12 +117,12 @@ add_post_type_support( 'profil', array(
     'author', 'excerpt',
 ) );
 
-function carroussel_couleur($type, $nbr){
+function carroussel_annonce(){
 
   $content = new WP_Query([ // je crée une variable $services
-    'post_type' => $type, // la je précise quel post_type je veux (dans mon cas "services")
+    'post_type' => 'annonce', // la je précise quel post_type je veux (dans mon cas "services")
     'post_status' => 'publish', // la je précise que je veux des posts qui sont publié
-    'limit' => $nbr, // dans mon cas je n'en ai besoin que de trois
+    'limit' => 10, // dans mon cas je n'en ai besoin que de trois
     'orderby' => 'date', // je les trie par date 
     'date' => true // je récupéère ma date
   ]);
@@ -133,8 +133,8 @@ function carroussel_couleur($type, $nbr){
 		$content->the_post(); // la récupère mon post
 			$image=get_field('image_dillustration');
 			$title=get_the_title();
-			echo '<div class="'.$type.' carrousel--item"> ';
-			echo '<div class="card '.$type.' ">
+			echo '<div class="annonce carrousel--item"> ';
+			echo '<div class="card annonce ">
 			<figure><img src="'.$image['url'].'" alt="'.$title.'"></figure>
 				<div class="cardbody">
 					<h5 class="card-title">'.$title.'</h5>
@@ -151,7 +151,48 @@ else{
 	echo '<h5>On a pas encore de question a vous répondre mais ça arrive !</h5>';
 }
 echo '</div>';
-}       
+}  
+
+//carroussel user 
+
+function carroussel_profil(){
+
+	$content = new WP_Query([ // je crée une variable $services
+	  'post_type' => 'profil', // la je précise quel post_type je veux (dans mon cas "services")
+	  'post_status' => 'publish', // la je précise que je veux des posts qui sont publié
+	  'limit' => 10, // dans mon cas je n'en ai besoin que de trois
+	  'orderby' => 'date', // je les trie par date 
+	  'date' => true // je récupéère ma date
+	]);
+  
+	if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts
+	  echo '<div style="display:flex" class="carouselprofil--wrapper">';
+		while ($content->have_posts()){ // la je lance ma boucle sur mes posts contenu dans services
+		  $content->the_post(); // la récupère mon post
+			  $id=get_field('iduser');
+			  $title=get_the_title();
+			  
+			  echo '<div class="carouselprofil--item"> ';
+				echo '<div class="card carouselprofil ">
+				<figure>'.get_avatar(get_field('iduser')).'</figure>
+					<div class="cardbody">
+						<h5 class="card-title">'.$title.'</h5>
+						<a href="'.get_the_permalink().'" class="vert boutonplus">+</a>
+					</div>
+				</div>
+			  </div>
+			  
+				  ';		
+	  }
+  }
+	  
+  else{
+	  echo '<h5>On a pas encore de question a vous répondre mais ça arrive !</h5>';
+  }
+  echo '</div>';
+  } 
+
+
 
 //autoriser les comments
 function get_profil_posts() {
