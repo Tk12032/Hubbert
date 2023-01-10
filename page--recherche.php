@@ -7,7 +7,7 @@ get_header(); ?>
     <aside class="filtres" style="width:270px">
 
 
-    <button class= 'filtre-picto vert'> 
+ <button class= 'filtre-picto vert'> 
         <img src="<?php echo get_template_directory_uri() ?>/assets/img/picto_filtre_inact.svg">
         </button>
 
