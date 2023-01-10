@@ -245,7 +245,7 @@ $content = new WP_Query([ // je crée une variable $services
   'post_status' => 'publish', // la je précise que je veux des posts qui sont publié
   'orderby' => 'date', // je les trie par date 
   'date' => true, // je récupéère ma date
-  'author' => $idauthor,
+  'author' => $idcurrent,
 ]);
 
 if ($content->have_posts()){ // ici je vérifie que $services posède bien mes posts

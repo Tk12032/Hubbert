@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<header> 
+<header style="display:flex; width:100%; justify-content:flex-end"> 
 <nav class="navbar navbar-expand-lg couleurnav">
   <div class="nav-container">
             <?php 
@@ -35,12 +35,11 @@
 
 
 <?php block_header_area(); ?>
+<div class="message">
+<?php boutonpicto("messagerie", "vert-plein", "rectangle");?>
+     yo       
 
+</div>
 </header>
 
 <?php boutonpicto("messagerie", "vert-plein", "rectangle");?>  
-<div class="message">
-
-            
-
-</div>

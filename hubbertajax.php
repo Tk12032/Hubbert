@@ -212,10 +212,13 @@ function majuser(){
 	$description = $_POST['description'];
 	$localite=$_POST['localite'];
 	$post_id = $_POST['postID'];
+	$postype = $_POST['postType'];
+	$currentuser = $_POST['userid'];
+
 	if($_POST['imgid']!=0){
 		$imgid = $_POST['imgid'];
 	}
-
+if($postype!='page'){
 	$argposttype = array(
 		'ID'=> $post_id,
 		'post_content'=> $description,
@@ -224,6 +227,22 @@ function majuser(){
 		'post_status' => 'publish',
 	
 	 );
+	}
+	else {
+		$post_id= new wp_Query([
+	
+		
+			'post_type' => 'profil', 
+			'post_status' => 'publish', 
+			'meta_query'    => array(
+			  array(
+				'key'       => 'iduser',
+				'value'     => $currentuser,
+				'type'      => 'NUMERIC',
+				'compare'   => '='
+			  ),
+			)]);
+	}
 	$post_id = wp_insert_post($argposttype);
 
 
@@ -247,6 +266,25 @@ function majuser(){
 }
 
 add_action('wp_ajax_majuser','majuser');
+
+function login(){
+
+	$mail = $_POST['mail'];//
+	$mdp = $_POST['mdp'];//
+
+
+
+	wp_logout();
+	
+	wp_signon(array(
+		'user_login' => $mail,
+		'user_password' => $mdp,
+	));
+	echo 'http://localhost/test-wordpress/';
+	
+}
+
+add_action('wp_ajax_login','login');
 
 do_action('wp_ajax_'.$_POST['action']);
 do_action('wp_ajax_'.$_GET['action']);
