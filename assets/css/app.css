@@ -1136,9 +1136,6 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
        }
 
 }
-<<<<<<< HEAD
-
-=======
 .messagerieon{
     width:750px;
      height:100%;
@@ -1147,4 +1144,3 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
      z-index: -1; 
      overflow:scroll;
 }
->>>>>>> b6b117d583ca98afed923c0bc09fcd0fae78ec97
