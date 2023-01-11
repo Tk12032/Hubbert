@@ -430,7 +430,7 @@ header .nav-item a, main .nav-item a{
     @media screen and (max-width: 600px) {
     
         .outils p{
-        width: 475px;
+        width: 90%;
         height: 81px;
         
         font-family: 'Josefin Sans';
@@ -446,7 +446,7 @@ header .nav-item a, main .nav-item a{
     @media screen and (max-width: 1000px) and (min-width: 600px){
     
         .outils p{
-        width: 550px;
+        width: 70%;
         height: 81px;
         
         font-family: 'Josefin Sans';
@@ -477,7 +477,7 @@ h2{
 @media screen and (max-width: 600px) {
         
     h2{
-        width: 380px;
+        width: 70%;
         height: 128px;
                 
         font-family: 'Josefin Sans';
@@ -495,7 +495,7 @@ h2{
 @media screen and (max-width: 1000px) and (min-width: 600px) {
         
     h2{
-        width: 500px;
+        width: 70%;
         height: 128px;
         margin-bottom: 5px;
                 
@@ -682,6 +682,31 @@ input[type="file"]::-webkit-file-upload-button:hover {
 
 }
     
+.configconnexion {
+
+    justify-content:space-between;
+
+}
+
+@media screen and (min-width: 601px) {
+
+    .configconnexion {
+
+        display:flex; 
+        justify-content:space-between;
+    
+    }
+
+}
+
+.configlogin {
+
+    display:flex; 
+    flex-direction:column; 
+    align-self:center;
+
+}
+
 
 /* fin page connexion */
 
@@ -724,7 +749,7 @@ a{
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
-    
+    width: 80%;
     color: #000000;
     
     
@@ -736,8 +761,10 @@ a{
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    
+    width: 80%;
 }
+
+
 
 /* fin faq */
 
@@ -1044,10 +1071,21 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
     flex-direction: row;
 }
 
+@media screen and (max-width: 600px) {
+
+    .infoannonce{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
 .infodroite{
     margin-left:22px;
     text-align: justify;
 }
+
+
 .description{
     margin:15px 0px;
     overflow: scroll;

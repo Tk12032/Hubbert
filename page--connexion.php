@@ -2,7 +2,7 @@
 /* Template Name: PageConnexion */
 get_header(); ?>
 
-<div style="display:flex; justify-content:space-between;" class="connect container">
+<div class="configconnexion connect container">
     <section class="inscript">
     <h1 class='texte-connect h1'> Connecte toi à Hubbert </h1>
     <p class='texte-connect p'> C'est parti pour l'aventure Hubbert !</p>
@@ -18,10 +18,12 @@ get_header(); ?>
     <label  for="mdp2"> Confirmer le mot de passe <input type=password id="mdp2" name="mdp2"></label>
 
     </form>
+
     <button class="orange bouton" onclick="newuser()"> Je m'inscris</button>
+
 </section>
 
-<section style="display:flex; flex-direction:column; align-self:center;">
+<section class="configlogin">
     
     <p class='texte-connect'>Si tu as déja un compte tu peux simplement :</p>
     <form>
@@ -29,11 +31,10 @@ get_header(); ?>
     <label  for="mail"> Mail<input type=textarea id="mail2" name="mail"></label>
 
     <label  for="mdp1"> Mot de passe <input type=password id="mdp12" name="mdp1"></label>
-
-    <button class="orange bouton" onclick="login()"> Je me connecte</button>
     
     </form>
 
+    <button class="orange bouton" onclick="login()"> Je me connecte</button>
 
 
 </section>
