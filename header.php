@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<header style="display:flex; width:100%; justify-content:flex-end"> 
+<header class="headerstyle"> 
 <nav class="navbar navbar-expand-lg couleurnav">
   <div class="nav-container">
             <?php 

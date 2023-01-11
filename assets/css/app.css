@@ -1,56 +1,269 @@
-html{
-    width: 100%;
+
+/* footer */
+
+
+.footer{
+    bottom:0px;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:30px 50px 30px 50px;
+    background-color: #504136;
+    color:#ECE4B7;
+    height: fit-content;
 }
 
 
-body {
+@media screen and (max-width: 1100px){
 
-    color: #504136;
-    scroll-behavior: smooth;
-    background-image: url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/fond_hubbert.png);
+    .footer{
+        bottom:0px;
+        justify-content: space-between;
+        align-items: center;
+        padding:30px 50px 30px 113px;
+        background-color: #504136;
+        color:#ECE4B7;
+        height: fit-content;
+        flex-direction: column;
+
+    }
+
+}
+
+
+.border-bot{
+    border-bottom: 1px solid #000;
+    padding-bottom: 120px;
+}
+
+
+.logo-footer{
+    width: 300px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .logo-footer{
+        width: 300px;
+        display: none;
+    }
     
 
 }
 
-.couleurnav {
 
-     background-color: #ECE4B7;
+.text-center{
+    text-align: center;
 
 }
 
-.container-fluid {
+.text-justify{
+    text-align:justify;
+}
 
-     display:flex; 
+.logo-footer2 {
+
+    width: 300px;
+    display: block;
+}
+
+@media screen and (min-width: 1101px) {
+
+    .logo-footer2{
+        width: 300px;
+        display: none;
+    }
+
+}
+
+.footer div{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+
+/* Pourquoi hubbertbook/tok/gram n'est pas centré ? */
+@media screen and (max-width: 1100px){
+
+    .footer div{
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 0px;
+        padding-bottom: 15px;
+        
+}
+}
+
+.footer p, .footer a {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    width:360px;
+}
+    
+.footer h5{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    border-bottom:  1px solid black;
+    margin: 30px 0px 25px 0px;
+}
+    
+    
+.footer a {
+
+    margin-bottom: 8px;
+ }
+    
+.footer p{
+
+    color: #ECE4B7;
+}
+      
+
+/* fin footer */
+
+
+
+
+
+
+
+
+
+
+/* header */
+
+
+header {
+
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    height: 86px;
+
+}
+
+.headerstyle {
+
+    display:flex;
+    width:100%; 
+    justify-content:flex-end;
 
 }
 
 .navbar {
-     justify-content: space-between;
-     height: 86px;
-     box-shadow: 0px 0px 20px black;
-     width: 100%;
+    justify-content: space-between;
+    height: 86px;
+    box-shadow: 0px 0px 20px black;
+    width: 100%;
+   
+}
+
+#menu-navbar li:last-child a{
+    color:transparent;
+    position :absolute;
+    width:45px;
+    margin:0px;
+}
+
+#menu-navbar li:last-child{
+    background-image:url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/picto_profil_inact.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    justify-self: flex-end;
+    background-position: center;
+}
+
+#menu-navbar li:last-child:hover{
+
+    background-image:url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/picto_profil_actif.svg);
+
+}
+#menu-navbar li{
+    margin:10px;
+    min-width: 45px;
+}
+#menu-navbar a{
+    width: fit-content;
+}
+
+.nav-container {
+
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 50px;
+
+}
+
+.messagerie {
+    right: 50px;
+    position: fixed;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+
+}
+
+.convcontent-off{
+    display:none;
+    
+  }
+
+
+.vert-plein {  /* vert cta */
+    
+    border: 3px solid #AACF23;
+    background-color: #AACF23;
+    border-radius: 8px;
+    opacity: 100%;
+    width: 50px;
     
 }
 
 
+header .nav-item a, main .nav-item a{
 
-.card.profil{
+    /* Auto layout --> template pour tout les boutons CTA */
+    
     display: flex;
-    flex-flow: column wrap;
-    background-color: transparent;
-    width: 310px;
-    display: flex;
-    align-content: flex-end;
-}
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-style: normal;
+    height: 40px;
+    font-size: 16px;
+    color: #504136;
+    }
 
-.card-title{
-    font-size:20px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-}
+
+
+/* fin header */
+
+
+
+
+
+
+
+
+
+
+/* home */
 
 .garden { 
 
@@ -64,45 +277,27 @@ body {
 
 }
 
-
-
-.off * {
-    display:none;
-}
-
-.messagerie {
-    right: 50px;
-    position: fixed;
-    bottom: 50px;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-
-}
-
 .texte-central {
 
-     position: absolute;
-     left: 168px;
-     top: 35%;
+    position: absolute;
+    left: 168px;
+    top: 35%;
 
 }
 
 @media screen and (max-width: 800px) {
 
-    .texte-central {
+   .texte-central {
 
-        position: absolute;
-        left: 50px;
-        top: 35%;
-        
-   
-   }
-   
+       position: absolute;
+       left: 50px;
+       top: 35%;
+
+
+  }
+
 
 }
-
-
 
 
 .texte-central h1 {
@@ -137,9 +332,8 @@ body {
 }
 
 
-.texte-central p {
+.texte-central p { /* texte de l'acceil */
 
-/* texte de l'acceil */
     color: #504136;
     width: 356.85px;
     font-family: 'Josefin Sans';
@@ -152,9 +346,7 @@ body {
 
 @media screen and (max-width: 800px) {
 
-    .texte-central p {
-
-        /* texte de l'acceil */
+    .texte-central p { /* texte de l'acceil */
         
             width: 258px;
             font-weight: 500;
@@ -167,20 +359,273 @@ body {
 }
 
 
-header .nav-item a, main .nav-item a{
+.services {
 
-/* Auto layout --> template pour tout les boutons CTA */
-
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: 'Poppins';
-font-weight: bold;
-font-style: normal;
-height: 40px;
-font-size: 16px;
-color: #504136;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 130px;
+    margin-top: 77px;
+    
+    
 }
+
+
+
+
+.outils {
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 130px;
+    
+}
+
+
+
+
+.outils p{
+    width: 946px;
+    height: 81px;
+    
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 27px;
+    text-align: center;
+    }
+    
+    @media screen and (max-width: 600px) {
+    
+        .outils p{
+        width: 475px;
+        height: 81px;
+        
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        text-align: center;
+        }
+        
+    
+    }
+    
+    @media screen and (max-width: 1000px) and (min-width: 600px){
+    
+        .outils p{
+        width: 550px;
+        height: 81px;
+        
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        text-align: center;
+        }
+        
+    
+    }
+    
+    
+  
+h2{
+    width: 637px;
+    height: 128px;
+        
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+        
+@media screen and (max-width: 600px) {
+        
+    h2{
+        width: 380px;
+        height: 128px;
+                
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 35px;
+        text-align: center;
+        margin-bottom: -43px;
+        }
+        
+} 
+        
+        
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+        
+    h2{
+        width: 500px;
+        height: 128px;
+        margin-bottom: 5px;
+                
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 45px;
+        text-align: center;
+        }
+        
+} 
+        
+.no-scroll{
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.carrousel p {
+    font-size:14px;
+    line-height: 14px;
+    margin-bottom:10px;
+    text-align:start;
+}
+.carrousel h5{
+    font-size:16px;
+}
+.carrousel .card-text{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+}
+div.card-body{
+    width: 160px;
+    height:132px;
+}
+
+.carrousel > .tools {
+    flex-shrink: 0;
+   text-align: center;
+   margin-left: 25px;
+   width: 254px;
+    height: 252px;
+    border: 2px solid #504136;
+    border-radius: 15px;
+}
+
+.tools p {
+    font-size: 16px;
+    width: 254px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.bouton-page{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    width: fit-content;
+    align-items: center;
+    justify-self: center;
+    margin-top: 25px;
+}
+
+
+
+/* fin home */
+
+
+
+
+
+
+
+
+
+/* page connexion */
+
+.texte-connect h1{
+
+    width: 361px;
+    height: 32px;
+    font-weight: 700;
+    font-size: 32px;
+
+}
+
+/* fin page connexion */
+
+
+
+
+
+html{
+    width: 100%;
+}
+
+
+body {
+
+    color: #504136;
+    scroll-behavior: smooth;
+    background-image: url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/fond_hubbert.png);
+    
+
+}
+
+.couleurnav {
+
+     background-color: #ECE4B7;
+
+}
+
+.container-fluid {
+
+     display:flex; 
+
+}
+
+
+.card.profil{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: transparent;
+    width: 310px;
+    display: flex;
+    align-content: flex-end;
+}
+
+.card-title{
+    font-size:20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+
+
+
+.off * {
+    display:none;
+}
+
+
+
+
 
 input[type="submit"], .vert{
 
@@ -193,17 +638,7 @@ display: flex;
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.vert-plein {
 
-    /* vert cta */
-    
-    border: 3px solid #AACF23;
-    background-color: #AACF23;
-    border-radius: 8px;
-    opacity: 100%;
-    width: 50px;
-    
-    }
 
 .vert-plein:hover {
     background-color:#95B61E;
@@ -241,296 +676,7 @@ transition: 0.4s;
 }
 
 
-header {
 
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-    height: 86px;
-
-}
-
-.services {
-
-display:flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;
-margin-bottom: 130px;
-margin-top: 77px;
-
-
-}
-.outils {
-
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 130px;
-    
-    }
-
-h2{
-width: 637px;
-height: 128px;
-
-font-family: 'Josefin Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 64px;
-line-height: 64px;
-text-align: center;
-margin-bottom: 25px;
-}
-
-@media screen and (max-width: 600px) {
-
-    h2{
-        width: 380px;
-        height: 128px;
-        
-        font-family: 'Josefin Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 35px;
-        line-height: 35px;
-        text-align: center;
-        margin-bottom: -43px;
-        }
-
-} 
-
-
-@media screen and (max-width: 1000px) and (min-width: 600px) {
-
-    h2{
-        width: 500px;
-        height: 128px;
-        margin-bottom: 5px;
-        
-        font-family: 'Josefin Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 45px;
-        line-height: 45px;
-        text-align: center;
-        }
-
-} 
-
-
-.outils p{
-width: 946px;
-height: 81px;
-
-font-family: 'Josefin Sans';
-font-style: normal;
-font-weight: 300;
-font-size: 27px;
-line-height: 27px;
-text-align: center;
-}
-
-@media screen and (max-width: 600px) {
-
-    .outils p{
-    width: 475px;
-    height: 81px;
-    
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    text-align: center;
-    }
-    
-
-}
-
-@media screen and (max-width: 1000px) and (min-width: 600px){
-
-    .outils p{
-    width: 550px;
-    height: 81px;
-    
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    text-align: center;
-    }
-    
-
-}
-
-
-
-.outils {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 73px;
-}
-.no-scroll{
-    overflow: hidden;
-}
-::-webkit-scrollbar {
-    display: none;
-}
-
-
-.carrousel p {
-    font-size:14px;
-    line-height: 14px;
-    margin-bottom:10px;
-    text-align:start;
-}
-.carrousel h5{
-    font-size:16px;
-}
-.carrousel .card-text{
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-}
-div.card-body{
-    width: 160px;
-    height:132px;
-}
-/*pipi*/
-.carrousel > .tools {
-    flex-shrink: 0;
-   text-align: center;
-   margin-left: 25px;
-   width: 254px;
-    height: 252px;
-    border: 2px solid #504136;
-    border-radius: 15px;
-}
-
-.tools p {
-    font-size: 16px;
-    width: 254px;
-}
-
-.bouton-page{
-    display: flex;
-    flex-direction: column;
-    height: 120px;
-    width: fit-content;
-    align-items: center;
-    justify-self: center;
-    margin-top: 25px;
-}
-
-.logo-footer{
-    width: 300px;
-}
-
-@media screen and (max-width: 1100px) {
-
-    .logo-footer{
-        width: 300px;
-        display: none;
-    }
-    
-
-}
-
-.footer{
-    bottom:0px;
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding:30px 50px 30px 50px;
-    background-color: #504136;
-    color:#ECE4B7;
-    height: fit-content;
-}
-
-@media screen and (max-width: 1100px){
-
-    .footer{
-        bottom:0px;
-        justify-content: space-between;
-        align-items: center;
-        padding:30px 50px 30px 113px;
-        background-color: #504136;
-        color:#ECE4B7;
-        height: fit-content;
-        flex-direction: column;
-
-    }
-
-}
-
-
-.footer div{
-    width: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 100px;
-}
-
-/* Pourquoi hubbertbook/tok/gram n'est pas centré ? */
-@media screen and (max-width: 1100px){
-
-    .footer div{
-        width: 360px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 0px;
-        padding-bottom: 15px;
-        
-}
-}
-
-.card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-
-.footer p, .footer a {
-font-family: 'Josefin Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 24px;
-width:360px;
-}
-
-.footer h5{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 48px;
-border-bottom:  1px solid black;
-margin: 30px 0px 25px 0px;
-}
-
-.text-justify{
-    text-align:justify;
-}
-.footer a {
-    margin-bottom: 8px;
-}
-.text-center{
-    text-align: center;
-
-}.border-bot{
-    border-bottom: 1px solid #000;
-    padding-bottom: 120px;
-}
 
 .rond {
     border-radius: 30px;
@@ -625,9 +771,6 @@ p, label {
     color: #000000;
 }
 
-.footer p{
-     color: #ECE4B7;
-}
 
 #menu-home li{
     display: flex;
@@ -648,38 +791,13 @@ p, label {
     margin: 0px auto;
 }
 
-#menu-navbar li:last-child a{
-    color:transparent;
-    position :absolute;
-    width:45px;
-    margin:0px;
-}
-#menu-navbar li:last-child{
-    background-image:url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/picto_profil_inact.svg);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    justify-self: flex-end;
-    background-position: center;
-}
+
+
 
 .navdroite{
     justify-self: flex-end;
     width: fit-content;
 }
-
-#menu-navbar li:last-child:hover{
-
-    background-image:url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/picto_profil_actif.svg);
-
-}
-#menu-navbar li{
-    margin:10px;
-    min-width: 45px;
-}
-#menu-navbar a{
-    width: fit-content;
-}
-
 
 .top-part{
     display: flex;
@@ -797,15 +915,7 @@ color:#504136;
     object-fit: cover;
     border-radius: 15px;
 }
-.nav-container {
 
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 50px;
-
-}
 
 .boutmid li{
     margin:10px;
@@ -917,14 +1027,7 @@ margin-top: 63px;
 }
 
 
-.texte-connect h1{
 
-    width: 361px;
-    height: 32px;
-    font-weight: 700;
-    font-size: 32px;
-
-}
 
 
 .carrousel .annonce .cardbody{
@@ -1171,10 +1274,7 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
     padding: 10px 10px;
   }
 
-  .convcontent-off{
-    display:none;
-    
-  }
+ 
 
   input[type="file"]::-webkit-file-upload-button:hover {
     background-color:#AACF23;
@@ -1190,20 +1290,7 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
     justify-content: space-between;
   }
 
-.logo-footer2 {
 
-    width: 300px;
-    display: block;
-}
-
-@media screen and (min-width: 1101px) {
-
-    .logo-footer2{
-        width: 300px;
-        display: none;
-    }
-
-}
 
 .filtre-picto {
 
