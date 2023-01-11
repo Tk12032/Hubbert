@@ -144,6 +144,11 @@
 
 /* header */
 
+.couleurnav {
+
+    background-color: #ECE4B7;
+
+}
 
 header {
 
@@ -264,6 +269,29 @@ header .nav-item a, main .nav-item a{
 
 
 /* home */
+
+
+
+#menu-home li{
+    display: flex;
+    align-content: center;
+    width: fit-content;
+    height: fit-content;
+}
+#menu-home {
+    width: fit-content;
+    height: fit-content;
+}
+#menu-home a{
+    color:transparent;
+    background-image:url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/hubbert_noir.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:180px;
+    margin: 0px auto;
+}
+
+
 
 .garden { 
 
@@ -542,7 +570,25 @@ div.card-body{
     margin-top: 25px;
 }
 
+.orange {
 
+    /* orange cta */
+   
+       border: 3px solid #F17444;
+       border-radius: 8px;
+       width: fit-content;
+   
+   }
+   
+   .orange:hover {
+   
+       background-color:#F17444;
+       border: 3px solid #F17444;
+       color: #504136;
+       transition: 0.4s;
+       
+   }
+   
 
 /* fin home */
 
@@ -565,194 +611,91 @@ div.card-body{
 
 }
 
+
+
+.bouton {
+
+    padding: 5px 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #504136;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+.connect p {
+
+    margin-top: 15px;
+    margin-bottom: 0em;
+    }
+    
+.connect label{
+
+    display: flex;
+    margin: 30px 0px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+    
+    
+     
+.conversation{
+     background-color: #ECE4B7;
+     border-radius: 15px;
+     padding: 10px 10px;
+}
+    
+     
+    
+input[type="file"]::-webkit-file-upload-button:hover {
+
+    background-color:#AACF23;
+    border: 3px solid #AACF23;
+    color: #504136;
+    transition: 0.4s;
+
+}
+      
+    
+#commentform{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+    
+    
+    
+    
+.messagerieon{
+
+    width:750px;
+    padding: 100px 50px;
+    height:100%;
+    background-color: #F2EACD ; 
+    position:fixed; 
+    z-index: -1; 
+    overflow:scroll;
+
+}
+    
+
 /* fin page connexion */
 
 
 
 
 
-html{
-    width: 100%;
-}
-
-
-body {
-
-    color: #504136;
-    scroll-behavior: smooth;
-    background-image: url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/fond_hubbert.png);
-    
-
-}
-
-.couleurnav {
-
-     background-color: #ECE4B7;
-
-}
-
-.container-fluid {
-
-     display:flex; 
-
-}
-
-
-.card.profil{
-    display: flex;
-    flex-flow: column wrap;
-    background-color: transparent;
-    width: 310px;
-    display: flex;
-    align-content: flex-end;
-}
-
-.card-title{
-    font-size:20px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-}
-
-
-
-
-.off * {
-    display:none;
-}
 
 
 
 
 
-input[type="submit"], .vert{
 
-border: 3px solid #AACF23;
-border-radius: 8px;
-display: flex;
-}
-
-.blanc{
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-
-
-.vert-plein:hover {
-    background-color:#95B61E;
-    border: 3px solid #95B61E;
-    color: #504136;
-    transition: 0.4s;
-    }
-
-.vert:hover , input[type="submit"]:hover {
-
-background-color:#AACF23;
-border: 3px solid #AACF23;
-color: #504136;
-transition: 0.4s;
-
-}
-
-.orange {
-
- /* orange cta */
-
-    border: 3px solid #F17444;
-    border-radius: 8px;
-    width: fit-content;
-
-}
-
-.orange:hover {
-
-    background-color:#F17444;
-    border: 3px solid #F17444;
-    color: #504136;
-    transition: 0.4s;
-    
-}
-
-
-
-
-.rond {
-    border-radius: 30px;
-    width: 45px;
-}
-
-
-.profil .menu-image{
-    margin-top:-20px;
-    height: 1000px;
-    padding:7px;
-    margin-left:-5px;
-}
-
-button{
-    width: fit-content;
-    height: fit-content;
-    background-color: transparent;
-}
- 
-.boutonplus{
-    width: fit-content;
-    padding: 0px 5px;
-    color:#504136;
-    font-weight: 700;
-    line-height: 25px;
-  }
-
-/* c'est pour le FAQ */
-
-.faq {
-
-width: 817px;       
-justify-content: center;
-min-height: 600px;
-}
-
-
-
-a{
-    text-decoration: none;
-}
-
-
-
-.question p {
-
-font-family: 'Josefin Sans';
-font-style: normal;
-font-weight: 300;
-font-size: 24px;
-
-color: #000000;
-
-
-}
-
-.question h5 {
-
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-
-}
-
-/* c'est pour la mentionlegale */
-
-.legal {
-
-padding-top: 100px;
-width: 817px;       
-justify-content: center;
-min-height: 600px;
-
-}
+/* faq */
 
 .container{
     padding-top: 100px;
@@ -761,204 +704,70 @@ min-height: 600px;
     margin-bottom: 175px;
 }
 
+.faq {
 
-p, label {
+    width: 817px;       
+    justify-content: center;
+    min-height: 600px;
+    }
 
+
+a{
+    text-decoration: none;
+}
+    
+    
+    
+.question p {
+    
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
+    
     color: #000000;
-}
-
-
-#menu-home li{
-    display: flex;
-    align-content: center;
-    width: fit-content;
-    height: fit-content;
-}
-#menu-home {
-    width: fit-content;
-    height: fit-content;
-}
-#menu-home a{
-    color:transparent;
-    background-image:url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/hubbert_noir.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width:180px;
-    margin: 0px auto;
-}
-
-
-
-
-.navdroite{
-    justify-self: flex-end;
-    width: fit-content;
-}
-
-.top-part{
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    justify-content: space-between;
-    width: 100%;
-}
-
-
-.info-profil{
-    width:500px;   
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    height: fit-content;
+    
     
 }
-
-.infotext {
-
-    width: 220px;
-    height: 36px;
+    
+.question h5 {
+    
     font-family: 'Josefin Sans';
-    font-style: normal;
-    
-    
-}
-
-
-.descri {
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    margin-top: 30px;
-    overflow: scroll;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    text-align: justify;
-}
-
-    
-* {
-  box-sizing: border-box;
-}
-
-.commentaires{
-    margin-top:50px;
-}
-
-.comment{
-    margin-top: 30px;
-    margin-bottom: 10px;
-    max-width: 500px;
-}
-h3{
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 32;
-}
-
-.versprofil img {
-    width: 47px;
-    height: 47px;
-    border-radius: 25px;
-}
-.versprofil {
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 4px 10px;
-    min-width: 180px;
-    height: 55px;
-    width: fit-content;
-}
-.versprofil h5{
-    font-size:24;
-    font-family:'Josefin Sans';
-    margin-left: 16px;
-    margin-top: 12px;
-    min-width: 50px;
-}
-.comment p {
-    margin-top: 16px;
-}
-
-
-input[type="textarea"], input[type="password"], textarea, input[type="submit"]{
-box-sizing: border-box;
-
-resize : none;
-font-size: 20px;
-line-height: 20px;
-
-
-border: 2px solid #504136;
-border-radius: 10px;
-background-color: transparent;
-padding:15px;
-
-display: flex;
-align-content: center;
-color:#504136;
-}
-.info-profil textarea {
-    line-height: 15px;
-    padding-bottom: 0px;
-}
-.avatar{
-    width: 255px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-
-.boutmid li{
-    margin:10px;
-    width: 100%;
-    display:block;
-
-}
-
-.boutmid a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-style: normal;
-    height: 40px;
-    font-size: 16px;
-    color: #504136;
-}
-
-ul{
-    width: fit-content;
-    padding-left: 0px;
-}
-
-.pdp {
-
-    border-radius: 12px;
-
-}
-
-.infotext h5 {
-
-margin: 20px 0px;
-font-size: 20px;
-
-}
-
-.infotext h5:first-child {
-
     font-size: 24px;
+    
 }
 
+/* fin faq */
+
+
+
+
+
+
+
+
+/* mention legale */
+
+.legal {
+
+    padding-top: 100px;
+    width: 817px;       
+    justify-content: center;
+    min-height: 600px;
+    
+    }
+
+/* mention legale fin */
+
+
+
+
+
+
+
+/* recherche */
 
 .recherchannonce{
 
@@ -977,116 +786,44 @@ font-size: 20px;
 }
 
 
-.carousel--wrapper {
 
-    margin-top: 50px;
-
-}
-
-.carrousel--wrapper {
-
-    margin-top: 50px;
-
-}
-
-
-.infoannonce{
-    display: flex;
-    flex-direction: row;
-}
-
-.infodroite{
-    margin-left:22px;
-    text-align: justify;
-}
-.description{
+.filtres > * {
     margin:15px 0px;
-    overflow: scroll;
-    height: 190px;
+    width:170px;
+}
+
+.filtre-picto {
+
+    width: 40px;
+    height: 38px;
 
 }
 
-.rectangle-connect {
+@media screen and (min-width: 1100px) {
 
-border: 3px solid beige;
-border-radius: 8px;
-width: 459px;
-height: 44px;
-background-color: whitesmoke;
-margin-left: 175px;
-margin-top: 63px;
+    .filtre-picto {
+
+        width: 40px;
+        height: 38px;
+        display: none;
+       }
+
 }
 
-.container-connexion {
-
-    padding-top: 130px;
-    height: fit-content;
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 100%;
-}
-
-
-
-
-
-.carrousel .annonce .cardbody{
-    width: 90%;
-    height: 33px;
-    display: flex;
-    justify-self: flex-end;
-    margin: 10px 15px; 
-    justify-content: space-between;
-}
-
-
-.card{
-    background-color: transparent;
-}
-
-/*recherche annonce*/
-.card-text{
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    text-align: justify;
-}
-
-.recherche .card {
-    margin:15px;
-    border-radius: 15px;
-}
-.recherche img{
-    border-radius:15px 0px 0px 15px;
-}
-.recherche .card-body{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height:330px;
-}
-
-.bot-card-body{
-    justify-self: flex-end;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-/*Filtre recherche*/
 
 .filtre-check-box{
     display: flex;
     flex-direction: column;
 }
 
-/* le double slider*/
+
+.check {
+
+    margin-right:60px;
+
+}
+
+                         /* le double slider*/
 
 .range_container {
     display: flex;
@@ -1135,19 +872,86 @@ input[type="range"] {
   .range_container input[type="range"]:nth-child(2){
     background-color: transparent;
   }
-  /**/
 
-  .filtres > * {
-    margin:15px 0px;
-    width:170px;
-  }
 
-  label {
-    margin:10px 0px;
-  }
-/*checkbox*/
+                            /**/
 
-/* configannonce*/
+
+
+
+input[type="submit"], .vert{
+
+border: 3px solid #AACF23;
+border-radius: 8px;
+display: flex;
+}
+
+.blanc{
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+
+.vert-plein:hover {
+    background-color:#95B61E;
+    border: 3px solid #95B61E;
+    color: #504136;
+    transition: 0.4s;
+    }
+
+.vert:hover , input[type="submit"]:hover {
+
+background-color:#AACF23;
+border: 3px solid #AACF23;
+color: #504136;
+transition: 0.4s;
+
+}
+
+input[type="submit"], .vert{
+
+    border: 3px solid #AACF23;
+    border-radius: 8px;
+    display: flex;
+}
+    
+.blanc{
+        background-color: rgba(255, 255, 255, 0.15);
+}
+    
+    
+    
+.vert-plein:hover {
+        background-color:#95B61E;
+        border: 3px solid #95B61E;
+        color: #504136;
+        transition: 0.4s;
+}
+    
+.vert:hover , input[type="submit"]:hover {
+    
+    background-color:#AACF23;
+    border: 3px solid #AACF23;
+    color: #504136;
+    transition: 0.4s;
+    
+}
+
+
+/* recherche fin */
+
+
+
+
+
+
+
+
+
+
+
+/* annonce */
+
 
 .configannonce h1 {
 
@@ -1208,13 +1012,6 @@ display: block;
 }
 
 
-.check {
-
-    margin-right:60px;
-
-}
-
-
 .configpart1 {
 
     height:300px;
@@ -1224,33 +1021,6 @@ display: block;
 
 }
 
-
-.bouton {
-
-    padding: 5px 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-    color: #504136;
-    text-align: center;
-    margin-top: 30px;
-
-}
-
-.connect p {
-
-margin-top: 15px;
-margin-bottom: 0em;
-}
-
-.connect label{
-    display: flex;
-    margin: 30px 0px;
-    align-items: flex-start;
-    flex-direction: column;
-}
 
 input[type="file"]::-webkit-file-upload-button, .imgupload {
     padding: 5px 10px;
@@ -1266,61 +1036,77 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
     border: 3px solid #AACF23;
     border-radius: 8px;
     content: "Sélectionner un fichier";
-  }
- 
-  .conversation{
-    background-color: #ECE4B7;
-    border-radius: 15px;
-    padding: 10px 10px;
-  }
+}
 
- 
 
-  input[type="file"]::-webkit-file-upload-button:hover {
-    background-color:#AACF23;
-    border: 3px solid #AACF23;
-    color: #504136;
-    transition: 0.4s;
-  }
-  
-
-  #commentform{
+.infoannonce{
     display: flex;
-    width: 500px;
+    flex-direction: row;
+}
+
+.infodroite{
+    margin-left:22px;
+    text-align: justify;
+}
+.description{
+    margin:15px 0px;
+    overflow: scroll;
+    height: 190px;
+
+}
+
+.card-text{
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+.recherche .card {
+    margin:15px;
+    border-radius: 15px;
+}
+.recherche img{
+    border-radius:15px 0px 0px 15px;
+}
+.recherche .card-body{
+    display:flex;
+    flex-direction: column;
     justify-content: space-between;
+    height:330px;
+}
+
+.bot-card-body{
+    justify-self: flex-end;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+  label {
+    margin:10px 0px;
   }
 
 
-
-.filtre-picto {
-
-    width: 40px;
-    height: 38px;
-
-}
-
-@media screen and (min-width: 1100px) {
-
-    .filtre-picto {
-
-        width: 40px;
-        height: 38px;
-        display: none;
-       }
-
-}
-.messagerieon{
-    width:750px;
-    padding: 100px 50px;
-     height:100%;
-     background-color: #F2EACD ; 
-     position:fixed; 
-     z-index: -1; 
-     overflow:scroll;
-}
+/* fin annonce */
 
 
-/*c'est pour la page profil*/
+
+
+
+
+
+
+
+
+/* profil */
+
 
 .rightpart {
 
@@ -1351,3 +1137,336 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
     }
     
 }
+
+.info-profil{
+    width:500px;   
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: fit-content;
+    
+}
+
+.top-part{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+.infotext {
+
+    width: 220px;
+    height: 36px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    
+    
+}
+
+.commentaires{
+    margin-top:50px;
+}
+
+.descri {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    margin-top: 30px;
+    overflow: scroll;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+
+/* profil fin */
+
+
+
+
+
+
+
+html{
+    width: 100%;
+}
+
+
+body {
+
+    color: #504136;
+    scroll-behavior: smooth;
+    background-image: url(http://localhost/test-wordpress/wp-content/themes/Hubbert/assets/img/fond_hubbert.png);
+    
+
+}
+
+
+
+.container-fluid {
+
+     display:flex; 
+
+}
+
+
+.card.profil{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: transparent;
+    width: 310px;
+    display: flex;
+    align-content: flex-end;
+}
+
+.card-title{
+    font-size:20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+
+
+
+.off * {
+    display:none;
+}
+
+
+.rond {
+    border-radius: 30px;
+    width: 45px;
+}
+
+
+.profil .menu-image{
+    margin-top:-20px;
+    height: 1000px;
+    padding:7px;
+    margin-left:-5px;
+}
+
+button{
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+}
+ 
+.boutonplus{
+    width: fit-content;
+    padding: 0px 5px;
+    color:#504136;
+    font-weight: 700;
+    line-height: 25px;
+  }
+
+p, label {
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+}
+
+
+.navdroite{
+    justify-self: flex-end;
+    width: fit-content;
+}
+
+
+    
+* {
+  box-sizing: border-box;
+}
+
+
+.comment{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    max-width: 500px;
+}
+h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32;
+}
+
+.versprofil img {
+    width: 47px;
+    height: 47px;
+    border-radius: 25px;
+}
+.versprofil {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 10px;
+    min-width: 180px;
+    height: 55px;
+    width: fit-content;
+}
+.versprofil h5{
+    font-size:24;
+    font-family:'Josefin Sans';
+    margin-left: 16px;
+    margin-top: 12px;
+    min-width: 50px;
+}
+.comment p {
+    margin-top: 16px;
+}
+
+
+input[type="textarea"], input[type="password"], textarea, input[type="submit"]{
+box-sizing: border-box;
+
+resize : none;
+font-size: 20px;
+line-height: 20px;
+
+
+border: 2px solid #504136;
+border-radius: 10px;
+background-color: transparent;
+padding:15px;
+
+display: flex;
+align-content: center;
+color:#504136;
+}
+
+
+.info-profil textarea {
+    line-height: 15px;
+    padding-bottom: 0px;
+}
+
+
+.avatar{
+    width: 255px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.boutmid li{
+    margin:10px;
+    width: 100%;
+    display:block;
+
+}
+
+.boutmid a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-style: normal;
+    height: 40px;
+    font-size: 16px;
+    color: #504136;
+}
+
+ul{
+    width: fit-content;
+    padding-left: 0px;
+}
+
+.pdp {
+
+    border-radius: 12px;
+
+}
+
+.infotext h5 {
+
+margin: 20px 0px;
+font-size: 20px;
+
+}
+
+.infotext h5:first-child {
+
+    font-size: 24px;
+}
+
+
+
+.carousel--wrapper {
+
+    margin-top: 50px;
+
+}
+
+.carrousel--wrapper {
+
+    margin-top: 50px;
+
+}
+
+
+
+
+.rectangle-connect {
+
+border: 3px solid beige;
+border-radius: 8px;
+width: 459px;
+height: 44px;
+background-color: whitesmoke;
+margin-left: 175px;
+margin-top: 63px;
+}
+
+.container-connexion {
+
+    padding-top: 130px;
+    height: fit-content;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 100%;
+}
+
+
+
+
+
+.carrousel .annonce .cardbody{
+    width: 90%;
+    height: 33px;
+    display: flex;
+    justify-self: flex-end;
+    margin: 10px 15px; 
+    justify-content: space-between;
+}
+
+
+.card{
+    background-color: transparent;
+}
+
+/*recherche annonce*/
+
+/*checkbox*/
+
+/* configannonce*/
+
+
+
+
+
+/*c'est pour la page profil*/
