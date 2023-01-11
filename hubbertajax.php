@@ -154,30 +154,26 @@ function filter(){
 add_action('wp_ajax_filter','filter');
 add_action('wp_ajax_newuser','createuser');
 
+
 function createuser(){
 	$nom = $_POST["name"];//
 	$prenom = $_POST["prenom"];//
 	$mail = $_POST['mail'];//
 	$mdp = $_POST['mdp'];//
-	$userid = $_POST['ID'];//
-	$idpost = $_POST['IDpost'];
-	$description = $_POST['description'];
-	$localite=$_POST['localite'];
-	$imgid = $_POST['imgid'];
-	$age = $_POST['age'];
+
 
 
  $arguser = array(
-	'ID'=> $userid,
 	'user_login' => $mail,
 	'display_name' => $nom.' '.$prenom,
 	'user_pass' =>$mdp,
 	'user_email' => $mail,
  );
+
  $newuserid = wp_insert_user($arguser);//on ajoute un user coté wordpress. Mnt pour le display d'une page de profil on va combiné un user et un posttype
 
- $argposttype = array(
-	'ID'=> $idpost,
+ 	$argposttype = array(
+	'ID' => 0,
 	'post_content'=> $description,
 	'post_author' =>$newuserid,
 	'post_title' => $nom.' '.$prenom,
@@ -185,10 +181,12 @@ function createuser(){
 	'post_status' => 'publish',
 
  );
-$post_id = wp_insert_post($argposttype);
+
+	$post_id = wp_insert_post($argposttype);
+
 
 	update_field('IDUSER',$newuserid, $post_id );// on garde l'id de l'user dans le post pour pouvoir appelé certain contenu de l'user avec le post. 
-
+	
 	wp_logout();
 	
 	wp_signon(array(
@@ -196,8 +194,8 @@ $post_id = wp_insert_post($argposttype);
 		'user_password' => $mdp,
 
 	));
-		echo get_permalink($post_id);	
-  
+	echo get_permalink($post_id);
+	
 }
 function majuser(){
 	$nom = $_POST["name"];

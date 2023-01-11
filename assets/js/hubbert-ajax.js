@@ -277,7 +277,7 @@ function newuser(){
        },
        success: function(response) {
          console.log(response)
-         window.location.href = response;
+         window.location.href(response)
        },
        error : function(){
            console.log("ça n'a pas marché, vous avez tout cassé")

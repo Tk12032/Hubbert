@@ -16,8 +16,9 @@ get_header(); ?>
     <label  for="mdp1"> Mot de passe <input type=password id="mdp1" name="mdp1"></label>
 
     <label  for="mdp2"> Confirmer le mot de passe <input type=password id="mdp2" name="mdp2"></label>
-    <button class="orange bouton" onclick="newuser()"> Je m'inscris</button>
+
     </form>
+    <button class="orange bouton" onclick="newuser()"> Je m'inscris</button>
 </section>
 
 <section style="display:flex; flex-direction:column; align-self:center;">
