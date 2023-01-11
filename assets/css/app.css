@@ -20,7 +20,7 @@
         bottom:0px;
         justify-content: space-between;
         align-items: center;
-        padding:30px 50px 30px 113px;
+        padding: 1px 100px 18px 113px;
         background-color: #504136;
         color:#ECE4B7;
         height: fit-content;
@@ -497,7 +497,7 @@ h2{
         
     h2{
         width: 70%;
-        height: 128px;
+        height: 200px;
                 
         font-family: 'Josefin Sans';
         font-style: normal;
@@ -682,11 +682,19 @@ input[type="file"]::-webkit-file-upload-button:hover {
     
 #commentform{
     display: flex;
-    width: 500px;
+    width: 470px;
     justify-content: space-between;
 }
     
-    
+@media screen and (max-width: 600px) {
+
+    #commentform{
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+    }
+
+}    
     
     
 .messagerieon{
@@ -1196,13 +1204,29 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
 }
 
 .info-profil{
-    width:500px;   
+    width:470px;   
     display: flex;
     flex-direction: column;
     align-content: space-between;
     height: fit-content;
     
 }
+
+@media screen and (max-width: 600px) {
+
+
+    .info-profil{
+
+        width: 405px;   
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        height: fit-content;
+        
+    }
+
+}
+
 
 .top-part{
     display: flex;
@@ -1212,7 +1236,19 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
     width: 100%;
 }
 
+@media screen and (max-width: 600px) {
 
+  
+.top-part{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: space-between;
+    width: 400px;
+}
+
+
+}
 
 .infotext {
 
