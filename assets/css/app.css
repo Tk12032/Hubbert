@@ -30,6 +30,25 @@
 
 }
 
+/* 
+@media screen and (max-width: 600px){
+
+    .footer{
+        bottom:0px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 31px 60px 30px 38px;
+        background-color: #504136;
+        color:#ECE4B7;
+        height: fit-content;
+        flex-direction: column;
+
+    }
+
+}
+*/
+
+
 
 .border-bot{
     border-bottom: 1px solid #000;
@@ -1152,7 +1171,7 @@ input[type="file"]::-webkit-file-upload-button, .imgupload {
     flex-direction:column;
     overflow:scroll;
     height:600px;
-    margin: auto -58px;
+    margin: auto 5px;
 
 }
 
