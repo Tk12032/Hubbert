@@ -22,14 +22,15 @@ testPost();*/
 
 const hubajaxurl = '/test-wordpress/wp-content/themes/Hubbert/hubbertajax.php'
 
-
+let offset = 0;
 function filter(){
   // Récupérez un élément parent dans lequel vous voulez ajouter les éléments article
 var parent = document.getElementById('parent');
 
 // Effacez le contenu de l'élément parent
+if(offset==0){
 parent.innerHTML = '';
-
+}
   const outil = document.getElementById('checkoutils').checked
   const services = document.getElementById('checkservices').checked
   const prix = document.getElementById('prix').value
@@ -38,12 +39,14 @@ parent.innerHTML = '';
   const jend = document.getElementById('toSlider').value
   const hstart = document.getElementById('fromSlider2').value
   const hend = document.getElementById('toSlider2').value
+  
 
   $.ajax({
     url: hubajaxurl,
     type: 'GET',
     data: {//tableau en Json
       'action' : "filter",
+      ofset : offset,
       outil : outil,
       service : services,
       prixmax : prix,

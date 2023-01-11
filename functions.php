@@ -146,7 +146,11 @@ function carroussel_annonce(){
 			$title=get_the_title();
 			echo '<div class="annonce carrousel--item"> ';
 			echo '<div class="card annonce ">
-			<figure><img src="'.$image['url'].'" alt="'.$title.'"></figure>
+			<figure><img src="';
+			if($image['url']==''){
+				$image['url']= get_template_directory_uri().'/assets/img/picto_noimage_inact.svg';
+			}
+				echo $image['url'].'" alt="'.$title.'"></figure>
 				<div class="cardbody">
 					<h5 class="card-title">'.$title.'</h5>
 					<a href="'.get_the_permalink().'" class="vert boutonplus">+</a>

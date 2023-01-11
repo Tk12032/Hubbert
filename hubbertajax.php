@@ -80,6 +80,7 @@ function filter(){
 	if($_GET['service']=='true'){
 		$service='service';
 	}else{$service='';}
+	$offset = $_GET['ofset'];
 	$annoncefiltrées = new WP_Query([
 		
 		
@@ -88,6 +89,7 @@ function filter(){
 		'limit' => 10,
 		'orderby' => 'date',
 		'date' => true,
+		'offset' => $offset,
 		'meta_query'    => array(
 			'relation'      => 'AND',
 			array(
@@ -112,6 +114,9 @@ function filter(){
 
 
 			$image = get_field('image_dillustration');
+			if($image['url']==0){
+				$image['url']= get_template_directory_uri().'/assets/img/picto_noimage_inact.svg';
+			}
 			$a_id=$post->post_author;
 			$auteur = get_the_author_meta( 'user_nicename', $a_id );
 			if($auteur===''){
@@ -182,20 +187,8 @@ function createuser(){
  );
 $post_id = wp_insert_post($argposttype);
 
-
 	update_field('IDUSER',$newuserid, $post_id );// on garde l'id de l'user dans le post pour pouvoir appelé certain contenu de l'user avec le post. 
-	
-	if ($_POST['localite']!=''){
-		update_field('localite', $localite, $post_id );
-	}
-	if ($_POST['age']>17){
-		update_field('age', $age, $post_id );
-	}
-	
-	update_field('localite',$localite, $post_id );
-	if ($_POST['imgid']!=0){
-		update_field('profilepicture', $imgid, $post_id );
-	}
+
 	wp_logout();
 	
 	wp_signon(array(

@@ -59,7 +59,7 @@ get_header(); ?>
             <div style="display:flex;justify-content:space-between;margin-top:10px"><output id="starthour">7h</output><output id="endhour">20h</output></div>
         </div>
         
-        <button class="vert" style="display:flex; width:fit-content;padding:10px;align-items:center" onclick="filter()">
+        <button class="vert" style="display:flex; width:fit-content;padding:10px;align-items:center" onclick="offset = 0;filter()">
             <img style="width:20px" class="recherchepicto" src="<?php echo get_template_directory_uri() ?>/assets/img/picto_recherche_inact.svg">
             <p style="margin:0px 10px;">C'est parti !</p>
         </button>
@@ -74,8 +74,11 @@ get_header(); ?>
 
      
         
-        <div id="readmore"></div>
+        
     </div>
+    <div id="readmore">
+            <button class="vert" onclick="offset = offset+10;filter()">Chargez plus de post</button>
+        </div>
 </section>
 </div>
 
